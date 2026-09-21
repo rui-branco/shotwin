@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>Shotwin</AssemblyName>
+    <RootNamespace>Shotwin</RootNamespace>
+    <!-- The one place the version is set. The update check compares against this. -->
+    <Version>1.0.0</Version>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <!-- Keep the exe small and cold-start fast; capture latency is the whole point. -->
+    <TieredPGO>true</TieredPGO>
+
+    <!--
+      InvariantGlobalization must stay OFF. WPF two-way bindings convert values back
+      through XmlLanguage.GetSpecificCulture(), which throws
+      "Cannot find non-neutral culture related to 'en-us'" in invariant mode. It shows
+      up as a hard crash on the first TwoWay binding a user touches, nowhere else.
+    -->
+    <InvariantGlobalization>false</InvariantGlobalization>
+
+    <!--
+      Resources\Strings.resx is the English baseline and compiles into this assembly;
+      every Strings.<culture>.resx beside it becomes a satellite. NeutralLanguage is the
+      property the SDK turns into NeutralResourcesLanguageAttribute (NeutralResourcesLanguage
+      is a different, older knob and is silently ignored here): with it, the ResourceManager
+      answers for "en" out of the main assembly, so English is discovered like any other
+      translation and a key missing from a translation falls back to it rather than throwing.
+    -->
+    <NeutralLanguage>en</NeutralLanguage>
+
+    <!--
+      Left empty on purpose, which means "keep every language".
+      SatelliteResourceLanguages filters the satellites that come out of referenced
+      packages, and a value here would have to be edited every time a translation is
+      added — exactly the code change dropping in a .resx is supposed to avoid. Our own
+      satellites are published as <culture>\Shotwin.resources.dll and bundled into the
+      single-file exe, so install.ps1 and the self-update, which ships that one exe,
+      both carry the translations with them.
+    -->
+    <SatelliteResourceLanguages></SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Also embedded as a resource so the tray icon can load it via a pack:// URI. -->
+    <Resource Include="Assets\app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="3.119.0" />
+    <PackageReference Include="SkiaSharp.HarfBuzz" Version="3.119.0" />
+    <PackageReference Include="SkiaSharp.Views.WPF" Version="3.119.0" />
+    <PackageReference Include="H.NotifyIcon.Wpf" Version="2.3.0" />
+  </ItemGroup>
+
+</Project>

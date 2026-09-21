@@ -1,0 +1,38 @@
+<Window x:Class="Shotwin.Capture.ScrollProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+        xmlns:loc="clr-namespace:Shotwin.Services"
+        Title="Shotwin"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        ShowInTaskbar="False"
+        ShowActivated="False"
+        Topmost="True"
+        Background="{StaticResource Surface}"
+        UseLayoutRounding="True"
+        TextOptions.TextFormattingMode="Display">
+
+    <!--
+        The same integrated caption the rest of the app uses. The whole strip is the
+        caption, so it can be dragged out of the way mid-capture; the Stop button opts
+        back out of it, or the chrome would swallow its clicks.
+    -->
+    <sys:WindowChrome.WindowChrome>
+        <sys:WindowChrome CaptionHeight="52"
+                          ResizeBorderThickness="0"
+                          CornerRadius="0"
+                          GlassFrameThickness="0"
+                          UseAeroCaptionButtons="False" />
+    </sys:WindowChrome.WindowChrome>
+
+    <Border BorderBrush="{StaticResource Line}" BorderThickness="1">
+        <StackPanel Orientation="Horizontal" Margin="16,9">
+            <TextBlock x:Name="StatusText" VerticalAlignment="Center"
+                       FontSize="12.5" Margin="0,0,14,0" />
+            <Button x:Name="StopButton" Style="{StaticResource Chip}" Content="{loc:S CaptureScrollingStop}"
+                    sys:WindowChrome.IsHitTestVisibleInChrome="True" />
+        </StackPanel>
+    </Border>
+</Window>

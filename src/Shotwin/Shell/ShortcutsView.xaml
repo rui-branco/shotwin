@@ -1,0 +1,100 @@
+<UserControl x:Class="Shotwin.Shell.ShortcutsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:Shotwin.Services">
+    <Grid Margin="0,0,0,22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="{loc:S ShortcutsTitle}" Style="{StaticResource ViewTitle}" />
+            <TextBlock Style="{StaticResource ViewSubtitle}"
+                       Text="{loc:S ShortcutsSubtitle}" />
+        </StackPanel>
+
+        <Border Grid.Row="1" Style="{StaticResource Card}" Margin="0,20,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <TextBlock Text="{loc:S ShortcutsCaptureArea}" />
+                    <TextBlock Text="{loc:S ShortcutsCaptureAreaDetail}" Foreground="{StaticResource Muted}" FontSize="11" />
+                </StackPanel>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="AreaHotkey" Style="{StaticResource HotkeyBox}"
+                        VerticalAlignment="Center" Margin="0,0,0,10" />
+
+                <StackPanel Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <TextBlock Text="{loc:S ShortcutsCaptureScreen}" />
+                    <TextBlock Text="{loc:S ShortcutsCaptureScreenDetail}" Foreground="{StaticResource Muted}" FontSize="11" />
+                </StackPanel>
+                <Button Grid.Row="1" Grid.Column="1" x:Name="ScreenHotkey" Style="{StaticResource HotkeyBox}"
+                        VerticalAlignment="Center" Margin="0,0,0,10" />
+
+                <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <TextBlock Text="{loc:S ShortcutsGrabText}" />
+                    <TextBlock Text="{loc:S ShortcutsGrabTextDetail}" Foreground="{StaticResource Muted}" FontSize="11" />
+                </StackPanel>
+                <Button Grid.Row="2" Grid.Column="1" x:Name="TextHotkey" Style="{StaticResource HotkeyBox}"
+                        VerticalAlignment="Center" Margin="0,0,0,10" />
+
+                <StackPanel Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <TextBlock Text="{loc:S ShortcutsPickColour}" />
+                    <TextBlock Text="{loc:S ShortcutsPickColourDetail}" Foreground="{StaticResource Muted}" FontSize="11" />
+                </StackPanel>
+                <Button Grid.Row="3" Grid.Column="1" x:Name="ColourHotkey" Style="{StaticResource HotkeyBox}"
+                        VerticalAlignment="Center" Margin="0,0,0,10" />
+
+                <StackPanel Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,0,10">
+                    <TextBlock Text="{loc:S ShortcutsScrolling}" />
+                    <TextBlock Text="{loc:S ShortcutsScrollingDetail}" Foreground="{StaticResource Muted}" FontSize="11" />
+                </StackPanel>
+                <Button Grid.Row="4" Grid.Column="1" x:Name="ScrollingHotkey" Style="{StaticResource HotkeyBox}"
+                        VerticalAlignment="Center" Margin="0,0,0,10" />
+
+                <StackPanel Grid.Row="5" Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Text="{loc:S RecordShortcutName}" />
+                    <TextBlock Text="{loc:S RecordShortcutDetail}" Foreground="{StaticResource Muted}" FontSize="11" />
+                </StackPanel>
+                <Button Grid.Row="5" Grid.Column="1" x:Name="RecordHotkey" Style="{StaticResource HotkeyBox}"
+                        VerticalAlignment="Center" />
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Row="2" VerticalAlignment="Top">
+            <TextBlock x:Name="Warning" Style="{StaticResource Hint}" Foreground="{StaticResource Warn}"
+                       Visibility="Collapsed" Margin="2,12,2,0" />
+
+            <TextBlock Text="{loc:S ShortcutsEditorHeader}" Style="{StaticResource SectionHeader}" />
+            <TextBlock Style="{StaticResource Hint}" Margin="0"
+                       Text="{loc:S ShortcutsEditorTools}" />
+            <TextBlock Style="{StaticResource Hint}"
+                       Text="{loc:S ShortcutsEditorCommands}" />
+        </StackPanel>
+
+        <!--
+            No Apply button: a combination takes effect the moment it is recorded. A page
+            that holds a shortcut until you find the button loses it when you switch tabs,
+            and gives no sign that it did.
+        -->
+        <StackPanel x:Name="StatusRow" Grid.Row="3" Orientation="Horizontal"
+                    Margin="0,12,0,0" Visibility="Collapsed">
+            <TextBlock x:Name="StatusText" VerticalAlignment="Center"
+                       Foreground="{StaticResource Muted}" FontSize="11.5" />
+        </StackPanel>
+    </Grid>
+</UserControl>

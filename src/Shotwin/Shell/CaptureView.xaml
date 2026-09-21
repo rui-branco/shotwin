@@ -1,0 +1,122 @@
+<UserControl x:Class="Shotwin.Shell.CaptureView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:Shotwin.Services">
+    <Grid Margin="0,0,0,22">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="{loc:S CaptureTitle}" Style="{StaticResource ViewTitle}" />
+            <TextBlock Style="{StaticResource ViewSubtitle}"
+                       Text="{loc:S CaptureSubtitle}" />
+        </StackPanel>
+
+        <!-- Three modes, biggest first. Area is what you reach for 90% of the time. -->
+        <!-- Label and shortcut travel together as one centred group. -->
+        <StackPanel Grid.Row="1" Margin="0,22,0,0">
+            <Button x:Name="AreaButton" Style="{StaticResource Primary}">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="{loc:S CaptureArea}" VerticalAlignment="Center"
+                               Foreground="White" FontSize="13" />
+                    <Border Style="{StaticResource InlineKeyCap}" Margin="9,0,0,0">
+                        <TextBlock x:Name="AreaKeys" Style="{StaticResource InlineKeyText}" />
+                    </Border>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="ScreenButton" Style="{StaticResource Chip}" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="{loc:S CaptureScreen}" VerticalAlignment="Center"
+                               Foreground="{StaticResource Ink}" FontSize="12" />
+                    <Border Style="{StaticResource InlineKeyCap}" Margin="8,0,0,0">
+                        <TextBlock x:Name="ScreenKeys" Style="{StaticResource InlineKeyText}"
+                                   Foreground="{StaticResource Muted}" />
+                    </Border>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="ScrollingButton" Style="{StaticResource Chip}" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="{loc:S CaptureScrolling}" VerticalAlignment="Center"
+                               Foreground="{StaticResource Ink}" FontSize="12" />
+                    <Border Style="{StaticResource InlineKeyCap}" Margin="8,0,0,0">
+                        <TextBlock x:Name="ScrollingKeys" Style="{StaticResource InlineKeyText}"
+                                   Foreground="{StaticResource Muted}" />
+                    </Border>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="RecordButton" Style="{StaticResource Chip}" Margin="0,10,0,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock Text="{loc:S RecordCaptureButton}" VerticalAlignment="Center"
+                               Foreground="{StaticResource Ink}" FontSize="12" />
+                    <Border Style="{StaticResource InlineKeyCap}" Margin="8,0,0,0">
+                        <TextBlock x:Name="RecordKeys" Style="{StaticResource InlineKeyText}"
+                                   Foreground="{StaticResource Muted}" />
+                    </Border>
+                </StackPanel>
+            </Button>
+
+            <!--
+                Paired rather than given the full width the captures above get: these two
+                would read as more important than capture, which they are not, and left a
+                lot of dead space around a short label.
+            -->
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" x:Name="ColourButton" Style="{StaticResource Chip}">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{loc:S CapturePickColour}" VerticalAlignment="Center"
+                                   Foreground="{StaticResource Ink}" FontSize="12" />
+                        <Border Style="{StaticResource InlineKeyCap}" Margin="8,0,0,0">
+                            <TextBlock x:Name="ColourKeys" Style="{StaticResource InlineKeyText}"
+                                       Foreground="{StaticResource Muted}" />
+                        </Border>
+                    </StackPanel>
+                </Button>
+
+                <Button Grid.Column="2" x:Name="TextButton" Style="{StaticResource Chip}">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{loc:S CaptureGrabText}" VerticalAlignment="Center"
+                                   Foreground="{StaticResource Ink}" FontSize="12" />
+                        <Border Style="{StaticResource InlineKeyCap}" Margin="8,0,0,0">
+                            <TextBlock x:Name="TextKeys" Style="{StaticResource InlineKeyText}"
+                                       Foreground="{StaticResource Muted}" />
+                        </Border>
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+            <!-- What those two put on the clipboard, out of the buttons themselves. -->
+            <TextBlock x:Name="SecondaryHint" Style="{StaticResource Hint}" Margin="2,10,2,0" />
+        </StackPanel>
+
+        <Border Grid.Row="2" Style="{StaticResource Card}" Margin="0,20,0,0">
+            <StackPanel>
+                <TextBlock Text="{loc:S CaptureDelayedHeader}" Foreground="{StaticResource Muted}" FontSize="11" FontWeight="SemiBold" />
+                <TextBlock Style="{StaticResource Hint}" Margin="0,4,0,12"
+                           Text="{loc:S CaptureDelayedHint}" />
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Delay3" Style="{StaticResource Chip}" />
+                    <Button x:Name="Delay5" Style="{StaticResource Chip}" Margin="8,0,0,0" />
+                    <Button x:Name="Delay10" Style="{StaticResource Chip}" Margin="8,0,0,0" />
+                    <TextBlock x:Name="CountdownText" VerticalAlignment="Center" Margin="14,0,0,0"
+                               Foreground="{StaticResource Accent}" FontSize="12.5" FontWeight="SemiBold" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <TextBlock Grid.Row="3" Style="{StaticResource Hint}" VerticalAlignment="Bottom" Margin="2,16,2,0"
+                   Text="{loc:S CaptureOverlayHint}" />
+    </Grid>
+</UserControl>

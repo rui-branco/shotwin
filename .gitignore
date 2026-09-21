@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# What install.ps1 publishes into: a 76MB self-contained build, rebuilt every time.
+artifacts/

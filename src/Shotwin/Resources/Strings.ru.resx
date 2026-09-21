@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Russian translation of Strings.resx. Entries, order and comments follow the
+    English baseline; the _Few entries are the extra form Russian takes for counts
+    ending 2-4 (not the teens) and have no English counterpart.
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ==== About page ==== -->
+  <data name="AboutAroundDetail" xml:space="preserve">
+    <value>Глобальные горячие клавиши · миниатюра предпросмотра, которую можно перетащить прямо в другое приложение · автосохранение · вывод в PNG и в буфер обмена · запуск из командной строки · работает из области уведомлений</value>
+    <comment>About page, the single line under the AROUND IT heading.</comment>
+  </data>
+  <data name="AboutAroundHeader" xml:space="preserve">
+    <value>КРОМЕ ТОГО</value>
+    <comment>About page, section heading over the miscellaneous features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureArea" xml:space="preserve">
+    <value>Область</value>
+    <comment>About page, name of the area capture feature in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureAreaDetail" xml:space="preserve">
+    <value>Выделите любую область, с живым отсчётом координат и размера. Щёлкните по окну, чтобы снять его целиком.</value>
+    <comment>About page, what area capture does. Sits beside AboutCaptureArea.</comment>
+  </data>
+  <data name="AboutCaptureColour" xml:space="preserve">
+    <value>Цвет</value>
+    <comment>About page, name of the colour picker in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureColourDetail" xml:space="preserve">
+    <value>Увеличительная лупа над экраном; щелчок копирует значение как Hex, RGB или HSL.</value>
+    <comment>About page, what the colour picker does. Hex, RGB and HSL are notation names and stay as they are.</comment>
+  </data>
+  <data name="AboutCaptureHeader" xml:space="preserve">
+    <value>СЪЁМКА</value>
+    <comment>About page, section heading over the capture features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureScreen" xml:space="preserve">
+    <value>Экран</value>
+    <comment>About page, name of the whole-screen capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScreenDetail" xml:space="preserve">
+    <value>Монитор, на котором находится курсор, в полном разрешении.</value>
+    <comment>About page, what screen capture does.</comment>
+  </data>
+  <data name="AboutCaptureScrolling" xml:space="preserve">
+    <value>Прокрутка</value>
+    <comment>About page, name of scrolling capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScrollingDetail" xml:space="preserve">
+    <value>Страница выше экрана, прокрученная и сшитая в одно изображение. Внизу останавливается сама.</value>
+    <comment>About page, what scrolling capture does.</comment>
+  </data>
+  <data name="AboutCaptureText" xml:space="preserve">
+    <value>Текст</value>
+    <comment>About page, name of text recognition in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureTextDetail" xml:space="preserve">
+    <value>Читает слова из области и копирует их вместо картинки. Офлайн, распознаванием, встроенным в Windows.</value>
+    <comment>About page, what text capture does.</comment>
+  </data>
+  <data name="AboutCheckAgain" xml:space="preserve">
+    <value>Проверить снова</value>
+    <comment>About page, button that looks for a newer version.</comment>
+  </data>
+  <data name="AboutChecking" xml:space="preserve">
+    <value>Ищем версию новее…</value>
+    <comment>About page, shown while an update check asked for by hand is running.</comment>
+  </data>
+  <data name="AboutEditorAnnotate" xml:space="preserve">
+    <value>Пометки</value>
+    <comment>About page, name of the annotation tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorAnnotateDetail" xml:space="preserve">
+    <value>Стрелки, фигуры, линии, перо, маркер, текст и нумерованные счётчики шагов.</value>
+    <comment>About page, what the annotation tools are.</comment>
+  </data>
+  <data name="AboutEditorCompose" xml:space="preserve">
+    <value>Компоновка</value>
+    <comment>About page, name of the composition tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorComposeDetail" xml:space="preserve">
+    <value>Обрежьте, вырежьте полосу из середины или добавьте второе изображение и разложите оба.</value>
+    <comment>About page, what the composition tools do.</comment>
+  </data>
+  <data name="AboutEditorHeader" xml:space="preserve">
+    <value>РЕДАКТОР</value>
+    <comment>About page, section heading over the editor features. Upper case in English.</comment>
+  </data>
+  <data name="AboutEditorPin" xml:space="preserve">
+    <value>Закрепление</value>
+    <comment>About page, name of the pin feature in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorPinDetail" xml:space="preserve">
+    <value>Держите снимок поверх всех окон, пока работаете по нему.</value>
+    <comment>About page, what pinning does.</comment>
+  </data>
+  <data name="AboutEditorRedact" xml:space="preserve">
+    <value>Скрытие</value>
+    <comment>About page, name of the redaction tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorRedactDetail" xml:space="preserve">
+    <value>Пикселизируйте или размойте всё, что не должно уйти с этой машины.</value>
+    <comment>About page, what the redaction tools do.</comment>
+  </data>
+  <data name="AboutSummary" xml:space="preserve">
+    <value>Инструмент для скриншотов, сделанный для работы с пикселями: снять, разметить, прочитать текст с картинки и держать снимок поверх окон, пока им пользуешься. Нативные .</value>
+    <comment>About page, the paragraph in the card at the top. .NET, WPF, SkiaSharp and Electron are product names and stay as they are.</comment>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>О программе</value>
+    <comment>About page, its heading.</comment>
+  </data>
+  <data name="AboutUpdateAvailable" xml:space="preserve">
+    <value>Доступен Shotwin {0}. Кнопка внизу панели установит его.</value>
+    <comment>About page, shown when a check found a newer build. {0} is the version number, for example 1.2.0.</comment>
+  </data>
+  <data name="AboutUpToDate" xml:space="preserve">
+    <value>У вас последняя версия.</value>
+    <comment>About page, shown when a check found nothing newer.</comment>
+  </data>
+  <data name="AboutVersionLine" xml:space="preserve">
+    <value>Shotwin {0}   ·   инструмент для скриншотов под Windows</value>
+    <comment>About page, the line under the heading. {0} is the running version number.</comment>
+  </data>
+
+  <!-- ==== Capture page, the scrolling capture and the shared text-recognition report ==== -->
+  <data name="CaptureArea" xml:space="preserve">
+    <value>Снять область</value>
+    <comment>Capture page, the main button. Opens the overlay to drag a region out.</comment>
+  </data>
+  <data name="CaptureCountdown" xml:space="preserve">
+    <value>{0}…</value>
+    <comment>Capture page, the delayed-capture countdown beside the delay buttons. {0} is the seconds left.</comment>
+  </data>
+  <data name="CaptureDelayedHeader" xml:space="preserve">
+    <value>С ЗАДЕРЖКОЙ</value>
+    <comment>Capture page, heading of the delayed capture card. Upper case in English.</comment>
+  </data>
+  <data name="CaptureDelayedHint" xml:space="preserve">
+    <value>Отсчитывает время, затем открывает наложение области. Для меню и состояний наведения, которые исчезают, стоит нажать горячую клавишу.</value>
+    <comment>Capture page, what delayed capture is for.</comment>
+  </data>
+  <data name="CaptureDelaySeconds" xml:space="preserve">
+    <value>{0} с</value>
+    <comment>Capture page, the three delay buttons. {0} is only ever 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="CaptureGrabText" xml:space="preserve">
+    <value>Снять текст</value>
+    <comment>Capture page, button that reads the text out of a region instead of taking a picture.</comment>
+  </data>
+  <data name="CaptureOverlayHint" xml:space="preserve">
+    <value>В наложении: тяните, чтобы выделить, щёлкните по окну, чтобы снять его целиком, Shift выравнивает в квадрат, Space двигает выделение, Ctrl+A берёт весь монитор, Esc отменяет.</value>
+    <comment>Capture page, the footnote at the bottom. Shift, Space, Ctrl+A and Esc are key names and stay as they are.</comment>
+  </data>
+  <data name="CapturePickColour" xml:space="preserve">
+    <value>Взять цвет</value>
+    <comment>Capture page, button that opens the colour loupe.</comment>
+  </data>
+  <data name="CaptureScreen" xml:space="preserve">
+    <value>Снять экран</value>
+    <comment>Capture page, button that grabs the whole monitor the cursor is on.</comment>
+  </data>
+  <data name="CaptureScrolling" xml:space="preserve">
+    <value>Снимок с прокруткой</value>
+    <comment>Capture page, button that scrolls a region and stitches the frames together.</comment>
+  </data>
+  <data name="CaptureScrollingProgress" xml:space="preserve">
+    <value>Съёмка… {0} px</value>
+    <comment>The small window shown while a scrolling capture runs. {0} is how many pixels tall the result is so far.</comment>
+  </data>
+  <data name="CaptureScrollingStop" xml:space="preserve">
+    <value>Стоп</value>
+    <comment>The small window shown while a scrolling capture runs: the button that ends it and keeps what was captured.</comment>
+  </data>
+  <data name="CaptureSecondaryHint" xml:space="preserve">
+    <value>Оба копируют сразу в буфер обмена. Текст читается на: {0}.</value>
+    <comment>Capture page, under the colour and text buttons. {0} is a comma-separated list of recognition language names supplied by Windows.</comment>
+  </data>
+  <data name="CaptureSecondaryHintNoOcr" xml:space="preserve">
+    <value>Взятие цвета копирует сразу в буфер обмена. Для снятия текста нужен язык OCR, установленный в Windows, в разделе Время и язык.</value>
+    <comment>Capture page, replaces CaptureSecondaryHint when Windows has no recognition language installed. Time and language is the name of a Windows Settings page.</comment>
+  </data>
+  <data name="CaptureSubtitle" xml:space="preserve">
+    <value>Горячие клавиши работают откуда угодно. Эти кнопки сначала прячут это окно, так что оно никогда не попадёт в снимок.</value>
+    <comment>Capture page, the line under its heading.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_Few" xml:space="preserve">
+    <value>Скопировано {0} строки текста.</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Shown after text recognition succeeds, in the editor, on the preview thumbnail and as a notification. {0} is the number of lines, always two or more.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_Many" xml:space="preserve">
+    <value>Скопировано {0} строк текста.</value>
+    <comment>Shown after text recognition succeeds, in the editor, on the preview thumbnail and as a notification. {0} is the number of lines, always two or more.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_One" xml:space="preserve">
+    <value>Скопирована {0} строка текста.</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. Shown after text recognition read exactly one line. Singular form of CaptureTextCopiedLines_Many.</comment>
+  </data>
+  <data name="CaptureTitle" xml:space="preserve">
+    <value>Съёмка</value>
+    <comment>Capture page, its heading.</comment>
+  </data>
+
+  <!-- ==== Editor window ==== -->
+  <data name="EditorAddedBelow" xml:space="preserve">
+    <value>Добавлено снизу — перетащите, чтобы сдвинуть.</value>
+    <comment>Editor status line, after another image was dropped in under the shot.</comment>
+  </data>
+  <data name="EditorAddedRight" xml:space="preserve">
+    <value>Добавлено справа — перетащите, чтобы сдвинуть.</value>
+    <comment>Editor status line, after another image was dropped in beside the shot.</comment>
+  </data>
+  <data name="EditorAddImage" xml:space="preserve">
+    <value>Добавить на холст ещё изображение ({0} или вставить через {1})</value>
+    <comment>Editor toolbar tooltip. {0} and {1} are the key names Ctrl+Shift+A and Ctrl+V, supplied by the app.</comment>
+  </data>
+  <data name="EditorAddImageTitle" xml:space="preserve">
+    <value>Добавить изображение на холст</value>
+    <comment>Title of the file picker the editor opens to add a second image.</comment>
+  </data>
+  <data name="EditorCaption" xml:space="preserve">
+    <value>Shotwin  ·  {0} x {1}</value>
+    <comment>Editor title bar. {0} and {1} are the width and height of the shot in pixels.</comment>
+  </data>
+  <data name="EditorClipboardBusy" xml:space="preserve">
+    <value>Буфер обмена был занят. Попробуйте ещё раз.</value>
+    <comment>Editor status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="EditorClipboardUnreadable" xml:space="preserve">
+    <value>Это изображение из буфера обмена не удалось прочитать.</value>
+    <comment>Editor status line, when the image on the clipboard could not be decoded.</comment>
+  </data>
+  <data name="EditorClose" xml:space="preserve">
+    <value>Закрыть</value>
+    <comment>Editor title bar, tooltip on the close button. Closes the window rather than hiding it.</comment>
+  </data>
+  <data name="EditorCopiedToClipboard" xml:space="preserve">
+    <value>Скопировано в буфер обмена</value>
+    <comment>Editor status line, after the shot was copied.</comment>
+  </data>
+  <data name="EditorCopy" xml:space="preserve">
+    <value>Копировать ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+C, supplied by the app.</comment>
+  </data>
+  <data name="EditorCropped" xml:space="preserve">
+    <value>Обрезано.</value>
+    <comment>Editor status line, after a crop was applied.</comment>
+  </data>
+  <data name="EditorCutOut" xml:space="preserve">
+    <value>Вырезано.</value>
+    <comment>Editor status line, after a band was cut out of the middle of the shot.</comment>
+  </data>
+  <data name="EditorFileUnreadable" xml:space="preserve">
+    <value>Этот файл не удалось прочитать.</value>
+    <comment>Editor status line, when a chosen image file could not be decoded.</comment>
+  </data>
+  <data name="EditorImageNotAdded" xml:space="preserve">
+    <value>Это изображение не удалось добавить.</value>
+    <comment>Editor status line, when a second image would not fit onto the canvas.</comment>
+  </data>
+  <data name="EditorNoClipboardImage" xml:space="preserve">
+    <value>В буфере обмена нет изображения.</value>
+    <comment>Editor status line, after pasting with nothing to paste.</comment>
+  </data>
+  <data name="EditorNoText" xml:space="preserve">
+    <value>В этом снимке текст не найден.</value>
+    <comment>Editor status line, when recognition ran but read nothing.</comment>
+  </data>
+  <data name="EditorOcr" xml:space="preserve">
+    <value>Копировать текст с этого снимка ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Shift+T, supplied by the app.</comment>
+  </data>
+  <data name="EditorOpenFilter" xml:space="preserve">
+    <value>Изображения|*.png;*.jpg;*.jpeg;*.bmp|Все файлы|*.*</value>
+    <comment>File type list in the editor's Add image dialog. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorPin" xml:space="preserve">
+    <value>Закрепить на экране ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+P, supplied by the app.</comment>
+  </data>
+  <data name="EditorPinned" xml:space="preserve">
+    <value>Закреплено</value>
+    <comment>Editor status line, after the shot was floated above the other windows.</comment>
+  </data>
+  <data name="EditorReadingText" xml:space="preserve">
+    <value>Читаем текст...</value>
+    <comment>Editor status line, while the words in the shot are being recognised.</comment>
+  </data>
+  <data name="EditorRegionTooSmall" xml:space="preserve">
+    <value>Эта область слишком мала.</value>
+    <comment>Editor status line, when a crop or cut rectangle was too small to apply.</comment>
+  </data>
+  <data name="EditorSave" xml:space="preserve">
+    <value>Сохранить ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+S, supplied by the app.</comment>
+  </data>
+  <data name="EditorSavedTo" xml:space="preserve">
+    <value>Сохранено в {0}</value>
+    <comment>Editor status line. {0} is the full path the shot was written to.</comment>
+  </data>
+  <data name="EditorSavedToWithProblem" xml:space="preserve">
+    <value>Сохранено в {0} — {1}</value>
+    <comment>Editor status line when the shot landed somewhere other than the chosen folder. {0} is the path, {1} is why the chosen folder was not used.</comment>
+  </data>
+  <data name="EditorSaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить: {0}</value>
+    <comment>Editor status line. {0} is the reason the write failed, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="EditorSaveFailedShort" xml:space="preserve">
+    <value>Сохранить не удалось</value>
+    <comment>Editor status line, when Save as could not write the file.</comment>
+  </data>
+  <data name="EditorSaveFilter" xml:space="preserve">
+    <value>Изображение PNG|*.png|Изображение JPEG|*.jpg</value>
+    <comment>File type list in the Save as dialogs of the editor, the preview thumbnail and a pinned shot. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorSize" xml:space="preserve">
+    <value>Размер</value>
+    <comment>Editor toolbar, label on the stroke thickness slider.</comment>
+  </data>
+  <data name="EditorStatus_Few" xml:space="preserve">
+    <value>{0} x {1}   ·   {2} пометки</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Editor status line. {0} and {1} are the pixel size, {2} is how many marks have been drawn, two or more.</comment>
+  </data>
+  <data name="EditorStatus_Many" xml:space="preserve">
+    <value>{0} x {1}   ·   {2} пометок</value>
+    <comment>Editor status line. {0} and {1} are the pixel size, {2} is how many marks have been drawn, two or more.</comment>
+  </data>
+  <data name="EditorStatus_One" xml:space="preserve">
+    <value>{0} x {1}   ·   {2} пометка</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. Editor status line with exactly one mark drawn. Singular form of EditorStatus_Many.</comment>
+  </data>
+  <data name="EditorStatusPosition" xml:space="preserve">
+    <value>   ·   {0}, {1}</value>
+    <comment>Appended to the editor status line while the cursor is over the image. {0} and {1} are the pixel coordinates.</comment>
+  </data>
+  <data name="EditorToolArrow" xml:space="preserve">
+    <value>Стрелка ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolBlur" xml:space="preserve">
+    <value>Размытие ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCrop" xml:space="preserve">
+    <value>Обрезка ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCut" xml:space="preserve">
+    <value>Вырезать полосу ({0})</value>
+    <comment>Editor toolbar tooltip. Removes a strip from the middle and closes the gap. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolEllipse" xml:space="preserve">
+    <value>Эллипс ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolHighlight" xml:space="preserve">
+    <value>Маркер ({0})</value>
+    <comment>Editor toolbar tooltip for the highlighter pen. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolLine" xml:space="preserve">
+    <value>Линия ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolPen" xml:space="preserve">
+    <value>Перо ({0})</value>
+    <comment>Editor toolbar tooltip for freehand drawing. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolPixelate" xml:space="preserve">
+    <value>Пикселизация ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolRectangle" xml:space="preserve">
+    <value>Прямоугольник ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolSelect" xml:space="preserve">
+    <value>Выделение ({0})</value>
+    <comment>Editor toolbar tooltip for the tool that picks up and moves marks already drawn. {0} is the key that selects it.</comment>
+  </data>
+  <data name="EditorToolStep" xml:space="preserve">
+    <value>Счётчик шагов ({0})</value>
+    <comment>Editor toolbar tooltip for the numbered badges 1, 2, 3 used to walk through a screenshot. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolText" xml:space="preserve">
+    <value>Текст ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorUndo" xml:space="preserve">
+    <value>Отменить ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Z, supplied by the app.</comment>
+  </data>
+  <data name="EditorZoom" xml:space="preserve">
+    <value>{0}%</value>
+    <comment>Editor status bar, the zoom level at the far end. {0} is a whole number.</comment>
+  </data>
+
+  <!-- ==== Failures reported out of the services ==== -->
+  <data name="ErrorAdminPromptDismissed" xml:space="preserve">
+    <value>Запрос администратора отклонён, поэтому ничего не изменилось.</value>
+    <comment>Settings page, after the Windows elevation prompt was declined.</comment>
+  </data>
+  <data name="ErrorElevationFailed" xml:space="preserve">
+    <value>Windows не запустила команду с правами администратора.</value>
+    <comment>Settings page, when the request to allow Shotwin through Windows Security could not even be launched.</comment>
+  </data>
+  <data name="ErrorNoOcrLanguage" xml:space="preserve">
+    <value>В Windows не установлен язык OCR. Добавьте его в Параметрах, Время и язык, Язык и регион.</value>
+    <comment>Shown wherever text recognition is attempted. Settings, Time and language, and Language and region are the names of Windows Settings pages.</comment>
+  </data>
+  <data name="ErrorOwnPathUnknown" xml:space="preserve">
+    <value>Shotwin не смог определить собственный путь.</value>
+    <comment>Settings page, when the app cannot name its own executable to Windows Security.</comment>
+  </data>
+  <data name="ErrorSaveBlocked" xml:space="preserve">
+    <value>Контролируемый доступ к папкам или права на папку</value>
+    <comment>The reason a save failed, dropped into EditorSaveFailed and TraySaveFailed. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="ErrorSaveFolderBlocked" xml:space="preserve">
+    <value>Папка {0} заблокирована Windows ({1})</value>
+    <comment>Said when a shot landed in the fallback folder instead. {0} is the folder that was chosen, {1} is why it refused the write.</comment>
+  </data>
+  <data name="ErrorSecurityRefused" xml:space="preserve">
+    <value>Безопасность Windows отклонила изменение. Этим параметром может управлять ваша организация.</value>
+    <comment>Settings page, when the elevated command ran but Windows Security rejected it.</comment>
+  </data>
+
+  <!-- ==== Main window: the navigation rail and the caption buttons ==== -->
+  <data name="NavAbout" xml:space="preserve">
+    <value>О программе</value>
+    <comment>Main window navigation rail, the About item.</comment>
+  </data>
+  <data name="NavCapture" xml:space="preserve">
+    <value>Съёмка</value>
+    <comment>Main window navigation rail, the Capture item.</comment>
+  </data>
+  <data name="NavCloseToTray" xml:space="preserve">
+    <value>Свернуть в трей</value>
+    <comment>Main window title bar, tooltip on the close button. The app keeps running in the notification area.</comment>
+  </data>
+  <data name="NavMaximise" xml:space="preserve">
+    <value>Развернуть</value>
+    <comment>Title bar tooltip on the maximise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavMinimise" xml:space="preserve">
+    <value>Свернуть</value>
+    <comment>Title bar tooltip on the minimise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavRecent" xml:space="preserve">
+    <value>Недавние</value>
+    <comment>Main window navigation rail, the Recent item.</comment>
+  </data>
+  <data name="NavRestore" xml:space="preserve">
+    <value>Восстановить</value>
+    <comment>Title bar tooltip on the maximise button once the window is maximised, in the main window and the editor.</comment>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Параметры</value>
+    <comment>Main window navigation rail, the Settings item.</comment>
+  </data>
+  <data name="NavShortcuts" xml:space="preserve">
+    <value>Горячие клавиши</value>
+    <comment>Main window navigation rail, the Shortcuts item.</comment>
+  </data>
+  <data name="NavUpdateDownloading" xml:space="preserve">
+    <value>Загрузка {0}%</value>
+    <comment>Main window, on the update button while the new build is coming down. {0} is a whole number.</comment>
+  </data>
+  <data name="NavUpdateTo" xml:space="preserve">
+    <value>Обновить до {0}</value>
+    <comment>Main window, the button at the foot of the rail when a newer build was found. {0} is the version number.</comment>
+  </data>
+
+  <!-- ==== The full-screen capture overlay ==== -->
+  <data name="OverlayScrollingHint" xml:space="preserve">
+    <value>Выделите область: она будет прокручена и сшита в один высокий снимок. Esc останавливает и сохраняет снятое.</value>
+    <comment>Drawn across the top of the screen while a scrolling capture region is being chosen. Esc is a key name. This one is painted onto the canvas rather than laid out by Windows, so it is never mirrored for a right-to-left language.</comment>
+  </data>
+
+  <!-- ==== A pinned shot floating above the other windows ==== -->
+  <data name="PinActualSize" xml:space="preserve">
+    <value>Реальный размер</value>
+    <comment>Pinned shot, right-click menu item that puts the zoom back to 100%.</comment>
+  </data>
+  <data name="PinClickThrough" xml:space="preserve">
+    <value>Прозрачно для щелчков</value>
+    <comment>Pinned shot, right-click menu item that lets the mouse reach the window underneath.</comment>
+  </data>
+  <data name="PinClose" xml:space="preserve">
+    <value>Закрыть</value>
+    <comment>Pinned shot, right-click menu item that takes it off the screen.</comment>
+  </data>
+  <data name="PinCopy" xml:space="preserve">
+    <value>Копировать</value>
+    <comment>Pinned shot, right-click menu item that copies the image.</comment>
+  </data>
+  <data name="PinFade" xml:space="preserve">
+    <value>Прозрачность 50%</value>
+    <comment>Pinned shot, right-click menu item that makes it half transparent.</comment>
+  </data>
+  <data name="PinFullOpacity" xml:space="preserve">
+    <value>Вернуть полную непрозрачность</value>
+    <comment>Pinned shot, what the fade menu item says once it is already faded.</comment>
+  </data>
+  <data name="PinSave" xml:space="preserve">
+    <value>Сохранить</value>
+    <comment>Pinned shot, right-click menu item that writes the image to a file.</comment>
+  </data>
+  <data name="PinTitle" xml:space="preserve">
+    <value>Закреплённый снимок</value>
+    <comment>Window title of a pinned shot.</comment>
+  </data>
+
+  <!-- ==== The preview thumbnail that appears after a capture ==== -->
+  <data name="PreviewCopy" xml:space="preserve">
+    <value>Копировать</value>
+    <comment>Preview thumbnail, tooltip on the copy button.</comment>
+  </data>
+  <data name="PreviewDismiss" xml:space="preserve">
+    <value>Убрать</value>
+    <comment>Preview thumbnail, tooltip on the button that sends it away.</comment>
+  </data>
+  <data name="PreviewEdit" xml:space="preserve">
+    <value>Изменить</value>
+    <comment>Preview thumbnail, tooltip on the button that opens the editor.</comment>
+  </data>
+  <data name="PreviewNoText" xml:space="preserve">
+    <value>В этом снимке текст не найден.</value>
+    <comment>Notification after using the preview thumbnail's text button on a shot with no readable words.</comment>
+  </data>
+  <data name="PreviewOcr" xml:space="preserve">
+    <value>Копировать текст с этого снимка</value>
+    <comment>Preview thumbnail, tooltip on the text recognition button.</comment>
+  </data>
+  <data name="PreviewPin" xml:space="preserve">
+    <value>Закрепить на экране</value>
+    <comment>Preview thumbnail, tooltip on the button that floats the shot above the other windows.</comment>
+  </data>
+  <data name="PreviewSave" xml:space="preserve">
+    <value>Сохранить</value>
+    <comment>Preview thumbnail, tooltip on the save button.</comment>
+  </data>
+  <data name="PreviewShowInFolder" xml:space="preserve">
+    <value>Показать в папке</value>
+    <comment>Preview thumbnail, tooltip on the button that opens Explorer with the saved file selected.</comment>
+  </data>
+
+  <!-- ==== Recent page ==== -->
+  <data name="RecentCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Second caption line under a thumbnail. {0} is when the file was written, {1} is its size on disk.</comment>
+  </data>
+  <data name="RecentClipboardBusy" xml:space="preserve">
+    <value>Буфер обмена был занят. Попробуйте ещё раз.</value>
+    <comment>Recent page status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="RecentCopied" xml:space="preserve">
+    <value>Скопировано в буфер обмена.</value>
+    <comment>Recent page status line, after one shot was copied as an image.</comment>
+  </data>
+  <data name="RecentCopiedFiles_Few" xml:space="preserve">
+    <value>Скопировано {0} файла.</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Recent page status line, after several shots were copied as files. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentCopiedFiles_Many" xml:space="preserve">
+    <value>Скопировано {0} файлов.</value>
+    <comment>Recent page status line, after several shots were copied as files. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentCopiedFiles_One" xml:space="preserve">
+    <value>Скопирован {0} файл.</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. Recent page status line, singular form of RecentCopiedFiles_Many.</comment>
+  </data>
+  <data name="RecentCopy" xml:space="preserve">
+    <value>Копировать</value>
+    <comment>Recent page, button that copies the selected shots.</comment>
+  </data>
+  <data name="RecentDelete" xml:space="preserve">
+    <value>Удалить</value>
+    <comment>Recent page, button that deletes the selected shots.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_Few" xml:space="preserve">
+    <value>Удалить эти {0} снимка?</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Confirmation asked before deleting several shots. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_Many" xml:space="preserve">
+    <value>Удалить эти {0} снимков?</value>
+    <comment>Confirmation asked before deleting several shots. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_One" xml:space="preserve">
+    <value>Удалить {0}?</value>
+    <comment>Confirmation asked before deleting one shot. {0} is its file name.</comment>
+  </data>
+  <data name="RecentDeleted_Few" xml:space="preserve">
+    <value>Удалено {0}.</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Recent page status line after a delete. {0} is how many were removed, two or more.</comment>
+  </data>
+  <data name="RecentDeleted_Many" xml:space="preserve">
+    <value>Удалено {0}.</value>
+    <comment>Recent page status line after a delete. {0} is how many were removed, two or more.</comment>
+  </data>
+  <data name="RecentDeleted_One" xml:space="preserve">
+    <value>Удалён {0}.</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. Recent page status line after deleting exactly one shot.</comment>
+  </data>
+  <data name="RecentDeletedPartial_Few" xml:space="preserve">
+    <value>Удалено {0}, {1} не удалось убрать.</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Recent page status line when some files refused to go. {0} is how many were deleted, {1} how many failed, two or more.</comment>
+  </data>
+  <data name="RecentDeletedPartial_Many" xml:space="preserve">
+    <value>Удалено {0}, {1} не удалось убрать.</value>
+    <comment>Recent page status line when some files refused to go. {0} is how many were deleted, {1} how many failed, two or more.</comment>
+  </data>
+  <data name="RecentDeletedPartial_One" xml:space="preserve">
+    <value>Удалено {0}, {1} не удалось убрать.</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. Recent page status line when exactly one file refused to go. {0} is how many were deleted.</comment>
+  </data>
+  <data name="RecentEdit" xml:space="preserve">
+    <value>Изменить</value>
+    <comment>Recent page, button that opens the selected shots in the editor.</comment>
+  </data>
+  <data name="RecentEmpty" xml:space="preserve">
+    <value>Снимков пока нет. Снимите что-нибудь, и оно появится здесь.</value>
+    <comment>Recent page, shown in the middle of the gallery when the save folder is empty.</comment>
+  </data>
+  <data name="RecentExplorerFailed" xml:space="preserve">
+    <value>Не удалось открыть Проводник.</value>
+    <comment>Recent page status line, when Windows refused to open a folder window. Explorer is the Windows file manager.</comment>
+  </data>
+  <data name="RecentFileUnreadable" xml:space="preserve">
+    <value>Этот файл не удалось прочитать.</value>
+    <comment>Recent page status line, when a shot could not be decoded to copy it.</comment>
+  </data>
+  <data name="RecentOpenFolder" xml:space="preserve">
+    <value>Открыть папку</value>
+    <comment>Recent page, button at the top of the page that opens the save folder.</comment>
+  </data>
+  <data name="RecentPin" xml:space="preserve">
+    <value>Закрепить</value>
+    <comment>Recent page, button that floats the selected shots above the other windows.</comment>
+  </data>
+  <data name="RecentSelected_Few" xml:space="preserve">
+    <value>Выбрано {0}</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Recent page status line while several thumbnails are picked. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentSelected_Many" xml:space="preserve">
+    <value>Выбрано {0}</value>
+    <comment>Recent page status line while several thumbnails are picked. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentSelected_One" xml:space="preserve">
+    <value>Выбран {0}</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. Recent page status line, singular form of RecentSelected_Many.</comment>
+  </data>
+  <data name="RecentShotCount_Few" xml:space="preserve">
+    <value>{0} снимка   ·   Ctrl или Shift + щелчок выделяют несколько</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. Recent page, the line under its heading. {0} is how many shots are listed, two or more. Ctrl and Shift are key names.</comment>
+  </data>
+  <data name="RecentShotCount_Many" xml:space="preserve">
+    <value>{0} снимков   ·   Ctrl или Shift + щелчок выделяют несколько</value>
+    <comment>Recent page, the line under its heading. {0} is how many shots are listed, two or more. Ctrl and Shift are key names.</comment>
+  </data>
+  <data name="RecentShotCount_One" xml:space="preserve">
+    <value>{0} снимок</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. Recent page, the line under its heading when exactly one shot is listed.</comment>
+  </data>
+  <data name="RecentShowInFolder" xml:space="preserve">
+    <value>Показать в папке</value>
+    <comment>Recent page, button that opens Explorer with the selected shot highlighted.</comment>
+  </data>
+  <data name="RecentSizeBytes" xml:space="preserve">
+    <value>{0} Б</value>
+    <comment>File size under a thumbnail, in bytes. {0} is a whole number; B is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeKilobytes" xml:space="preserve">
+    <value>{0} КБ</value>
+    <comment>File size under a thumbnail, in kilobytes. {0} is a whole number; KB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeMegabytes" xml:space="preserve">
+    <value>{0} МБ</value>
+    <comment>File size under a thumbnail, in megabytes. {0} has one decimal place; MB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentTitle" xml:space="preserve">
+    <value>Недавние</value>
+    <comment>Recent page, its heading.</comment>
+  </data>
+
+  <!-- ==== Screen recording: the overlay hint, the bar shown while it runs, and its settings ==== -->
+  <data name="RecordBarCancel" xml:space="preserve">
+    <value>Отмена</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and throws the file away.</comment>
+  </data>
+  <data name="RecordBarStop" xml:space="preserve">
+    <value>Стоп</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and keeps the file.</comment>
+  </data>
+  <data name="RecordCaptureButton" xml:space="preserve">
+    <value>Начать запись</value>
+    <comment>Capture page, button that opens the overlay to pick what to record. The footnote at the bottom of the page already lists what can be picked there, so the button only has to say what it starts.</comment>
+  </data>
+  <data name="RecordCountdown" xml:space="preserve">
+    <value>Отсчёт перед записью</value>
+    <comment>Settings page, label beside the list of countdown lengths. The countdown runs in the small recording window after the region is chosen and before anything is recorded.</comment>
+  </data>
+  <data name="RecordCountdownNone" xml:space="preserve">
+    <value>Без отсчёта</value>
+    <comment>Settings page, the entry in the list of countdown lengths that starts the recording immediately.</comment>
+  </data>
+  <data name="RecordCountdownOption" xml:space="preserve">
+    <value>{0} с</value>
+    <comment>Settings page, one entry in the list of countdown lengths. {0} is a number, always 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="RecordFrameRate" xml:space="preserve">
+    <value>Кадров в секунду</value>
+    <comment>Settings page, label beside the list of recording frame rates.</comment>
+  </data>
+  <data name="RecordFrameRateOption" xml:space="preserve">
+    <value>{0} кадр/с</value>
+    <comment>Settings page, one entry in the list of recording frame rates. {0} is a number such as 30.</comment>
+  </data>
+  <data name="RecordOverlayHint" xml:space="preserve">
+    <value>Выделите область для записи, щёлкните по окну, чтобы записать его целиком, Ctrl+A берёт весь экран, Esc отменяет.</value>
+    <comment>Drawn across the top of the screen while what to record is being chosen, and the only place the three ways of choosing are spelled out, so it has to name all of them. Ctrl+A and Esc are key names and stay as they are. This one is painted onto the canvas rather than laid out by Windows, so it is neither mirrored nor shaped for a right-to-left script.</comment>
+  </data>
+  <data name="RecordSettingsHeader" xml:space="preserve">
+    <value>ЗАПИСЬ</value>
+    <comment>Settings page, section heading over the screen recording options. Upper case in English.</comment>
+  </data>
+  <data name="RecordShortcutDetail" xml:space="preserve">
+    <value>Записывает область, окно или весь экран</value>
+    <comment>Shortcuts page, what the recording shortcut does.</comment>
+  </data>
+  <data name="RecordShortcutName" xml:space="preserve">
+    <value>Начать запись</value>
+    <comment>Shortcuts page, name of the screen recording action. Also names it in the messages about clashing shortcuts.</comment>
+  </data>
+  <data name="RecordShowCursor" xml:space="preserve">
+    <value>Показывать указатель мыши в записях</value>
+    <comment>Settings page, tick box under RECORDING. The pointer is not in the screen copy Windows hands back, so it is drawn into each frame.</comment>
+  </data>
+  <data name="RecordTrayBusy" xml:space="preserve">
+    <value>Запись уже идёт. Сначала остановите её.</value>
+    <comment>Notification shown when a recording is asked for while one is already going.</comment>
+  </data>
+  <data name="RecordTrayFailed" xml:space="preserve">
+    <value>Не удалось записать эту область.</value>
+    <comment>Notification shown when the video encoder refused the region, or finished with nothing usable in the file.</comment>
+  </data>
+  <data name="RecordTrayCountingIn" xml:space="preserve">
+    <value>Shotwin — запись через {0}</value>
+    <comment>Tray icon tooltip during the count-in before a recording starts. {0} is the seconds left.</comment>
+  </data>
+  <data name="RecordTrayStopItem" xml:space="preserve">
+    <value>Остановить запись</value>
+    <comment>Tray menu item, shown only while a recording is running. Keeps the file.</comment>
+  </data>
+  <data name="RecordTrayCancelItem" xml:space="preserve">
+    <value>Отменить запись</value>
+    <comment>Tray menu item, shown only while a recording is running. Throws the file away.</comment>
+  </data>
+  <data name="RecordTrayTip" xml:space="preserve">
+    <value>Shotwin — запись {0}</value>
+    <comment>Tray icon tooltip while recording. {0} is the elapsed time as m:ss.</comment>
+  </data>
+  <data name="RecordTrayItem" xml:space="preserve">
+    <value>Начать запись</value>
+    <comment>Notification area menu item that starts a screen recording. A region, a window or a whole screen is chosen in the overlay it opens, so this only has to say what it starts.</comment>
+  </data>
+  <data name="RecordTraySaved" xml:space="preserve">
+    <value>Запись сохранена как {0}. Щёлкните, чтобы показать её в папке.</value>
+    <comment>Notification after a recording is stopped and written. {0} is the file name.</comment>
+  </data>
+
+  <!-- ==== Settings page, and the folder question asked on the first capture ==== -->
+  <data name="SettingsAfterCaptureHeader" xml:space="preserve">
+    <value>ПОСЛЕ СЪЁМКИ</value>
+    <comment>Settings page, first section heading. Upper case in English.</comment>
+  </data>
+  <data name="SettingsAllowInSecurity" xml:space="preserve">
+    <value>Разрешить Shotwin в Безопасности Windows</value>
+    <comment>Settings page, button that asks Windows to let the app write to a protected folder. Windows Security is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsAutoSave" xml:space="preserve">
+    <value>Сохранять каждый снимок в папку автоматически</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsBrowse" xml:space="preserve">
+    <value>Обзор</value>
+    <comment>Settings page, button that opens a folder picker beside the save folder box.</comment>
+  </data>
+  <data name="SettingsChooseFolderTitle" xml:space="preserve">
+    <value>Выберите, куда сохранять снимки</value>
+    <comment>Title of the folder picker, opened from Settings and from the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsColourPickerCopies" xml:space="preserve">
+    <value>Пипетка копирует</value>
+    <comment>Settings page, label beside the list of colour notations. The notation names Hex, RGB and HSL are not translated.</comment>
+  </data>
+  <data name="SettingsCopyClipboard" xml:space="preserve">
+    <value>Копировать в буфер обмена</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsCornerBottomLeft" xml:space="preserve">
+    <value>Слева внизу</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerBottomRight" xml:space="preserve">
+    <value>Справа внизу</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerCursor" xml:space="preserve">
+    <value>Там, где закончила мышь</value>
+    <comment>Settings page, first choice for where the preview thumbnail appears: beside the spot the drag finished on.</comment>
+  </data>
+  <data name="SettingsCornerTopLeft" xml:space="preserve">
+    <value>Слева вверху</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerTopRight" xml:space="preserve">
+    <value>Справа вверху</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsFileName" xml:space="preserve">
+    <value>Имя файла</value>
+    <comment>Settings page, label over the file name template box.</comment>
+  </data>
+  <data name="SettingsFileTemplateHint" xml:space="preserve">
+    <value>Подстановки в фигурных скобках — это форматы даты, например {yyyy-MM-dd}.</value>
+    <comment>Settings page, shown under an empty file name box. The braces and the letters inside them are a date pattern Windows reads, so leave that part exactly as it is.</comment>
+  </data>
+  <data name="SettingsFirstRunDefault" xml:space="preserve">
+    <value>Взять по умолчанию</value>
+    <comment>The folder question asked on the first capture: button that accepts the app's own folder.</comment>
+  </data>
+  <data name="SettingsFirstRunHint" xml:space="preserve">
+    <value>Windows защищает Изображения, Документы, Рабочий стол и Видео от приложений, которых не знает, так что своя папка надёжнее. Shotwin проверяет папку, прежде чем её использовать.</value>
+    <comment>The folder question asked on the first capture: why a folder of your own is suggested. Pictures, Documents, Desktop and Videos are Windows folder names.</comment>
+  </data>
+  <data name="SettingsFirstRunPickFolder" xml:space="preserve">
+    <value>Выберите папку или возьмите папку по умолчанию.</value>
+    <comment>The folder question asked on the first capture, when the box was left empty.</comment>
+  </data>
+  <data name="SettingsFirstRunProtected" xml:space="preserve">
+    <value>Windows не даст Shotwin туда писать — это одна из папок, которые защищает Контролируемый доступ к папкам. Выберите другую или возьмите папку по умолчанию.</value>
+    <comment>The folder question asked on the first capture, when the chosen folder is protected. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsFirstRunSubtitle" xml:space="preserve">
+    <value>Ваш первый снимок готов. Выберите папку сейчас, и дальше будет использоваться она — потом её можно сменить в Параметрах.</value>
+    <comment>The folder question asked on the first capture, the line under its heading.</comment>
+  </data>
+  <data name="SettingsFirstRunTitle" xml:space="preserve">
+    <value>Где Shotwin будет хранить ваши скриншоты?</value>
+    <comment>Heading of the folder question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFirstRunUnwritable" xml:space="preserve">
+    <value>Shotwin не может туда писать. Проверьте путь или возьмите папку по умолчанию.</value>
+    <comment>The folder question asked on the first capture, when the chosen folder refused a test write.</comment>
+  </data>
+  <data name="SettingsFirstRunUse" xml:space="preserve">
+    <value>Использовать эту папку</value>
+    <comment>The folder question asked on the first capture: button that accepts the typed folder.</comment>
+  </data>
+  <data name="SettingsFolder" xml:space="preserve">
+    <value>Папка</value>
+    <comment>Label over the save folder box, in Settings and in the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFolderOpenFailed" xml:space="preserve">
+    <value>Эту папку не удалось открыть.</value>
+    <comment>Settings page, when Windows refused to open the save folder.</comment>
+  </data>
+  <data name="SettingsFolderProtected" xml:space="preserve">
+    <value>Контролируемый доступ к папкам в Windows защищает эту папку, так что Shotwin не может в неё писать. Снимки идут в запасную папку — ничего не теряется. Разрешите Shotwin в Безопасности Windows, если хотите использовать эту папку.</value>
+    <comment>Settings page, under the save folder box when the folder is protected. Controlled Folder Access and Windows Security are Windows feature names.</comment>
+  </data>
+  <data name="SettingsFolderUnwritable" xml:space="preserve">
+    <value>Shotwin не может писать в эту папку, поэтому снимки идут в запасную. Проверьте путь и то, что у вас есть право записи.</value>
+    <comment>Settings page, under the save folder box when a write failed for any other reason.</comment>
+  </data>
+  <data name="SettingsLanguage" xml:space="preserve">
+    <value>Язык</value>
+    <comment>Settings page, label beside the language list under SYSTEM.</comment>
+  </data>
+  <data name="SettingsLanguageAutomatic" xml:space="preserve">
+    <value>Автоматически (как в Windows)</value>
+    <comment>Settings page, first entry in the language list: use whatever display language Windows is set to. Every other entry is a language written in its own words and is never translated.</comment>
+  </data>
+  <data name="SettingsNextFile" xml:space="preserve">
+    <value>Следующий файл: {0}.png</value>
+    <comment>Settings page, a worked example under the file name box. {0} is the name the template produces right now.</comment>
+  </data>
+  <data name="SettingsOpen" xml:space="preserve">
+    <value>Открыть</value>
+    <comment>Settings page, button that opens the save folder in Explorer.</comment>
+  </data>
+  <data name="SettingsOpenEditor" xml:space="preserve">
+    <value>Открывать редактор</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsOverlayHeader" xml:space="preserve">
+    <value>НАЛОЖЕНИЕ</value>
+    <comment>Settings page, section heading over the capture overlay options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsPreviewAppears" xml:space="preserve">
+    <value>Появляется</value>
+    <comment>Settings page, label beside the list of corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsPreviewHint" xml:space="preserve">
+    <value>Предпросмотр — то место, откуда вы берёте снимок: щёлкните, чтобы изменить, перетащите в любое приложение, чтобы бросить туда PNG, или нажмите кнопки вдоль нижнего края. Он исчезает, когда вы возвращаетесь в другое окно, оставляя снимок в буфере обмена готовым к вставке. С выключенным автосохранением снимок пропадает, если не нажать Сохранить на предпросмотре.</value>
+    <comment>Settings page, the paragraph explaining the preview thumbnail. PNG is a file format name.</comment>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Сохранено.</value>
+    <comment>Settings page, the confirmation that floats over the bottom of the list after a change is written.</comment>
+  </data>
+  <data name="SettingsSavingHeader" xml:space="preserve">
+    <value>СОХРАНЕНИЕ</value>
+    <comment>Settings page, section heading over the folder and file name options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsSecurityDone" xml:space="preserve">
+    <value>Готово. Теперь Shotwin может писать в эту папку.</value>
+    <comment>Settings page, after Windows Security accepted the app and the folder now takes writes.</comment>
+  </data>
+  <data name="SettingsSecurityStillBlocked" xml:space="preserve">
+    <value>Windows приняла изменение, но папка всё равно не даёт писать.</value>
+    <comment>Settings page, after Windows Security accepted the app but the folder still refuses writes.</comment>
+  </data>
+  <data name="SettingsShowCoordinates" xml:space="preserve">
+    <value>Показывать координаты у курсора</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsShowPreview" xml:space="preserve">
+    <value>Показывать миниатюру предпросмотра</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsSnapWindows" xml:space="preserve">
+    <value>Прилипать к окнам под курсором</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsStartupHint" xml:space="preserve">
+    <value>Запускается сразу в область уведомлений, без окна.</value>
+    <comment>Settings page, under the start-at-login tick box.</comment>
+  </data>
+  <data name="SettingsStartupRefused" xml:space="preserve">
+    <value>Windows отклонила изменение автозапуска при входе.</value>
+    <comment>Settings page, when the registry entry for starting at login could not be written.</comment>
+  </data>
+  <data name="SettingsStartWithWindows" xml:space="preserve">
+    <value>Запускать Shotwin при входе в систему</value>
+    <comment>Settings page, tick box under SYSTEM.</comment>
+  </data>
+  <data name="SettingsSubtitle" xml:space="preserve">
+    <value>Изменения применяются сразу.</value>
+    <comment>Settings page, the line under its heading.</comment>
+  </data>
+  <data name="SettingsSystemHeader" xml:space="preserve">
+    <value>СИСТЕМА</value>
+    <comment>Settings page, section heading over the language and start-at-login options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Параметры</value>
+    <comment>Settings page, its heading.</comment>
+  </data>
+  <data name="SettingsWaitingForAdmin" xml:space="preserve">
+    <value>Ждём запрос администратора...</value>
+    <comment>Settings page, while the Windows elevation prompt is on screen.</comment>
+  </data>
+
+  <!-- ==== Shortcuts page ==== -->
+  <data name="ShortcutsCaptureArea" xml:space="preserve">
+    <value>Снять область</value>
+    <comment>Shortcuts page, name of the area capture action. Also names it in the messages about shortcuts Windows refused.</comment>
+  </data>
+  <data name="ShortcutsCaptureAreaDetail" xml:space="preserve">
+    <value>Выделить любую область</value>
+    <comment>Shortcuts page, what the area capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreen" xml:space="preserve">
+    <value>Снять экран</value>
+    <comment>Shortcuts page, name of the whole-screen capture action.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreenDetail" xml:space="preserve">
+    <value>Монитор, на котором курсор</value>
+    <comment>Shortcuts page, what the screen capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsClash" xml:space="preserve">
+    <value>Это сочетание уже занято другим действием.</value>
+    <comment>Shortcuts page, when the recorded combination is already bound to a different Shotwin action.</comment>
+  </data>
+  <data name="ShortcutsEditorCommands" xml:space="preserve">
+    <value>Ctrl+C копировать · Ctrl+S сохранить · Ctrl+Shift+S сохранить как · Ctrl+P закрепить · Ctrl+Z отменить · Ctrl+колесо масштаб · Ctrl+0 вписать · Delete убрать · Esc закрыть</value>
+    <comment>Shortcuts page, the editor's command keys. Translate only the word after each key name; the key names themselves stay as they are.</comment>
+  </data>
+  <data name="ShortcutsEditorHeader" xml:space="preserve">
+    <value>В РЕДАКТОРЕ</value>
+    <comment>Shortcuts page, heading over the editor's own keys. Upper case in English.</comment>
+  </data>
+  <data name="ShortcutsEditorTools" xml:space="preserve">
+    <value>V выделение · A стрелка · R прямоугольник · O эллипс · L линия · P перо · H маркер · T текст · S счётчик шагов · B пикселизация · Shift+B размытие</value>
+    <comment>Shortcuts page, the editor's tool keys. Translate only the words after each key name; the letters themselves are fixed keys and stay as they are.</comment>
+  </data>
+  <data name="ShortcutsGrabText" xml:space="preserve">
+    <value>Снять текст</value>
+    <comment>Shortcuts page, name of the text recognition action.</comment>
+  </data>
+  <data name="ShortcutsGrabTextDetail" xml:space="preserve">
+    <value>Читает область и копирует текст</value>
+    <comment>Shortcuts page, what the text shortcut does.</comment>
+  </data>
+  <data name="ShortcutsNotSet" xml:space="preserve">
+    <value>Не задано</value>
+    <comment>Shown in place of a key combination when an action has none bound.</comment>
+  </data>
+  <data name="ShortcutsPickColour" xml:space="preserve">
+    <value>Взять цвет</value>
+    <comment>Shortcuts page, name of the colour picker action.</comment>
+  </data>
+  <data name="ShortcutsPickColourDetail" xml:space="preserve">
+    <value>Лупа над экраном; щелчок копирует значение</value>
+    <comment>Shortcuts page, what the colour shortcut does. A loupe is a magnifying lens.</comment>
+  </data>
+  <data name="ShortcutsPressCombination" xml:space="preserve">
+    <value>Нажмите сочетание...</value>
+    <comment>Shortcuts page, shown in a box that is waiting for the keys to be pressed.</comment>
+  </data>
+  <data name="ShortcutsRefused" xml:space="preserve">
+    <value>Windows не отдала Shotwin: {0}. Ими уже владеет другое приложение.</value>
+    <comment>Shortcuts page, when Windows refused to register a combination. {0} is a comma-separated list of action names.</comment>
+  </data>
+  <data name="ShortcutsSaved" xml:space="preserve">
+    <value>Сохранено.</value>
+    <comment>Shortcuts page, the confirmation after a new combination is written.</comment>
+  </data>
+  <data name="ShortcutsScrolling" xml:space="preserve">
+    <value>Снимок с прокруткой</value>
+    <comment>Shortcuts page, name of the scrolling capture action.</comment>
+  </data>
+  <data name="ShortcutsScrollingDetail" xml:space="preserve">
+    <value>Прокручивает область и сшивает её</value>
+    <comment>Shortcuts page, what the scrolling shortcut does.</comment>
+  </data>
+  <data name="ShortcutsSubtitle" xml:space="preserve">
+    <value>Щёлкните по горячей клавише, затем нажмите нужное сочетание. Esc отменяет.</value>
+    <comment>Shortcuts page, the line under its heading. Esc is a key name.</comment>
+  </data>
+  <data name="ShortcutsTitle" xml:space="preserve">
+    <value>Горячие клавиши</value>
+    <comment>Shortcuts page, its heading.</comment>
+  </data>
+
+  <!-- ==== Notification area: the menu, and the messages raised from it ==== -->
+  <data name="TrayCaptureArea" xml:space="preserve">
+    <value>Снять область</value>
+    <comment>Notification area menu item that opens the area overlay.</comment>
+  </data>
+  <data name="TrayCaptureScreen" xml:space="preserve">
+    <value>Снять экран</value>
+    <comment>Notification area menu item that grabs the monitor the cursor is on.</comment>
+  </data>
+  <data name="TrayColourCopied" xml:space="preserve">
+    <value>Скопировано {0}</value>
+    <comment>Notification after the colour picker. {0} is the colour value, for example #1B1B1F.</comment>
+  </data>
+  <data name="TrayCrash" xml:space="preserve">
+    <value>Что-то пошло не так: {0}. Подробности в {1}</value>
+    <comment>Notification after an error the app recovered from. {0} is the message from Windows, {1} is the path of the log file. Neither is translated.</comment>
+  </data>
+  <data name="TrayFileUnreadable" xml:space="preserve">
+    <value>Этот файл не удалось открыть.</value>
+    <comment>Notification when a saved shot could not be decoded to reopen it.</comment>
+  </data>
+  <data name="TrayGrabText" xml:space="preserve">
+    <value>Снять текст</value>
+    <comment>Notification area menu item that reads the text out of a region.</comment>
+  </data>
+  <data name="TrayHotkeyConflicts" xml:space="preserve">
+    <value>Этими горячими клавишами уже владеет другое приложение: {0}. Смените их в разделе Горячие клавиши.</value>
+    <comment>Notification at startup when Windows refused a shortcut. {0} is a comma-separated list of action names. Shortcuts is the name of a page in the app.</comment>
+  </data>
+  <data name="TrayNoText" xml:space="preserve">
+    <value>В этой области текст не найден.</value>
+    <comment>Notification when text recognition ran on a captured region and read nothing.</comment>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Открыть Shotwin</value>
+    <comment>Notification area menu item that shows the main window.</comment>
+  </data>
+  <data name="TrayPickColour" xml:space="preserve">
+    <value>Взять цвет</value>
+    <comment>Notification area menu item that opens the colour loupe.</comment>
+  </data>
+  <data name="TrayQuit" xml:space="preserve">
+    <value>Выйти из Shotwin</value>
+    <comment>Notification area menu item that ends the app.</comment>
+  </data>
+  <data name="TrayRecent" xml:space="preserve">
+    <value>Недавние снимки</value>
+    <comment>Notification area menu item that opens the gallery of saved shots.</comment>
+  </data>
+  <data name="TraySaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить снимок: {0}</value>
+    <comment>Notification when automatic saving failed. {0} is the reason, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="TrayScrollingCapture" xml:space="preserve">
+    <value>Снимок с прокруткой</value>
+    <comment>Notification area menu item that starts a scrolling capture.</comment>
+  </data>
+  <data name="TraySettings" xml:space="preserve">
+    <value>Параметры</value>
+    <comment>Notification area menu item that opens the settings page.</comment>
+  </data>
+  <data name="VideoCaption" xml:space="preserve">
+    <value>Shotwin — {0}</value>
+    <comment>Video editor window caption. {0} is the file name.</comment>
+  </data>
+  <data name="VideoClipboardBusy" xml:space="preserve">
+    <value>Буфер обмена занят. Попробуйте ещё раз.</value>
+    <comment>Shown when another app holds the clipboard.</comment>
+  </data>
+  <data name="VideoCopied" xml:space="preserve">
+    <value>Запись скопирована.</value>
+    <comment>Shown after the file is put on the clipboard.</comment>
+  </data>
+  <data name="VideoCopy" xml:space="preserve">
+    <value>Копировать</value>
+    <comment>Video editor button that copies the file itself.</comment>
+  </data>
+  <data name="VideoCut" xml:space="preserve">
+    <value>Вырезать фрагмент</value>
+    <comment>Video editor button that drops a stretch of the recording out of the middle.</comment>
+  </data>
+  <data name="VideoCutCount_One" xml:space="preserve">
+    <value>{0} вырезанный фрагмент</value>
+    <comment>Russian takes this form for every count ending in 1 except 11, so 21 and 101 read it too: the count placeholder is required here, not a literal 1. How many stretches are being dropped. {0} is the number, here one.</comment>
+  </data>
+  <data name="VideoCutCount_Few" xml:space="preserve">
+    <value>{0} вырезанных фрагмента</value>
+    <comment>Form for counts ending 2-4, not the teens; no English counterpart. How many stretches are being dropped. {0} is the number, two or more.</comment>
+  </data>
+  <data name="VideoCutCount_Many" xml:space="preserve">
+    <value>{0} вырезанных фрагментов</value>
+    <comment>How many stretches are being dropped. {0} is the number, two or more.</comment>
+  </data>
+  <data name="VideoCutRemove" xml:space="preserve">
+    <value>Вернуть этот фрагмент</value>
+    <comment>Tooltip on the small cross that undoes one cut.</comment>
+  </data>
+  <data name="VideoExplorerFailed" xml:space="preserve">
+    <value>Не удалось открыть Проводник.</value>
+    <comment>Shown when revealing the file in Explorer fails.</comment>
+  </data>
+  <data name="VideoHintDrawPiece" xml:space="preserve">
+    <value>Выделите на шкале ещё один фрагмент</value>
+    <comment>Hint under the video editor's timeline, saying how to add a second kept piece of a recording.</comment>
+  </data>
+  <data name="VideoQualitySharper" xml:space="preserve">
+    <value>Чётче картинка, меньше кадров</value>
+    <comment>Tooltip on the video editor button that trades playback smoothness for detail.</comment>
+  </data>
+  <data name="VideoQualitySmoother" xml:space="preserve">
+    <value>Плавнее картинка, меньше деталей</value>
+    <comment>Tooltip on the video editor button that trades detail for playback smoothness.</comment>
+  </data>
+  <data name="VideoNothingLeft" xml:space="preserve">
+    <value>После вырезания сохранять нечего.</value>
+    <comment>Shown when every part of the recording has been cut away.</comment>
+  </data>
+  <data name="VideoPause" xml:space="preserve">
+    <value>Пауза</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPlay" xml:space="preserve">
+    <value>Воспроизвести</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPosition" xml:space="preserve">
+    <value>{0} / {1}</value>
+    <comment>Video editor position readout: current time over total, both m:ss.</comment>
+  </data>
+  <data name="VideoSave" xml:space="preserve">
+    <value>Сохранить фрагмент</value>
+    <comment>Video editor button that exports the selected span as a new file.</comment>
+  </data>
+  <data name="VideoSaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить: {0}</value>
+    <comment>Shown when the trim export fails. {0} is the reason.</comment>
+  </data>
+  <data name="VideoSaved" xml:space="preserve">
+    <value>Сохранено как {0}</value>
+    <comment>Shown after a trimmed copy is written. {0} is the file name.</comment>
+  </data>
+  <data name="VideoSaving" xml:space="preserve">
+    <value>Сохранение… {0}%</value>
+    <comment>Video editor progress while the trimmed copy is written. {0} is percent.</comment>
+  </data>
+  <data name="VideoShowInFolder" xml:space="preserve">
+    <value>Показать в папке</value>
+    <comment>Video editor button that reveals the file in Explorer.</comment>
+  </data>
+  <data name="VideoSpanTooShort" xml:space="preserve">
+    <value>Выберите более длинный фрагмент для сохранения.</value>
+    <comment>Shown when the trim handles are too close together.</comment>
+  </data>
+  <data name="VideoTrimSpan" xml:space="preserve">
+    <value>Фрагмент: {0} — {1}</value>
+    <comment>Video editor readout of the selected span, both m:ss.</comment>
+  </data>
+  <data name="VideoUnreadable" xml:space="preserve">
+    <value>Эту запись не удалось открыть.</value>
+    <comment>Shown when the video file will not load.</comment>
+  </data>
+  <data name="VideoCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Detail line on a recording's card in Recent: {0} is the date and size, {1} is how long it runs.</comment>
+  </data>
+</root>

@@ -1,0 +1,168 @@
+<UserControl x:Class="Shotwin.Shell.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:Shotwin.Services">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="{loc:S SettingsTitle}" Style="{StaticResource ViewTitle}" />
+            <TextBlock Style="{StaticResource ViewSubtitle}"
+                       Text="{loc:S SettingsSubtitle}" />
+        </StackPanel>
+
+        <!--
+            Bleeds to the window edge so the scrollbar rides it; padding keeps the text
+            in. No bottom padding and no row beneath: the list runs to the edge of the
+            window and the last setting is the last thing on screen.
+        -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto"
+                      Margin="0,4,-28,0" Padding="0,0,28,0">
+            <StackPanel>
+
+                <TextBlock Text="{loc:S SettingsAfterCaptureHeader}" Style="{StaticResource SectionHeader}" Margin="0,16,0,10" />
+                <CheckBox x:Name="OpenEditor" Content="{loc:S SettingsOpenEditor}" />
+                <CheckBox x:Name="CopyClipboard" Content="{loc:S SettingsCopyClipboard}" />
+                <CheckBox x:Name="ShowPreview" Content="{loc:S SettingsShowPreview}" />
+                <CheckBox x:Name="AutoSave" Content="{loc:S SettingsAutoSave}" />
+                <TextBlock Style="{StaticResource Hint}" Margin="0,0,0,0"
+                           Text="{loc:S SettingsPreviewHint}" />
+
+                <Grid x:Name="PreviewOptions" Margin="0,12,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="{loc:S SettingsPreviewAppears}" VerticalAlignment="Center"
+                               Margin="0,0,12,0" />
+                    <ComboBox Grid.Row="0" Grid.Column="1" x:Name="PreviewCorner" MinWidth="180" />
+                </Grid>
+
+                <TextBlock Text="{loc:S SettingsOverlayHeader}" Style="{StaticResource SectionHeader}" />
+                <CheckBox x:Name="ShowCoordinates" Content="{loc:S SettingsShowCoordinates}" />
+                <CheckBox x:Name="SnapWindows" Content="{loc:S SettingsSnapWindows}" />
+
+                <Grid Margin="0,6,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{loc:S SettingsColourPickerCopies}" VerticalAlignment="Center"
+                               Margin="0,0,12,0" />
+                    <ComboBox Grid.Column="1" x:Name="ColourFormat" MinWidth="180" />
+                </Grid>
+
+                <TextBlock Text="{loc:S RecordSettingsHeader}" Style="{StaticResource SectionHeader}" />
+
+                <!--
+                    Its own section rather than lines under SAVING: the folder and the
+                    file name below are shared with the shots, and these are the settings
+                    that belong to recording alone.
+                -->
+                <CheckBox x:Name="ShowCursor" Content="{loc:S RecordShowCursor}" />
+
+                <Grid Margin="0,6,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{loc:S RecordFrameRate}" VerticalAlignment="Center"
+                               Margin="0,0,12,0" />
+                    <ComboBox Grid.Column="1" x:Name="FrameRate" MinWidth="180" />
+                </Grid>
+
+                <Grid Margin="0,6,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{loc:S RecordCountdown}" VerticalAlignment="Center"
+                               Margin="0,0,12,0" />
+                    <ComboBox Grid.Column="1" x:Name="Countdown" MinWidth="180" />
+                </Grid>
+
+                <TextBlock Text="{loc:S SettingsSavingHeader}" Style="{StaticResource SectionHeader}" />
+                <TextBlock Text="{loc:S SettingsFolder}" Margin="0,0,0,5" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" x:Name="SaveFolder" />
+                    <Button Grid.Column="1" x:Name="BrowseFolder" Style="{StaticResource Chip}" Content="{loc:S SettingsBrowse}" Margin="6,0,0,0" />
+                    <Button Grid.Column="2" x:Name="OpenFolder" Style="{StaticResource Chip}" Content="{loc:S SettingsOpen}" Margin="6,0,0,0" />
+                </Grid>
+                <!--
+                    Informational, not an alarm: by the time this is read the app has
+                    already moved the folder somewhere that works. The button is for
+                    people who would rather have Pictures back.
+                -->
+                <StackPanel x:Name="FolderProblem" Visibility="Collapsed" Margin="0,8,0,0">
+                    <TextBlock x:Name="FolderWarning" Style="{StaticResource Hint}" Margin="0" />
+                    <StackPanel Orientation="Horizontal" Margin="0,9,0,0">
+                        <Button x:Name="AllowAppButton" Style="{StaticResource Chip}" Height="28"
+                                Content="{loc:S SettingsAllowInSecurity}" />
+                        <TextBlock x:Name="FolderFixStatus" Style="{StaticResource Hint}"
+                                   Foreground="{StaticResource Muted}" VerticalAlignment="Center"
+                                   Margin="10,0,0,0" />
+                    </StackPanel>
+                </StackPanel>
+
+                <TextBlock Text="{loc:S SettingsFileName}" Margin="0,18,0,5" />
+                <TextBox x:Name="FileTemplate" />
+                <TextBlock x:Name="FilePreview" Style="{StaticResource Hint}" />
+
+                <TextBlock Text="{loc:S SettingsSystemHeader}" Style="{StaticResource SectionHeader}" />
+
+                <!--
+                    Every language is listed in its own words, never translated: someone
+                    who opened this because the app came up in a language they cannot
+                    read has to be able to find their own in it.
+                -->
+                <Grid Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{loc:S SettingsLanguage}" VerticalAlignment="Center"
+                               Margin="0,0,12,0" />
+                    <ComboBox Grid.Column="1" x:Name="LanguageBox" MinWidth="180" />
+                </Grid>
+
+                <CheckBox x:Name="StartWithWindows" Content="{loc:S SettingsStartWithWindows}" />
+                <TextBlock Style="{StaticResource Hint}" Margin="0,0,0,10"
+                           Text="{loc:S SettingsStartupHint}" />
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!--
+            No Save button: every control writes as you change it. A settings page that
+            holds changes until you find the button loses them the moment you switch
+            tabs or the app restarts, and gives no sign that it did.
+
+            The confirmation floats over the bottom of the list rather than occupying a
+            row of its own, so it cannot leave a strip of empty page behind when it goes.
+        -->
+        <Border x:Name="StatusRow" Grid.Row="1" Visibility="Collapsed"
+                HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                Margin="0,0,0,12" Padding="12,6" CornerRadius="6"
+                Background="{StaticResource SurfaceRaised}"
+                BorderBrush="{StaticResource Line}" BorderThickness="1">
+            <TextBlock x:Name="StatusText" Foreground="{StaticResource Muted}" FontSize="11.5" />
+        </Border>
+    </Grid>
+</UserControl>

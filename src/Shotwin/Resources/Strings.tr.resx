@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    The English baseline, and the only resource file compiled into the main assembly.
+    Every other language is a satellite built from a Strings.<culture>.resx beside this
+    one; nothing in the code names a culture, so adding a file is the whole job.
+
+    Each entry carries a comment saying where it shows up, because a translator sees the
+    string and nothing else. Numbered placeholders are filled by string.Format, so a
+    language that needs a different word order can move them.
+
+    Deliberately not in here: the app name, log and crash text, exception messages,
+    file-name templates, key names such as Ctrl+Shift+2, and the colour notations
+    Hex, RGB and HSL.
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ==== About page ==== -->
+  <data name="AboutAroundDetail" xml:space="preserve">
+    <value>Genel kısayollar · başka bir uygulamaya doğrudan sürükleyebileceğin önizleme · otomatik kaydetme · PNG ve pano çıktısı · komut satırından tetikleme · bildirim alanında çalışır</value>
+    <comment>About page, the single line under the AROUND IT heading.</comment>
+  </data>
+  <data name="AboutAroundHeader" xml:space="preserve">
+    <value>ÇEVRESİNDE</value>
+    <comment>About page, section heading over the miscellaneous features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureArea" xml:space="preserve">
+    <value>Alan</value>
+    <comment>About page, name of the area capture feature in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureAreaDetail" xml:space="preserve">
+    <value>Herhangi bir bölgeyi sürükleyerek seç, konum ve boyut anlık görünür. Bir pencereye tıkla, tamamını al.</value>
+    <comment>About page, what area capture does. Sits beside AboutCaptureArea.</comment>
+  </data>
+  <data name="AboutCaptureColour" xml:space="preserve">
+    <value>Renk</value>
+    <comment>About page, name of the colour picker in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureColourDetail" xml:space="preserve">
+    <value>Ekran üzerinde büyüteç; tıklayınca değeri Hex, RGB veya HSL olarak kopyalar.</value>
+    <comment>About page, what the colour picker does. Hex, RGB and HSL are notation names and stay as they are.</comment>
+  </data>
+  <data name="AboutCaptureHeader" xml:space="preserve">
+    <value>YAKALAMA</value>
+    <comment>About page, section heading over the capture features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureScreen" xml:space="preserve">
+    <value>Ekran</value>
+    <comment>About page, name of the whole-screen capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScreenDetail" xml:space="preserve">
+    <value>İmlecin bulunduğu ekran, tam çözünürlüğünde.</value>
+    <comment>About page, what screen capture does.</comment>
+  </data>
+  <data name="AboutCaptureScrolling" xml:space="preserve">
+    <value>Kaydırmalı</value>
+    <comment>About page, name of scrolling capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScrollingDetail" xml:space="preserve">
+    <value>Ekrandan uzun bir sayfayı kaydırıp tek görüntüde birleştirir. Sayfanın sonunda kendiliğinden durur.</value>
+    <comment>About page, what scrolling capture does.</comment>
+  </data>
+  <data name="AboutCaptureText" xml:space="preserve">
+    <value>Metin</value>
+    <comment>About page, name of text recognition in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureTextDetail" xml:space="preserve">
+    <value>Bir bölgedeki yazıyı okur ve resim yerine onu kopyalar. Çevrimdışı, Windows'un kendi metin tanımasıyla.</value>
+    <comment>About page, what text capture does.</comment>
+  </data>
+  <data name="AboutCheckAgain" xml:space="preserve">
+    <value>Yeniden denetle</value>
+    <comment>About page, button that looks for a newer version.</comment>
+  </data>
+  <data name="AboutChecking" xml:space="preserve">
+    <value>Yeni sürüm aranıyor…</value>
+    <comment>About page, shown while an update check asked for by hand is running.</comment>
+  </data>
+  <data name="AboutEditorAnnotate" xml:space="preserve">
+    <value>İşaretle</value>
+    <comment>About page, name of the annotation tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorAnnotateDetail" xml:space="preserve">
+    <value>Oklar, şekiller, çizgiler, kalem, fosforlu kalem, metin ve numaralı adım rozetleri.</value>
+    <comment>About page, what the annotation tools are.</comment>
+  </data>
+  <data name="AboutEditorCompose" xml:space="preserve">
+    <value>Birleştir</value>
+    <comment>About page, name of the composition tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorComposeDetail" xml:space="preserve">
+    <value>Kırp, ortadan bir şerit çıkar ya da başka bir görüntü ekleyip ikisini yerleştir.</value>
+    <comment>About page, what the composition tools do.</comment>
+  </data>
+  <data name="AboutEditorHeader" xml:space="preserve">
+    <value>DÜZENLEYİCİ</value>
+    <comment>About page, section heading over the editor features. Upper case in English.</comment>
+  </data>
+  <data name="AboutEditorPin" xml:space="preserve">
+    <value>Sabitle</value>
+    <comment>About page, name of the pin feature in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorPinDetail" xml:space="preserve">
+    <value>Bir kareyi, ondan çalışırken bütün pencerelerin üstünde tut.</value>
+    <comment>About page, what pinning does.</comment>
+  </data>
+  <data name="AboutEditorRedact" xml:space="preserve">
+    <value>Gizle</value>
+    <comment>About page, name of the redaction tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorRedactDetail" xml:space="preserve">
+    <value>Bu makineden çıkmaması gereken her şeyi pikselleştir ya da bulanıklaştır.</value>
+    <comment>About page, what the redaction tools do.</comment>
+  </data>
+  <data name="AboutSummary" xml:space="preserve">
+    <value>Piksel işi için yapılmış bir ekran görüntüsü aracı: yakala, işaretle, görüntüdeki yazıyı oku ve kullanırken bir kareyi üstte tut.</value>
+    <comment>About page, the paragraph in the card at the top. .NET, WPF, SkiaSharp and Electron are product names and stay as they are.</comment>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>Hakkında</value>
+    <comment>About page, its heading.</comment>
+  </data>
+  <data name="AboutUpdateAvailable" xml:space="preserve">
+    <value>Shotwin {0} çıktı. Şeridin altındaki düğme kurar.</value>
+    <comment>About page, shown when a check found a newer build. {0} is the version number, for example 1.2.0.</comment>
+  </data>
+  <data name="AboutUpToDate" xml:space="preserve">
+    <value>En son sürümü kullanıyorsun.</value>
+    <comment>About page, shown when a check found nothing newer.</comment>
+  </data>
+  <data name="AboutVersionLine" xml:space="preserve">
+    <value>Shotwin {0}   ·   Windows için ekran görüntüsü aracı</value>
+    <comment>About page, the line under the heading. {0} is the running version number.</comment>
+  </data>
+  <data name="CaptureArea" xml:space="preserve">
+    <value>Bir alan yakala</value>
+    <comment>Capture page, the main button. Opens the overlay to drag a region out.</comment>
+  </data>
+  <data name="CaptureCountdown" xml:space="preserve">
+    <value>{0}…</value>
+    <comment>Capture page, the delayed-capture countdown beside the delay buttons. {0} is the seconds left.</comment>
+  </data>
+  <data name="CaptureDelayedHeader" xml:space="preserve">
+    <value>GECİKMELİ</value>
+    <comment>Capture page, heading of the delayed capture card. Upper case in English.</comment>
+  </data>
+  <data name="CaptureDelayedHint" xml:space="preserve">
+    <value>Geri sayar, sonra alan katmanını açar. Kısayola basınca kaybolan menüler ve üzerine gelme durumları için.</value>
+    <comment>Capture page, what delayed capture is for.</comment>
+  </data>
+  <data name="CaptureDelaySeconds" xml:space="preserve">
+    <value>{0} saniye</value>
+    <comment>Capture page, the three delay buttons. {0} is only ever 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="CaptureGrabText" xml:space="preserve">
+    <value>Metni al</value>
+    <comment>Capture page, button that reads the text out of a region instead of taking a picture.</comment>
+  </data>
+  <data name="CaptureOverlayHint" xml:space="preserve">
+    <value>Katmanda: seçmek için sürükle, tüm pencereyi almak için üzerine tıkla, kare yapmak için Shift, seçimi taşımak için Space, tüm ekran için Ctrl+A, iptal için Esc.</value>
+    <comment>Capture page, the footnote at the bottom. Shift, Space, Ctrl+A and Esc are key names and stay as they are.</comment>
+  </data>
+  <data name="CapturePickColour" xml:space="preserve">
+    <value>Renk seç</value>
+    <comment>Capture page, button that opens the colour loupe.</comment>
+  </data>
+  <data name="CaptureScreen" xml:space="preserve">
+    <value>Ekranı yakala</value>
+    <comment>Capture page, button that grabs the whole monitor the cursor is on.</comment>
+  </data>
+  <data name="CaptureScrolling" xml:space="preserve">
+    <value>Kaydırmalı yakalama</value>
+    <comment>Capture page, button that scrolls a region and stitches the frames together.</comment>
+  </data>
+  <data name="CaptureScrollingProgress" xml:space="preserve">
+    <value>Yakalanıyor… {0} px</value>
+    <comment>The small window shown while a scrolling capture runs. {0} is how many pixels tall the result is so far.</comment>
+  </data>
+  <data name="CaptureScrollingStop" xml:space="preserve">
+    <value>Durdur</value>
+    <comment>The small window shown while a scrolling capture runs: the button that ends it and keeps what was captured.</comment>
+  </data>
+  <data name="CaptureSecondaryHint" xml:space="preserve">
+    <value>İkisi de doğrudan panoya kopyalar. Metin şu dillerde okunur: {0}.</value>
+    <comment>Capture page, under the colour and text buttons. {0} is a comma-separated list of recognition language names supplied by Windows.</comment>
+  </data>
+  <data name="CaptureSecondaryHintNoOcr" xml:space="preserve">
+    <value>Renk seç doğrudan panoya kopyalar. Metni al için Windows'ta kurulu bir OCR dili gerekir; Saat ve dil altından ekle.</value>
+    <comment>Capture page, replaces CaptureSecondaryHint when Windows has no recognition language installed. Time and language is the name of a Windows Settings page.</comment>
+  </data>
+  <data name="CaptureSubtitle" xml:space="preserve">
+    <value>Kısayollar her yerden çalışır. Bu düğmeler önce bu pencereyi gizler, böylece kareye girmez.</value>
+    <comment>Capture page, the line under its heading.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_Many" xml:space="preserve">
+    <value>{0} satır metin kopyalandı.</value>
+    <comment>Shown after text recognition succeeds, in the editor, on the preview thumbnail and as a notification. {0} is the number of lines, always two or more.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_One" xml:space="preserve">
+    <value>1 satır metin kopyalandı.</value>
+    <comment>Shown after text recognition read exactly one line. Singular form of CaptureTextCopiedLines_Many.</comment>
+  </data>
+  <data name="CaptureTitle" xml:space="preserve">
+    <value>Yakala</value>
+    <comment>Capture page, its heading.</comment>
+  </data>
+  <data name="EditorAddedBelow" xml:space="preserve">
+    <value>Alta eklendi — taşımak için sürükle.</value>
+    <comment>Editor status line, after another image was dropped in under the shot.</comment>
+  </data>
+  <data name="EditorAddedRight" xml:space="preserve">
+    <value>Sağa eklendi — taşımak için sürükle.</value>
+    <comment>Editor status line, after another image was dropped in beside the shot.</comment>
+  </data>
+  <data name="EditorAddImage" xml:space="preserve">
+    <value>Tuvale başka bir görüntü ekle ({0} ya da {1} ile yapıştır)</value>
+    <comment>Editor toolbar tooltip. {0} and {1} are the key names Ctrl+Shift+A and Ctrl+V, supplied by the app.</comment>
+  </data>
+  <data name="EditorAddImageTitle" xml:space="preserve">
+    <value>Tuvale bir görüntü ekle</value>
+    <comment>Title of the file picker the editor opens to add a second image.</comment>
+  </data>
+  <data name="EditorCaption" xml:space="preserve">
+    <value>Shotwin  ·  {0} x {1}</value>
+    <comment>Editor title bar. {0} and {1} are the width and height of the shot in pixels.</comment>
+  </data>
+  <data name="EditorClipboardBusy" xml:space="preserve">
+    <value>Pano meşguldü. Yeniden dene.</value>
+    <comment>Editor status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="EditorClipboardUnreadable" xml:space="preserve">
+    <value>Panodaki görüntü okunamadı.</value>
+    <comment>Editor status line, when the image on the clipboard could not be decoded.</comment>
+  </data>
+  <data name="EditorClose" xml:space="preserve">
+    <value>Kapat</value>
+    <comment>Editor title bar, tooltip on the close button. Closes the window rather than hiding it.</comment>
+  </data>
+  <data name="EditorCopiedToClipboard" xml:space="preserve">
+    <value>Panoya kopyalandı</value>
+    <comment>Editor status line, after the shot was copied.</comment>
+  </data>
+  <data name="EditorCopy" xml:space="preserve">
+    <value>Kopyala ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+C, supplied by the app.</comment>
+  </data>
+  <data name="EditorCropped" xml:space="preserve">
+    <value>Kırpıldı.</value>
+    <comment>Editor status line, after a crop was applied.</comment>
+  </data>
+  <data name="EditorCutOut" xml:space="preserve">
+    <value>Şerit çıkarıldı.</value>
+    <comment>Editor status line, after a band was cut out of the middle of the shot.</comment>
+  </data>
+  <data name="EditorFileUnreadable" xml:space="preserve">
+    <value>Bu dosya okunamadı.</value>
+    <comment>Editor status line, when a chosen image file could not be decoded.</comment>
+  </data>
+  <data name="EditorImageNotAdded" xml:space="preserve">
+    <value>Bu görüntü eklenemedi.</value>
+    <comment>Editor status line, when a second image would not fit onto the canvas.</comment>
+  </data>
+  <data name="EditorNoClipboardImage" xml:space="preserve">
+    <value>Panoda görüntü yok.</value>
+    <comment>Editor status line, after pasting with nothing to paste.</comment>
+  </data>
+  <data name="EditorNoText" xml:space="preserve">
+    <value>Bu karede metin bulunamadı.</value>
+    <comment>Editor status line, when recognition ran but read nothing.</comment>
+  </data>
+  <data name="EditorOcr" xml:space="preserve">
+    <value>Bu karedeki metni kopyala ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Shift+T, supplied by the app.</comment>
+  </data>
+  <data name="EditorOpenFilter" xml:space="preserve">
+    <value>Görüntüler|*.png;*.jpg;*.jpeg;*.bmp|Tüm dosyalar|*.*</value>
+    <comment>File type list in the editor's Add image dialog. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorPin" xml:space="preserve">
+    <value>Ekrana sabitle ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+P, supplied by the app.</comment>
+  </data>
+  <data name="EditorPinned" xml:space="preserve">
+    <value>Sabitlendi</value>
+    <comment>Editor status line, after the shot was floated above the other windows.</comment>
+  </data>
+  <data name="EditorReadingText" xml:space="preserve">
+    <value>Metin okunuyor...</value>
+    <comment>Editor status line, while the words in the shot are being recognised.</comment>
+  </data>
+  <data name="EditorRegionTooSmall" xml:space="preserve">
+    <value>Bu bölge çok küçük.</value>
+    <comment>Editor status line, when a crop or cut rectangle was too small to apply.</comment>
+  </data>
+  <data name="EditorSave" xml:space="preserve">
+    <value>Kaydet ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+S, supplied by the app.</comment>
+  </data>
+  <data name="EditorSavedTo" xml:space="preserve">
+    <value>Şuraya kaydedildi: {0}</value>
+    <comment>Editor status line. {0} is the full path the shot was written to.</comment>
+  </data>
+  <data name="EditorSavedToWithProblem" xml:space="preserve">
+    <value>Şuraya kaydedildi: {0} — {1}</value>
+    <comment>Editor status line when the shot landed somewhere other than the chosen folder. {0} is the path, {1} is why the chosen folder was not used.</comment>
+  </data>
+  <data name="EditorSaveFailed" xml:space="preserve">
+    <value>Kaydedilemedi: {0}</value>
+    <comment>Editor status line. {0} is the reason the write failed, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="EditorSaveFailedShort" xml:space="preserve">
+    <value>Kaydedilemedi</value>
+    <comment>Editor status line, when Save as could not write the file.</comment>
+  </data>
+  <data name="EditorSaveFilter" xml:space="preserve">
+    <value>PNG görüntüsü|*.png|JPEG görüntüsü|*.jpg</value>
+    <comment>File type list in the Save as dialogs of the editor, the preview thumbnail and a pinned shot. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorSize" xml:space="preserve">
+    <value>Boyut</value>
+    <comment>Editor toolbar, label on the stroke thickness slider.</comment>
+  </data>
+  <data name="EditorStatus_Many" xml:space="preserve">
+    <value>{0} x {1}   ·   {2} işaret</value>
+    <comment>Editor status line. {0} and {1} are the pixel size, {2} is how many marks have been drawn, two or more.</comment>
+  </data>
+  <data name="EditorStatus_One" xml:space="preserve">
+    <value>{0} x {1}   ·   1 işaret</value>
+    <comment>Editor status line with exactly one mark drawn. Singular form of EditorStatus_Many.</comment>
+  </data>
+  <data name="EditorStatusPosition" xml:space="preserve">
+    <value>   ·   {0}, {1}</value>
+    <comment>Appended to the editor status line while the cursor is over the image. {0} and {1} are the pixel coordinates.</comment>
+  </data>
+  <data name="EditorToolArrow" xml:space="preserve">
+    <value>Ok ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolBlur" xml:space="preserve">
+    <value>Bulanıklaştır ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCrop" xml:space="preserve">
+    <value>Kırp ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCut" xml:space="preserve">
+    <value>Şerit çıkar ({0})</value>
+    <comment>Editor toolbar tooltip. Removes a strip from the middle and closes the gap. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolEllipse" xml:space="preserve">
+    <value>Elips ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolHighlight" xml:space="preserve">
+    <value>Vurgula ({0})</value>
+    <comment>Editor toolbar tooltip for the highlighter pen. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolLine" xml:space="preserve">
+    <value>Çizgi ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolPen" xml:space="preserve">
+    <value>Kalem ({0})</value>
+    <comment>Editor toolbar tooltip for freehand drawing. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolPixelate" xml:space="preserve">
+    <value>Pikselleştir ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolRectangle" xml:space="preserve">
+    <value>Dikdörtgen ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolSelect" xml:space="preserve">
+    <value>Seç ({0})</value>
+    <comment>Editor toolbar tooltip for the tool that picks up and moves marks already drawn. {0} is the key that selects it.</comment>
+  </data>
+  <data name="EditorToolStep" xml:space="preserve">
+    <value>Adım sayacı ({0})</value>
+    <comment>Editor toolbar tooltip for the numbered badges 1, 2, 3 used to walk through a screenshot. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolText" xml:space="preserve">
+    <value>Metin ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorUndo" xml:space="preserve">
+    <value>Geri al ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Z, supplied by the app.</comment>
+  </data>
+  <data name="EditorZoom" xml:space="preserve">
+    <value>%{0}</value>
+    <comment>Editor status bar, the zoom level at the far end. {0} is a whole number.</comment>
+  </data>
+  <data name="ErrorAdminPromptDismissed" xml:space="preserve">
+    <value>Yönetici istemi kapatıldı, hiçbir şey değişmedi.</value>
+    <comment>Settings page, after the Windows elevation prompt was declined.</comment>
+  </data>
+  <data name="ErrorElevationFailed" xml:space="preserve">
+    <value>Windows yükseltilmiş komutu başlatmadı.</value>
+    <comment>Settings page, when the request to allow Shotwin through Windows Security could not even be launched.</comment>
+  </data>
+  <data name="ErrorNoOcrLanguage" xml:space="preserve">
+    <value>Windows'ta kurulu OCR dili yok. Ayarlar, Saat ve dil, Dil ve bölge altından bir tane ekle.</value>
+    <comment>Shown wherever text recognition is attempted. Settings, Time and language, and Language and region are the names of Windows Settings pages.</comment>
+  </data>
+  <data name="ErrorOwnPathUnknown" xml:space="preserve">
+    <value>Shotwin kendi yolunu çözemedi.</value>
+    <comment>Settings page, when the app cannot name its own executable to Windows Security.</comment>
+  </data>
+  <data name="ErrorSaveBlocked" xml:space="preserve">
+    <value>Denetimli Klasör Erişimi ya da klasör izinleri</value>
+    <comment>The reason a save failed, dropped into EditorSaveFailed and TraySaveFailed. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="ErrorSaveFolderBlocked" xml:space="preserve">
+    <value>{0} klasörünü Windows engelliyor ({1})</value>
+    <comment>Said when a shot landed in the fallback folder instead. {0} is the folder that was chosen, {1} is why it refused the write.</comment>
+  </data>
+  <data name="ErrorSecurityRefused" xml:space="preserve">
+    <value>Windows Güvenliği değişikliği reddetti. Bu ayar kurumun tarafından yönetiliyor olabilir.</value>
+    <comment>Settings page, when the elevated command ran but Windows Security rejected it.</comment>
+  </data>
+  <data name="NavAbout" xml:space="preserve">
+    <value>Hakkında</value>
+    <comment>Main window navigation rail, the About item.</comment>
+  </data>
+  <data name="NavCapture" xml:space="preserve">
+    <value>Yakala</value>
+    <comment>Main window navigation rail, the Capture item.</comment>
+  </data>
+  <data name="NavCloseToTray" xml:space="preserve">
+    <value>Bildirim alanına kapat</value>
+    <comment>Main window title bar, tooltip on the close button. The app keeps running in the notification area.</comment>
+  </data>
+  <data name="NavMaximise" xml:space="preserve">
+    <value>Büyüt</value>
+    <comment>Title bar tooltip on the maximise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavMinimise" xml:space="preserve">
+    <value>Küçült</value>
+    <comment>Title bar tooltip on the minimise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavRecent" xml:space="preserve">
+    <value>Son kareler</value>
+    <comment>Main window navigation rail, the Recent item.</comment>
+  </data>
+  <data name="NavRestore" xml:space="preserve">
+    <value>Geri yükle</value>
+    <comment>Title bar tooltip on the maximise button once the window is maximised, in the main window and the editor.</comment>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Ayarlar</value>
+    <comment>Main window navigation rail, the Settings item.</comment>
+  </data>
+  <data name="NavShortcuts" xml:space="preserve">
+    <value>Kısayollar</value>
+    <comment>Main window navigation rail, the Shortcuts item.</comment>
+  </data>
+  <data name="NavUpdateDownloading" xml:space="preserve">
+    <value>İndiriliyor %{0}</value>
+    <comment>Main window, on the update button while the new build is coming down. {0} is a whole number.</comment>
+  </data>
+  <data name="NavUpdateTo" xml:space="preserve">
+    <value>{0} sürümüne güncelle</value>
+    <comment>Main window, the button at the foot of the rail when a newer build was found. {0} is the version number.</comment>
+  </data>
+  <data name="OverlayScrollingHint" xml:space="preserve">
+    <value>Bir bölge sürükle: kaydırılıp tek uzun kareye birleştirilir. Esc durdurur ve yakalananı tutar.</value>
+    <comment>Drawn across the top of the screen while a scrolling capture region is being chosen. Esc is a key name. This one is painted onto the canvas rather than laid out by Windows, so it is never mirrored for a right-to-left language.</comment>
+  </data>
+  <data name="PinActualSize" xml:space="preserve">
+    <value>Gerçek boyut</value>
+    <comment>Pinned shot, right-click menu item that puts the zoom back to 100%.</comment>
+  </data>
+  <data name="PinClickThrough" xml:space="preserve">
+    <value>Tıklama geçişi</value>
+    <comment>Pinned shot, right-click menu item that lets the mouse reach the window underneath.</comment>
+  </data>
+  <data name="PinClose" xml:space="preserve">
+    <value>Kapat</value>
+    <comment>Pinned shot, right-click menu item that takes it off the screen.</comment>
+  </data>
+  <data name="PinCopy" xml:space="preserve">
+    <value>Kopyala</value>
+    <comment>Pinned shot, right-click menu item that copies the image.</comment>
+  </data>
+  <data name="PinFade" xml:space="preserve">
+    <value>%50 soluklaştır</value>
+    <comment>Pinned shot, right-click menu item that makes it half transparent.</comment>
+  </data>
+  <data name="PinFullOpacity" xml:space="preserve">
+    <value>Tam görünürlüğe dön</value>
+    <comment>Pinned shot, what the fade menu item says once it is already faded.</comment>
+  </data>
+  <data name="PinSave" xml:space="preserve">
+    <value>Kaydet</value>
+    <comment>Pinned shot, right-click menu item that writes the image to a file.</comment>
+  </data>
+  <data name="PinTitle" xml:space="preserve">
+    <value>Sabitlenmiş kare</value>
+    <comment>Window title of a pinned shot.</comment>
+  </data>
+  <data name="PreviewCopy" xml:space="preserve">
+    <value>Kopyala</value>
+    <comment>Preview thumbnail, tooltip on the copy button.</comment>
+  </data>
+  <data name="PreviewDismiss" xml:space="preserve">
+    <value>Kapat</value>
+    <comment>Preview thumbnail, tooltip on the button that sends it away.</comment>
+  </data>
+  <data name="PreviewEdit" xml:space="preserve">
+    <value>Düzenle</value>
+    <comment>Preview thumbnail, tooltip on the button that opens the editor.</comment>
+  </data>
+  <data name="PreviewNoText" xml:space="preserve">
+    <value>O karede metin bulunamadı.</value>
+    <comment>Notification after using the preview thumbnail's text button on a shot with no readable words.</comment>
+  </data>
+  <data name="PreviewOcr" xml:space="preserve">
+    <value>Bu karedeki metni kopyala</value>
+    <comment>Preview thumbnail, tooltip on the text recognition button.</comment>
+  </data>
+  <data name="PreviewPin" xml:space="preserve">
+    <value>Ekrana sabitle</value>
+    <comment>Preview thumbnail, tooltip on the button that floats the shot above the other windows.</comment>
+  </data>
+  <data name="PreviewSave" xml:space="preserve">
+    <value>Kaydet</value>
+    <comment>Preview thumbnail, tooltip on the save button.</comment>
+  </data>
+  <data name="PreviewShowInFolder" xml:space="preserve">
+    <value>Klasörde göster</value>
+    <comment>Preview thumbnail, tooltip on the button that opens Explorer with the saved file selected.</comment>
+  </data>
+  <data name="RecentCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Second caption line under a thumbnail. {0} is when the file was written, {1} is its size on disk.</comment>
+  </data>
+  <data name="RecentClipboardBusy" xml:space="preserve">
+    <value>Pano meşguldü. Yeniden dene.</value>
+    <comment>Recent page status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="RecentCopied" xml:space="preserve">
+    <value>Panoya kopyalandı.</value>
+    <comment>Recent page status line, after one shot was copied as an image.</comment>
+  </data>
+  <data name="RecentCopiedFiles_Many" xml:space="preserve">
+    <value>{0} dosya kopyalandı.</value>
+    <comment>Recent page status line, after several shots were copied as files. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentCopiedFiles_One" xml:space="preserve">
+    <value>1 dosya kopyalandı.</value>
+    <comment>Recent page status line, singular form of RecentCopiedFiles_Many.</comment>
+  </data>
+  <data name="RecentCopy" xml:space="preserve">
+    <value>Kopyala</value>
+    <comment>Recent page, button that copies the selected shots.</comment>
+  </data>
+  <data name="RecentDelete" xml:space="preserve">
+    <value>Sil</value>
+    <comment>Recent page, button that deletes the selected shots.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_Many" xml:space="preserve">
+    <value>Bu {0} kare silinsin mi?</value>
+    <comment>Confirmation asked before deleting several shots. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_One" xml:space="preserve">
+    <value>{0} silinsin mi?</value>
+    <comment>Confirmation asked before deleting one shot. {0} is its file name.</comment>
+  </data>
+  <data name="RecentDeleted_Many" xml:space="preserve">
+    <value>{0} silindi.</value>
+    <comment>Recent page status line after a delete. {0} is how many were removed, two or more.</comment>
+  </data>
+  <data name="RecentDeleted_One" xml:space="preserve">
+    <value>1 silindi.</value>
+    <comment>Recent page status line after deleting exactly one shot.</comment>
+  </data>
+  <data name="RecentDeletedPartial_Many" xml:space="preserve">
+    <value>{0} silindi, {1} kaldırılamadı.</value>
+    <comment>Recent page status line when some files refused to go. {0} is how many were deleted, {1} how many failed, two or more.</comment>
+  </data>
+  <data name="RecentDeletedPartial_One" xml:space="preserve">
+    <value>{0} silindi, 1 kaldırılamadı.</value>
+    <comment>Recent page status line when exactly one file refused to go. {0} is how many were deleted.</comment>
+  </data>
+  <data name="RecentEdit" xml:space="preserve">
+    <value>Düzenle</value>
+    <comment>Recent page, button that opens the selected shots in the editor.</comment>
+  </data>
+  <data name="RecentEmpty" xml:space="preserve">
+    <value>Henüz kare yok. Bir şey yakala, burada görünsün.</value>
+    <comment>Recent page, shown in the middle of the gallery when the save folder is empty.</comment>
+  </data>
+  <data name="RecentExplorerFailed" xml:space="preserve">
+    <value>Explorer açılamadı.</value>
+    <comment>Recent page status line, when Windows refused to open a folder window. Explorer is the Windows file manager.</comment>
+  </data>
+  <data name="RecentFileUnreadable" xml:space="preserve">
+    <value>Bu dosya okunamadı.</value>
+    <comment>Recent page status line, when a shot could not be decoded to copy it.</comment>
+  </data>
+  <data name="RecentOpenFolder" xml:space="preserve">
+    <value>Klasörü aç</value>
+    <comment>Recent page, button at the top of the page that opens the save folder.</comment>
+  </data>
+  <data name="RecentPin" xml:space="preserve">
+    <value>Sabitle</value>
+    <comment>Recent page, button that floats the selected shots above the other windows.</comment>
+  </data>
+  <data name="RecentSelected_Many" xml:space="preserve">
+    <value>{0} seçili</value>
+    <comment>Recent page status line while several thumbnails are picked. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentSelected_One" xml:space="preserve">
+    <value>1 seçili</value>
+    <comment>Recent page status line, singular form of RecentSelected_Many.</comment>
+  </data>
+  <data name="RecentShotCount_Many" xml:space="preserve">
+    <value>{0} kare   ·   birkaçını seçmek için Ctrl ya da Shift ile tıkla</value>
+    <comment>Recent page, the line under its heading. {0} is how many shots are listed, two or more. Ctrl and Shift are key names.</comment>
+  </data>
+  <data name="RecentShotCount_One" xml:space="preserve">
+    <value>1 kare</value>
+    <comment>Recent page, the line under its heading when exactly one shot is listed.</comment>
+  </data>
+  <data name="RecentShowInFolder" xml:space="preserve">
+    <value>Klasörde göster</value>
+    <comment>Recent page, button that opens Explorer with the selected shot highlighted.</comment>
+  </data>
+  <data name="RecentSizeBytes" xml:space="preserve">
+    <value>{0} B</value>
+    <comment>File size under a thumbnail, in bytes. {0} is a whole number; B is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeKilobytes" xml:space="preserve">
+    <value>{0} KB</value>
+    <comment>File size under a thumbnail, in kilobytes. {0} is a whole number; KB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeMegabytes" xml:space="preserve">
+    <value>{0} MB</value>
+    <comment>File size under a thumbnail, in megabytes. {0} has one decimal place; MB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentTitle" xml:space="preserve">
+    <value>Son kareler</value>
+    <comment>Recent page, its heading.</comment>
+  </data>
+  <data name="RecordBarCancel" xml:space="preserve">
+    <value>Vazgeç</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and throws the file away.</comment>
+  </data>
+  <data name="RecordBarStop" xml:space="preserve">
+    <value>Durdur</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and keeps the file.</comment>
+  </data>
+  <data name="RecordCaptureButton" xml:space="preserve">
+    <value>Kayda başla</value>
+    <comment>Capture page, button that opens the overlay to pick what to record. The footnote at the bottom of the page already lists what can be picked there, so the button only has to say what it starts.</comment>
+  </data>
+  <data name="RecordCountdown" xml:space="preserve">
+    <value>Kayıttan önce geri sayım</value>
+    <comment>Settings page, label beside the list of countdown lengths. The countdown runs in the small recording window after the region is chosen and before anything is recorded.</comment>
+  </data>
+  <data name="RecordCountdownNone" xml:space="preserve">
+    <value>Geri sayım yok</value>
+    <comment>Settings page, the entry in the list of countdown lengths that starts the recording immediately.</comment>
+  </data>
+  <data name="RecordCountdownOption" xml:space="preserve">
+    <value>{0} saniye</value>
+    <comment>Settings page, one entry in the list of countdown lengths. {0} is a number, always 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="RecordFrameRate" xml:space="preserve">
+    <value>Saniyedeki kare</value>
+    <comment>Settings page, label beside the list of recording frame rates.</comment>
+  </data>
+  <data name="RecordFrameRateOption" xml:space="preserve">
+    <value>{0} fps</value>
+    <comment>Settings page, one entry in the list of recording frame rates. {0} is a number such as 30.</comment>
+  </data>
+  <data name="RecordOverlayHint" xml:space="preserve">
+    <value>Kaydetmek için bir bölge sürükle, tüm pencereyi kaydetmek için üzerine tıkla, tüm ekran için Ctrl+A, iptal için Esc.</value>
+    <comment>Drawn across the top of the screen while what to record is being chosen, and the only place the three ways of choosing are spelled out, so it has to name all of them. Ctrl+A and Esc are key names and stay as they are. This one is painted onto the canvas rather than laid out by Windows, so it is neither mirrored nor shaped for a right-to-left script.</comment>
+  </data>
+  <data name="RecordSettingsHeader" xml:space="preserve">
+    <value>KAYIT</value>
+    <comment>Settings page, section heading over the screen recording options. Upper case in English.</comment>
+  </data>
+  <data name="RecordShortcutDetail" xml:space="preserve">
+    <value>Bir bölgeyi, pencereyi veya tüm ekranı kaydeder</value>
+    <comment>Shortcuts page, what the recording shortcut does.</comment>
+  </data>
+  <data name="RecordShortcutName" xml:space="preserve">
+    <value>Kayda başla</value>
+    <comment>Shortcuts page, name of the screen recording action. Also names it in the messages about clashing shortcuts.</comment>
+  </data>
+  <data name="RecordShowCursor" xml:space="preserve">
+    <value>Kayıtlarda fare imlecini göster</value>
+    <comment>Settings page, tick box under RECORDING. The pointer is not in the screen copy Windows hands back, so it is drawn into each frame.</comment>
+  </data>
+  <data name="RecordTrayBusy" xml:space="preserve">
+    <value>Zaten bir kayıt sürüyor. Önce onu durdur.</value>
+    <comment>Notification shown when a recording is asked for while one is already going.</comment>
+  </data>
+  <data name="RecordTrayFailed" xml:space="preserve">
+    <value>Bu bölge kaydedilemedi.</value>
+    <comment>Notification shown when the video encoder refused the region, or finished with nothing usable in the file.</comment>
+  </data>
+  <data name="RecordTrayCountingIn" xml:space="preserve">
+    <value>Shotwin — {0} sonra kayıt</value>
+    <comment>Tray icon tooltip during the count-in before a recording starts. {0} is the seconds left.</comment>
+  </data>
+  <data name="RecordTrayStopItem" xml:space="preserve">
+    <value>Kaydı durdur</value>
+    <comment>Tray menu item, shown only while a recording is running. Keeps the file.</comment>
+  </data>
+  <data name="RecordTrayCancelItem" xml:space="preserve">
+    <value>Kayıttan vazgeç</value>
+    <comment>Tray menu item, shown only while a recording is running. Throws the file away.</comment>
+  </data>
+  <data name="RecordTrayTip" xml:space="preserve">
+    <value>Shotwin — kayıt {0}</value>
+    <comment>Tray icon tooltip while recording. {0} is the elapsed time as m:ss.</comment>
+  </data>
+  <data name="RecordTrayItem" xml:space="preserve">
+    <value>Kayda başla</value>
+    <comment>Notification area menu item that starts a screen recording. A region, a window or a whole screen is chosen in the overlay it opens, so this only has to say what it starts.</comment>
+  </data>
+  <data name="RecordTraySaved" xml:space="preserve">
+    <value>Kayıt {0} olarak kaydedildi. Klasörde göstermek için tıkla.</value>
+    <comment>Notification after a recording is stopped and written. {0} is the file name.</comment>
+  </data>
+  <data name="SettingsAfterCaptureHeader" xml:space="preserve">
+    <value>YAKALAMADAN SONRA</value>
+    <comment>Settings page, first section heading. Upper case in English.</comment>
+  </data>
+  <data name="SettingsAllowInSecurity" xml:space="preserve">
+    <value>Shotwin'e Windows Güvenliği'nde izin ver</value>
+    <comment>Settings page, button that asks Windows to let the app write to a protected folder. Windows Security is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsAutoSave" xml:space="preserve">
+    <value>Her kareyi klasöre otomatik kaydet</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsBrowse" xml:space="preserve">
+    <value>Gözat</value>
+    <comment>Settings page, button that opens a folder picker beside the save folder box.</comment>
+  </data>
+  <data name="SettingsChooseFolderTitle" xml:space="preserve">
+    <value>Karelerin kaydedileceği yeri seç</value>
+    <comment>Title of the folder picker, opened from Settings and from the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsColourPickerCopies" xml:space="preserve">
+    <value>Renk seçici şunu kopyalar</value>
+    <comment>Settings page, label beside the list of colour notations. The notation names Hex, RGB and HSL are not translated.</comment>
+  </data>
+  <data name="SettingsCopyClipboard" xml:space="preserve">
+    <value>Panoya kopyala</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsCornerBottomLeft" xml:space="preserve">
+    <value>Sol alt</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerBottomRight" xml:space="preserve">
+    <value>Sağ alt</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerCursor" xml:space="preserve">
+    <value>Farenin bittiği yer</value>
+    <comment>Settings page, first choice for where the preview thumbnail appears: beside the spot the drag finished on.</comment>
+  </data>
+  <data name="SettingsCornerTopLeft" xml:space="preserve">
+    <value>Sol üst</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerTopRight" xml:space="preserve">
+    <value>Sağ üst</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsFileName" xml:space="preserve">
+    <value>Dosya adı</value>
+    <comment>Settings page, label over the file name template box.</comment>
+  </data>
+  <data name="SettingsFileTemplateHint" xml:space="preserve">
+    <value>Süslü parantez içindekiler tarih biçimidir, örneğin {yyyy-MM-dd}.</value>
+    <comment>Settings page, shown under an empty file name box. The braces and the letters inside them are a date pattern Windows reads, so leave that part exactly as it is.</comment>
+  </data>
+  <data name="SettingsFirstRunDefault" xml:space="preserve">
+    <value>Varsayılanı kullan</value>
+    <comment>The folder question asked on the first capture: button that accepts the app's own folder.</comment>
+  </data>
+  <data name="SettingsFirstRunHint" xml:space="preserve">
+    <value>Windows, tanımadığı uygulamalara karşı Pictures, Documents, Desktop ve Videos klasörlerini korur; bu yüzden kendi klasörün güvenli seçimdir. Shotwin klasörü kullanmadan önce çalıştığını sınar.</value>
+    <comment>The folder question asked on the first capture: why a folder of your own is suggested. Pictures, Documents, Desktop and Videos are Windows folder names.</comment>
+  </data>
+  <data name="SettingsFirstRunPickFolder" xml:space="preserve">
+    <value>Bir klasör seç ya da varsayılanı kullan.</value>
+    <comment>The folder question asked on the first capture, when the box was left empty.</comment>
+  </data>
+  <data name="SettingsFirstRunProtected" xml:space="preserve">
+    <value>Windows, Shotwin'in oraya yazmasına izin vermez — burası Denetimli Klasör Erişimi'nin koruduğu klasörlerden biri. Başka birini seç ya da varsayılanı kullan.</value>
+    <comment>The folder question asked on the first capture, when the chosen folder is protected. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsFirstRunSubtitle" xml:space="preserve">
+    <value>İlk karen hazır. Şimdi bir klasör seç, bundan sonra o kullanılır — sonra Ayarlar'dan değiştirebilirsin.</value>
+    <comment>The folder question asked on the first capture, the line under its heading.</comment>
+  </data>
+  <data name="SettingsFirstRunTitle" xml:space="preserve">
+    <value>Shotwin ekran görüntülerini nerede tutsun?</value>
+    <comment>Heading of the folder question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFirstRunUnwritable" xml:space="preserve">
+    <value>Shotwin oraya yazamıyor. Yolu denetle ya da varsayılanı kullan.</value>
+    <comment>The folder question asked on the first capture, when the chosen folder refused a test write.</comment>
+  </data>
+  <data name="SettingsFirstRunUse" xml:space="preserve">
+    <value>Bu klasörü kullan</value>
+    <comment>The folder question asked on the first capture: button that accepts the typed folder.</comment>
+  </data>
+  <data name="SettingsFolder" xml:space="preserve">
+    <value>Klasör</value>
+    <comment>Label over the save folder box, in Settings and in the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFolderOpenFailed" xml:space="preserve">
+    <value>Bu klasör açılamadı.</value>
+    <comment>Settings page, when Windows refused to open the save folder.</comment>
+  </data>
+  <data name="SettingsFolderProtected" xml:space="preserve">
+    <value>Windows Denetimli Klasör Erişimi bu klasörü koruyor, bu yüzden Shotwin buraya yazamıyor. Kareler yedek klasöre gidiyor — hiçbir şey kaybolmuyor. Bu klasörün kullanılmasını istiyorsan Shotwin'e Windows Güvenliği'nde izin ver.</value>
+    <comment>Settings page, under the save folder box when the folder is protected. Controlled Folder Access and Windows Security are Windows feature names.</comment>
+  </data>
+  <data name="SettingsFolderUnwritable" xml:space="preserve">
+    <value>Shotwin bu klasöre yazamıyor, kareler yedek klasöre gidiyor. Yolu ve oraya yazma iznin olduğunu denetle.</value>
+    <comment>Settings page, under the save folder box when a write failed for any other reason.</comment>
+  </data>
+  <data name="SettingsLanguage" xml:space="preserve">
+    <value>Dil</value>
+    <comment>Settings page, label beside the language list under SYSTEM.</comment>
+  </data>
+  <data name="SettingsLanguageAutomatic" xml:space="preserve">
+    <value>Otomatik (Windows'u izle)</value>
+    <comment>Settings page, first entry in the language list: use whatever display language Windows is set to. Every other entry is a language written in its own words and is never translated.</comment>
+  </data>
+  <data name="SettingsNextFile" xml:space="preserve">
+    <value>Sonraki dosya: {0}.png</value>
+    <comment>Settings page, a worked example under the file name box. {0} is the name the template produces right now.</comment>
+  </data>
+  <data name="SettingsOpen" xml:space="preserve">
+    <value>Aç</value>
+    <comment>Settings page, button that opens the save folder in Explorer.</comment>
+  </data>
+  <data name="SettingsOpenEditor" xml:space="preserve">
+    <value>Düzenleyiciyi aç</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsOverlayHeader" xml:space="preserve">
+    <value>KATMAN</value>
+    <comment>Settings page, section heading over the capture overlay options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsPreviewAppears" xml:space="preserve">
+    <value>Görüneceği yer</value>
+    <comment>Settings page, label beside the list of corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsPreviewHint" xml:space="preserve">
+    <value>Önizleme, bir kareyi oradan aldığın yerdir: düzenlemek için tıkla, PNG'yi bırakmak için herhangi bir uygulamaya sürükle ya da alt kenarındaki düğmeleri kullan. Başka bir pencereye geçince kaybolur, kareyi panoda yapıştırmaya hazır bırakır. Otomatik kaydetme kapalıyken, önizlemede Kaydet'e basmazsan kare atılır.</value>
+    <comment>Settings page, the paragraph explaining the preview thumbnail. PNG is a file format name.</comment>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Kaydedildi.</value>
+    <comment>Settings page, the confirmation that floats over the bottom of the list after a change is written.</comment>
+  </data>
+  <data name="SettingsSavingHeader" xml:space="preserve">
+    <value>KAYDETME</value>
+    <comment>Settings page, section heading over the folder and file name options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsSecurityDone" xml:space="preserve">
+    <value>Tamam. Shotwin artık o klasöre yazabiliyor.</value>
+    <comment>Settings page, after Windows Security accepted the app and the folder now takes writes.</comment>
+  </data>
+  <data name="SettingsSecurityStillBlocked" xml:space="preserve">
+    <value>Windows değişikliği kabul etti ama klasör hâlâ yazmayı reddediyor.</value>
+    <comment>Settings page, after Windows Security accepted the app but the folder still refuses writes.</comment>
+  </data>
+  <data name="SettingsShowCoordinates" xml:space="preserve">
+    <value>İmlecin yanında konumu göster</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsShowPreview" xml:space="preserve">
+    <value>Önizleme göster</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsSnapWindows" xml:space="preserve">
+    <value>İmlecin altındaki pencerelere yapış</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsStartupHint" xml:space="preserve">
+    <value>Pencere açmadan doğrudan bildirim alanında başlar.</value>
+    <comment>Settings page, under the start-at-login tick box.</comment>
+  </data>
+  <data name="SettingsStartupRefused" xml:space="preserve">
+    <value>Windows, oturum açınca başlatma değişikliğini reddetti.</value>
+    <comment>Settings page, when the registry entry for starting at login could not be written.</comment>
+  </data>
+  <data name="SettingsStartWithWindows" xml:space="preserve">
+    <value>Oturum açtığımda Shotwin'i başlat</value>
+    <comment>Settings page, tick box under SYSTEM.</comment>
+  </data>
+  <data name="SettingsSubtitle" xml:space="preserve">
+    <value>Değişiklikler yaptıkça uygulanır.</value>
+    <comment>Settings page, the line under its heading.</comment>
+  </data>
+  <data name="SettingsSystemHeader" xml:space="preserve">
+    <value>SİSTEM</value>
+    <comment>Settings page, section heading over the language and start-at-login options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Ayarlar</value>
+    <comment>Settings page, its heading.</comment>
+  </data>
+  <data name="SettingsWaitingForAdmin" xml:space="preserve">
+    <value>Yönetici istemi bekleniyor...</value>
+    <comment>Settings page, while the Windows elevation prompt is on screen.</comment>
+  </data>
+  <data name="ShortcutsCaptureArea" xml:space="preserve">
+    <value>Alan yakala</value>
+    <comment>Shortcuts page, name of the area capture action. Also names it in the messages about shortcuts Windows refused.</comment>
+  </data>
+  <data name="ShortcutsCaptureAreaDetail" xml:space="preserve">
+    <value>Herhangi bir bölgeyi sürükle</value>
+    <comment>Shortcuts page, what the area capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreen" xml:space="preserve">
+    <value>Ekranı yakala</value>
+    <comment>Shortcuts page, name of the whole-screen capture action.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreenDetail" xml:space="preserve">
+    <value>İmlecin bulunduğu ekran</value>
+    <comment>Shortcuts page, what the screen capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsClash" xml:space="preserve">
+    <value>Bu birleşim başka bir eylemde kullanılıyor.</value>
+    <comment>Shortcuts page, when the recorded combination is already bound to a different Shotwin action.</comment>
+  </data>
+  <data name="ShortcutsEditorCommands" xml:space="preserve">
+    <value>Ctrl+C kopyala · Ctrl+S kaydet · Ctrl+Shift+S farklı kaydet · Ctrl+P sabitle · Ctrl+Z geri al · Ctrl+tekerlek yakınlaştır · Ctrl+0 sığdır · Delete kaldır · Esc kapat</value>
+    <comment>Shortcuts page, the editor's command keys. Translate only the word after each key name; the key names themselves stay as they are.</comment>
+  </data>
+  <data name="ShortcutsEditorHeader" xml:space="preserve">
+    <value>DÜZENLEYİCİDE</value>
+    <comment>Shortcuts page, heading over the editor's own keys. Upper case in English.</comment>
+  </data>
+  <data name="ShortcutsEditorTools" xml:space="preserve">
+    <value>V seç · A ok · R dikdörtgen · O elips · L çizgi · P kalem · H fosforlu kalem · T metin · S adım sayacı · B pikselleştir · Shift+B bulanıklaştır</value>
+    <comment>Shortcuts page, the editor's tool keys. Translate only the words after each key name; the letters themselves are fixed keys and stay as they are.</comment>
+  </data>
+  <data name="ShortcutsGrabText" xml:space="preserve">
+    <value>Metni al</value>
+    <comment>Shortcuts page, name of the text recognition action.</comment>
+  </data>
+  <data name="ShortcutsGrabTextDetail" xml:space="preserve">
+    <value>Bir alanı okur ve metni kopyalar</value>
+    <comment>Shortcuts page, what the text shortcut does.</comment>
+  </data>
+  <data name="ShortcutsNotSet" xml:space="preserve">
+    <value>Atanmadı</value>
+    <comment>Shown in place of a key combination when an action has none bound.</comment>
+  </data>
+  <data name="ShortcutsPickColour" xml:space="preserve">
+    <value>Renk seç</value>
+    <comment>Shortcuts page, name of the colour picker action.</comment>
+  </data>
+  <data name="ShortcutsPickColourDetail" xml:space="preserve">
+    <value>Ekran üzerinde büyüteç; tıklayınca değeri kopyalar</value>
+    <comment>Shortcuts page, what the colour shortcut does. A loupe is a magnifying lens.</comment>
+  </data>
+  <data name="ShortcutsPressCombination" xml:space="preserve">
+    <value>Bir birleşime bas...</value>
+    <comment>Shortcuts page, shown in a box that is waiting for the keys to be pressed.</comment>
+  </data>
+  <data name="ShortcutsRefused" xml:space="preserve">
+    <value>Windows şunları Shotwin'e vermedi: {0}. Başka bir uygulama onlara sahip.</value>
+    <comment>Shortcuts page, when Windows refused to register a combination. {0} is a comma-separated list of action names.</comment>
+  </data>
+  <data name="ShortcutsSaved" xml:space="preserve">
+    <value>Kaydedildi.</value>
+    <comment>Shortcuts page, the confirmation after a new combination is written.</comment>
+  </data>
+  <data name="ShortcutsScrolling" xml:space="preserve">
+    <value>Kaydırmalı yakalama</value>
+    <comment>Shortcuts page, name of the scrolling capture action.</comment>
+  </data>
+  <data name="ShortcutsScrollingDetail" xml:space="preserve">
+    <value>Bir bölgeyi kaydırır ve birleştirir</value>
+    <comment>Shortcuts page, what the scrolling shortcut does.</comment>
+  </data>
+  <data name="ShortcutsSubtitle" xml:space="preserve">
+    <value>Bir kısayola tıkla, sonra istediğin birleşime bas. Esc iptal eder.</value>
+    <comment>Shortcuts page, the line under its heading. Esc is a key name.</comment>
+  </data>
+  <data name="ShortcutsTitle" xml:space="preserve">
+    <value>Kısayollar</value>
+    <comment>Shortcuts page, its heading.</comment>
+  </data>
+  <data name="TrayCaptureArea" xml:space="preserve">
+    <value>Alan yakala</value>
+    <comment>Notification area menu item that opens the area overlay.</comment>
+  </data>
+  <data name="TrayCaptureScreen" xml:space="preserve">
+    <value>Ekranı yakala</value>
+    <comment>Notification area menu item that grabs the monitor the cursor is on.</comment>
+  </data>
+  <data name="TrayColourCopied" xml:space="preserve">
+    <value>{0} kopyalandı</value>
+    <comment>Notification after the colour picker. {0} is the colour value, for example #1B1B1F.</comment>
+  </data>
+  <data name="TrayCrash" xml:space="preserve">
+    <value>Bir şeyler ters gitti: {0}. Ayrıntılar: {1}</value>
+    <comment>Notification after an error the app recovered from. {0} is the message from Windows, {1} is the path of the log file. Neither is translated.</comment>
+  </data>
+  <data name="TrayFileUnreadable" xml:space="preserve">
+    <value>Bu dosya açılamadı.</value>
+    <comment>Notification when a saved shot could not be decoded to reopen it.</comment>
+  </data>
+  <data name="TrayGrabText" xml:space="preserve">
+    <value>Metni al</value>
+    <comment>Notification area menu item that reads the text out of a region.</comment>
+  </data>
+  <data name="TrayHotkeyConflicts" xml:space="preserve">
+    <value>Bu kısayollar başka bir uygulamada: {0}. Kısayollar altından değiştir.</value>
+    <comment>Notification at startup when Windows refused a shortcut. {0} is a comma-separated list of action names. Shortcuts is the name of a page in the app.</comment>
+  </data>
+  <data name="TrayNoText" xml:space="preserve">
+    <value>O alanda metin bulunamadı.</value>
+    <comment>Notification when text recognition ran on a captured region and read nothing.</comment>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Shotwin'i aç</value>
+    <comment>Notification area menu item that shows the main window.</comment>
+  </data>
+  <data name="TrayPickColour" xml:space="preserve">
+    <value>Renk seç</value>
+    <comment>Notification area menu item that opens the colour loupe.</comment>
+  </data>
+  <data name="TrayQuit" xml:space="preserve">
+    <value>Shotwin'den çık</value>
+    <comment>Notification area menu item that ends the app.</comment>
+  </data>
+  <data name="TrayRecent" xml:space="preserve">
+    <value>Son kareler</value>
+    <comment>Notification area menu item that opens the gallery of saved shots.</comment>
+  </data>
+  <data name="TraySaveFailed" xml:space="preserve">
+    <value>Kare kaydedilemedi: {0}</value>
+    <comment>Notification when automatic saving failed. {0} is the reason, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="TrayScrollingCapture" xml:space="preserve">
+    <value>Kaydırmalı yakalama</value>
+    <comment>Notification area menu item that starts a scrolling capture.</comment>
+  </data>
+  <data name="TraySettings" xml:space="preserve">
+    <value>Ayarlar</value>
+    <comment>Notification area menu item that opens the settings page.</comment>
+  </data>
+  <data name="VideoCaption" xml:space="preserve">
+    <value>Shotwin — {0}</value>
+    <comment>Video editor window caption. {0} is the file name.</comment>
+  </data>
+  <data name="VideoClipboardBusy" xml:space="preserve">
+    <value>Pano meşgul. Yeniden dene.</value>
+    <comment>Shown when another app holds the clipboard.</comment>
+  </data>
+  <data name="VideoCopied" xml:space="preserve">
+    <value>Kayıt kopyalandı.</value>
+    <comment>Shown after the file is put on the clipboard.</comment>
+  </data>
+  <data name="VideoCopy" xml:space="preserve">
+    <value>Kopyala</value>
+    <comment>Video editor button that copies the file itself.</comment>
+  </data>
+  <data name="VideoCut" xml:space="preserve">
+    <value>Bir bölümü kes</value>
+    <comment>Video editor button that drops a stretch of the recording out of the middle.</comment>
+  </data>
+  <data name="VideoCutCount_One" xml:space="preserve">
+    <value>{0} kesim</value>
+    <comment>How many stretches are being dropped. {0} is the number, here one.</comment>
+  </data>
+  <data name="VideoCutCount_Many" xml:space="preserve">
+    <value>{0} kesim</value>
+    <comment>How many stretches are being dropped. {0} is the number, two or more.</comment>
+  </data>
+  <data name="VideoCutRemove" xml:space="preserve">
+    <value>Bu bölümü geri getir</value>
+    <comment>Tooltip on the small cross that undoes one cut.</comment>
+  </data>
+  <data name="VideoExplorerFailed" xml:space="preserve">
+    <value>Explorer açılamadı.</value>
+    <comment>Shown when revealing the file in Explorer fails.</comment>
+  </data>
+  <data name="VideoHintDrawPiece" xml:space="preserve">
+    <value>Başka bir bölüm için şeritte sürükle</value>
+    <comment>Hint under the video editor's timeline, saying how to add a second kept piece of a recording.</comment>
+  </data>
+  <data name="VideoQualitySharper" xml:space="preserve">
+    <value>Daha net görüntü, daha az kare</value>
+    <comment>Tooltip on the video editor button that trades playback smoothness for detail.</comment>
+  </data>
+  <data name="VideoQualitySmoother" xml:space="preserve">
+    <value>Daha akıcı görüntü, daha az ayrıntı</value>
+    <comment>Tooltip on the video editor button that trades detail for playback smoothness.</comment>
+  </data>
+  <data name="VideoNothingLeft" xml:space="preserve">
+    <value>Kesimlerden sonra kaydedilecek bir şey kalmıyor.</value>
+    <comment>Shown when every part of the recording has been cut away.</comment>
+  </data>
+  <data name="VideoPause" xml:space="preserve">
+    <value>Duraklat</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPlay" xml:space="preserve">
+    <value>Oynat</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPosition" xml:space="preserve">
+    <value>{0} / {1}</value>
+    <comment>Video editor position readout: current time over total, both m:ss.</comment>
+  </data>
+  <data name="VideoSave" xml:space="preserve">
+    <value>Kırpmayı kaydet</value>
+    <comment>Video editor button that exports the selected span as a new file.</comment>
+  </data>
+  <data name="VideoSaveFailed" xml:space="preserve">
+    <value>Bu kaydedilemedi: {0}</value>
+    <comment>Shown when the trim export fails. {0} is the reason.</comment>
+  </data>
+  <data name="VideoSaved" xml:space="preserve">
+    <value>{0} olarak kaydedildi</value>
+    <comment>Shown after a trimmed copy is written. {0} is the file name.</comment>
+  </data>
+  <data name="VideoSaving" xml:space="preserve">
+    <value>Kaydediliyor… %{0}</value>
+    <comment>Video editor progress while the trimmed copy is written. {0} is percent.</comment>
+  </data>
+  <data name="VideoShowInFolder" xml:space="preserve">
+    <value>Klasörde göster</value>
+    <comment>Video editor button that reveals the file in Explorer.</comment>
+  </data>
+  <data name="VideoSpanTooShort" xml:space="preserve">
+    <value>Kaydetmek için daha uzun bir aralık seç.</value>
+    <comment>Shown when the trim handles are too close together.</comment>
+  </data>
+  <data name="VideoTrimSpan" xml:space="preserve">
+    <value>Kırpma: {0} — {1}</value>
+    <comment>Video editor readout of the selected span, both m:ss.</comment>
+  </data>
+  <data name="VideoUnreadable" xml:space="preserve">
+    <value>Bu kayıt açılamadı.</value>
+    <comment>Shown when the video file will not load.</comment>
+  </data>
+  <data name="VideoCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Detail line on a recording's card in Recent: {0} is the date and size, {1} is how long it runs.</comment>
+  </data>
+</root>

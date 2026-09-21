@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    The Spanish translation of Strings.resx, built into a satellite assembly.
+    Nothing in the code names a culture, so this file sitting beside the English one is
+    the whole job.
+
+    Each entry keeps the English comment saying where the string shows up, because that
+    is the context whoever edits this translation next will need. Numbered placeholders
+    are filled by string.Format and may sit in a different order here than in English.
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ==== About page ==== -->
+  <data name="AboutAroundDetail" xml:space="preserve">
+    <value>Atajos globales · una miniatura de vista previa que arrastras directamente a otra app · guardado automático · salida en PNG y al portapapeles · lanzadores desde la línea de comandos · funciona desde el área de notificación</value>
+    <comment>About page, the single line under the AROUND IT heading.</comment>
+  </data>
+  <data name="AboutAroundHeader" xml:space="preserve">
+    <value>ALREDEDOR</value>
+    <comment>About page, section heading over the miscellaneous features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureArea" xml:space="preserve">
+    <value>Área</value>
+    <comment>About page, name of the area capture feature in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureAreaDetail" xml:space="preserve">
+    <value>Arrastra cualquier región, con lectura en vivo de coordenadas y tamaño. Haz clic en una ventana para capturarla entera.</value>
+    <comment>About page, what area capture does. Sits beside AboutCaptureArea.</comment>
+  </data>
+  <data name="AboutCaptureColour" xml:space="preserve">
+    <value>Color</value>
+    <comment>About page, name of the colour picker in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureColourDetail" xml:space="preserve">
+    <value>Una lupa ampliada sobre la pantalla; un clic copia el valor en Hex, RGB o HSL.</value>
+    <comment>About page, what the colour picker does. Hex, RGB and HSL are notation names and stay as they are.</comment>
+  </data>
+  <data name="AboutCaptureHeader" xml:space="preserve">
+    <value>CAPTURA</value>
+    <comment>About page, section heading over the capture features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureScreen" xml:space="preserve">
+    <value>Pantalla</value>
+    <comment>About page, name of the whole-screen capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScreenDetail" xml:space="preserve">
+    <value>El monitor donde está el cursor, a su resolución completa.</value>
+    <comment>About page, what screen capture does.</comment>
+  </data>
+  <data name="AboutCaptureScrolling" xml:space="preserve">
+    <value>Desplazamiento</value>
+    <comment>About page, name of scrolling capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScrollingDetail" xml:space="preserve">
+    <value>Una página más alta que la pantalla, desplazada y unida en una sola imagen. Se detiene sola al llegar al final.</value>
+    <comment>About page, what scrolling capture does.</comment>
+  </data>
+  <data name="AboutCaptureText" xml:space="preserve">
+    <value>Texto</value>
+    <comment>About page, name of text recognition in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureTextDetail" xml:space="preserve">
+    <value>Lee las palabras de una región y copia eso en lugar de la imagen. Sin conexión, con el reconocimiento incluido en Windows.</value>
+    <comment>About page, what text capture does.</comment>
+  </data>
+  <data name="AboutCheckAgain" xml:space="preserve">
+    <value>Buscar de nuevo</value>
+    <comment>About page, button that looks for a newer version.</comment>
+  </data>
+  <data name="AboutChecking" xml:space="preserve">
+    <value>Buscando una versión más reciente…</value>
+    <comment>About page, shown while an update check asked for by hand is running.</comment>
+  </data>
+  <data name="AboutEditorAnnotate" xml:space="preserve">
+    <value>Anotar</value>
+    <comment>About page, name of the annotation tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorAnnotateDetail" xml:space="preserve">
+    <value>Flechas, formas, líneas, lápiz, marcador, texto y contadores de pasos numerados.</value>
+    <comment>About page, what the annotation tools are.</comment>
+  </data>
+  <data name="AboutEditorCompose" xml:space="preserve">
+    <value>Componer</value>
+    <comment>About page, name of the composition tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorComposeDetail" xml:space="preserve">
+    <value>Recorta, quita una franja del centro, o añade otra imagen y coloca las dos.</value>
+    <comment>About page, what the composition tools do.</comment>
+  </data>
+  <data name="AboutEditorHeader" xml:space="preserve">
+    <value>EDITOR</value>
+    <comment>About page, section heading over the editor features. Upper case in English.</comment>
+  </data>
+  <data name="AboutEditorPin" xml:space="preserve">
+    <value>Fijar</value>
+    <comment>About page, name of the pin feature in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorPinDetail" xml:space="preserve">
+    <value>Mantén una captura sobre todas las ventanas mientras trabajas con ella.</value>
+    <comment>About page, what pinning does.</comment>
+  </data>
+  <data name="AboutEditorRedact" xml:space="preserve">
+    <value>Ocultar</value>
+    <comment>About page, name of the redaction tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorRedactDetail" xml:space="preserve">
+    <value>Pixela o desenfoca todo lo que no debe salir de la máquina.</value>
+    <comment>About page, what the redaction tools do.</comment>
+  </data>
+  <data name="AboutSummary" xml:space="preserve">
+    <value>Una herramienta de capturas hecha para trabajar al píxel: capturar, anotar, leer el texto de una imagen y mantener una captura encima mientras la usas. .</value>
+    <comment>About page, the paragraph in the card at the top. .NET, WPF, SkiaSharp and Electron are product names and stay as they are.</comment>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>Acerca de</value>
+    <comment>About page, its heading.</comment>
+  </data>
+  <data name="AboutUpdateAvailable" xml:space="preserve">
+    <value>Shotwin {0} está disponible. El botón al final de la barra lo instala.</value>
+    <comment>About page, shown when a check found a newer build. {0} is the version number, for example 1.2.0.</comment>
+  </data>
+  <data name="AboutUpToDate" xml:space="preserve">
+    <value>Tienes la última versión.</value>
+    <comment>About page, shown when a check found nothing newer.</comment>
+  </data>
+  <data name="AboutVersionLine" xml:space="preserve">
+    <value>Shotwin {0}   ·   una herramienta de capturas para Windows</value>
+    <comment>About page, the line under the heading. {0} is the running version number.</comment>
+  </data>
+
+  <!-- ==== Capture page, the scrolling capture and the shared text-recognition report ==== -->
+  <data name="CaptureArea" xml:space="preserve">
+    <value>Capturar un área</value>
+    <comment>Capture page, the main button. Opens the overlay to drag a region out.</comment>
+  </data>
+  <data name="CaptureCountdown" xml:space="preserve">
+    <value>{0}…</value>
+    <comment>Capture page, the delayed-capture countdown beside the delay buttons. {0} is the seconds left.</comment>
+  </data>
+  <data name="CaptureDelayedHeader" xml:space="preserve">
+    <value>CON RETARDO</value>
+    <comment>Capture page, heading of the delayed capture card. Upper case in English.</comment>
+  </data>
+  <data name="CaptureDelayedHint" xml:space="preserve">
+    <value>Hace la cuenta atrás y abre la superposición de área. Para menús y estados al pasar el ratón que desaparecen en cuanto pulsas un atajo.</value>
+    <comment>Capture page, what delayed capture is for.</comment>
+  </data>
+  <data name="CaptureDelaySeconds" xml:space="preserve">
+    <value>{0} segundos</value>
+    <comment>Capture page, the three delay buttons. {0} is only ever 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="CaptureGrabText" xml:space="preserve">
+    <value>Extraer texto</value>
+    <comment>Capture page, button that reads the text out of a region instead of taking a picture.</comment>
+  </data>
+  <data name="CaptureOverlayHint" xml:space="preserve">
+    <value>En la superposición: arrastra para seleccionar, haz clic en una ventana para capturarla entera, Shift para cuadrarla, Space para mover la selección, Ctrl+A para todo el monitor, Esc para cancelar.</value>
+    <comment>Capture page, the footnote at the bottom. Shift, Space, Ctrl+A and Esc are key names and stay as they are.</comment>
+  </data>
+  <data name="CapturePickColour" xml:space="preserve">
+    <value>Elegir un color</value>
+    <comment>Capture page, button that opens the colour loupe.</comment>
+  </data>
+  <data name="CaptureScreen" xml:space="preserve">
+    <value>Capturar la pantalla</value>
+    <comment>Capture page, button that grabs the whole monitor the cursor is on.</comment>
+  </data>
+  <data name="CaptureScrolling" xml:space="preserve">
+    <value>Captura con desplazamiento</value>
+    <comment>Capture page, button that scrolls a region and stitches the frames together.</comment>
+  </data>
+  <data name="CaptureScrollingProgress" xml:space="preserve">
+    <value>Capturando… {0} px</value>
+    <comment>The small window shown while a scrolling capture runs. {0} is how many pixels tall the result is so far.</comment>
+  </data>
+  <data name="CaptureScrollingStop" xml:space="preserve">
+    <value>Parar</value>
+    <comment>The small window shown while a scrolling capture runs: the button that ends it and keeps what was captured.</comment>
+  </data>
+  <data name="CaptureSecondaryHint" xml:space="preserve">
+    <value>Ambos copian directamente al portapapeles. El texto se lee en {0}.</value>
+    <comment>Capture page, under the colour and text buttons. {0} is a comma-separated list of recognition language names supplied by Windows.</comment>
+  </data>
+  <data name="CaptureSecondaryHintNoOcr" xml:space="preserve">
+    <value>Elegir un color copia directamente al portapapeles. Extraer texto necesita un idioma de OCR instalado en Windows, en Hora e idioma.</value>
+    <comment>Capture page, replaces CaptureSecondaryHint when Windows has no recognition language installed. Time and language is the name of a Windows Settings page.</comment>
+  </data>
+  <data name="CaptureSubtitle" xml:space="preserve">
+    <value>Los atajos funcionan desde cualquier sitio. Estos botones ocultan primero esta ventana, para que nunca salga en tu captura.</value>
+    <comment>Capture page, the line under its heading.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_Many" xml:space="preserve">
+    <value>Copiadas {0} líneas de texto.</value>
+    <comment>Shown after text recognition succeeds, in the editor, on the preview thumbnail and as a notification. {0} is the number of lines, always two or more.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_One" xml:space="preserve">
+    <value>Copiada 1 línea de texto.</value>
+    <comment>Shown after text recognition read exactly one line. Singular form of CaptureTextCopiedLines_Many.</comment>
+  </data>
+  <data name="CaptureTitle" xml:space="preserve">
+    <value>Capturar</value>
+    <comment>Capture page, its heading.</comment>
+  </data>
+
+  <!-- ==== Editor window ==== -->
+  <data name="EditorAddedBelow" xml:space="preserve">
+    <value>Añadida debajo — arrástrala para moverla.</value>
+    <comment>Editor status line, after another image was dropped in under the shot.</comment>
+  </data>
+  <data name="EditorAddedRight" xml:space="preserve">
+    <value>Añadida a la derecha — arrástrala para moverla.</value>
+    <comment>Editor status line, after another image was dropped in beside the shot.</comment>
+  </data>
+  <data name="EditorAddImage" xml:space="preserve">
+    <value>Añadir otra imagen al lienzo ({0}, o pega con {1})</value>
+    <comment>Editor toolbar tooltip. {0} and {1} are the key names Ctrl+Shift+A and Ctrl+V, supplied by the app.</comment>
+  </data>
+  <data name="EditorAddImageTitle" xml:space="preserve">
+    <value>Añadir una imagen al lienzo</value>
+    <comment>Title of the file picker the editor opens to add a second image.</comment>
+  </data>
+  <data name="EditorCaption" xml:space="preserve">
+    <value>Shotwin  ·  {0} x {1}</value>
+    <comment>Editor title bar. {0} and {1} are the width and height of the shot in pixels.</comment>
+  </data>
+  <data name="EditorClipboardBusy" xml:space="preserve">
+    <value>El portapapeles estaba ocupado. Inténtalo de nuevo.</value>
+    <comment>Editor status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="EditorClipboardUnreadable" xml:space="preserve">
+    <value>No se pudo leer esa imagen del portapapeles.</value>
+    <comment>Editor status line, when the image on the clipboard could not be decoded.</comment>
+  </data>
+  <data name="EditorClose" xml:space="preserve">
+    <value>Cerrar</value>
+    <comment>Editor title bar, tooltip on the close button. Closes the window rather than hiding it.</comment>
+  </data>
+  <data name="EditorCopiedToClipboard" xml:space="preserve">
+    <value>Copiado al portapapeles</value>
+    <comment>Editor status line, after the shot was copied.</comment>
+  </data>
+  <data name="EditorCopy" xml:space="preserve">
+    <value>Copiar ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+C, supplied by the app.</comment>
+  </data>
+  <data name="EditorCropped" xml:space="preserve">
+    <value>Recortado.</value>
+    <comment>Editor status line, after a crop was applied.</comment>
+  </data>
+  <data name="EditorCutOut" xml:space="preserve">
+    <value>Franja quitada.</value>
+    <comment>Editor status line, after a band was cut out of the middle of the shot.</comment>
+  </data>
+  <data name="EditorFileUnreadable" xml:space="preserve">
+    <value>No se pudo leer ese archivo.</value>
+    <comment>Editor status line, when a chosen image file could not be decoded.</comment>
+  </data>
+  <data name="EditorImageNotAdded" xml:space="preserve">
+    <value>No se pudo añadir esa imagen.</value>
+    <comment>Editor status line, when a second image would not fit onto the canvas.</comment>
+  </data>
+  <data name="EditorNoClipboardImage" xml:space="preserve">
+    <value>No hay ninguna imagen en el portapapeles.</value>
+    <comment>Editor status line, after pasting with nothing to paste.</comment>
+  </data>
+  <data name="EditorNoText" xml:space="preserve">
+    <value>No se ha encontrado texto en esta captura.</value>
+    <comment>Editor status line, when recognition ran but read nothing.</comment>
+  </data>
+  <data name="EditorOcr" xml:space="preserve">
+    <value>Copiar el texto de esta captura ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Shift+T, supplied by the app.</comment>
+  </data>
+  <data name="EditorOpenFilter" xml:space="preserve">
+    <value>Imágenes|*.png;*.jpg;*.jpeg;*.bmp|Todos los archivos|*.*</value>
+    <comment>File type list in the editor's Add image dialog. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorPin" xml:space="preserve">
+    <value>Fijar en pantalla ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+P, supplied by the app.</comment>
+  </data>
+  <data name="EditorPinned" xml:space="preserve">
+    <value>Fijada</value>
+    <comment>Editor status line, after the shot was floated above the other windows.</comment>
+  </data>
+  <data name="EditorReadingText" xml:space="preserve">
+    <value>Leyendo el texto...</value>
+    <comment>Editor status line, while the words in the shot are being recognised.</comment>
+  </data>
+  <data name="EditorRegionTooSmall" xml:space="preserve">
+    <value>Esa región es demasiado pequeña.</value>
+    <comment>Editor status line, when a crop or cut rectangle was too small to apply.</comment>
+  </data>
+  <data name="EditorSave" xml:space="preserve">
+    <value>Guardar ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+S, supplied by the app.</comment>
+  </data>
+  <data name="EditorSavedTo" xml:space="preserve">
+    <value>Guardado en {0}</value>
+    <comment>Editor status line. {0} is the full path the shot was written to.</comment>
+  </data>
+  <data name="EditorSavedToWithProblem" xml:space="preserve">
+    <value>Guardado en {0} — {1}</value>
+    <comment>Editor status line when the shot landed somewhere other than the chosen folder. {0} is the path, {1} is why the chosen folder was not used.</comment>
+  </data>
+  <data name="EditorSaveFailed" xml:space="preserve">
+    <value>No se pudo guardar: {0}</value>
+    <comment>Editor status line. {0} is the reason the write failed, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="EditorSaveFailedShort" xml:space="preserve">
+    <value>Error al guardar</value>
+    <comment>Editor status line, when Save as could not write the file.</comment>
+  </data>
+  <data name="EditorSaveFilter" xml:space="preserve">
+    <value>Imagen PNG|*.png|Imagen JPEG|*.jpg</value>
+    <comment>File type list in the Save as dialogs of the editor, the preview thumbnail and a pinned shot. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorSize" xml:space="preserve">
+    <value>Tamaño</value>
+    <comment>Editor toolbar, label on the stroke thickness slider.</comment>
+  </data>
+  <data name="EditorStatus_Many" xml:space="preserve">
+    <value>{0} x {1}   ·   {2} anotaciones</value>
+    <comment>Editor status line. {0} and {1} are the pixel size, {2} is how many marks have been drawn, two or more.</comment>
+  </data>
+  <data name="EditorStatus_One" xml:space="preserve">
+    <value>{0} x {1}   ·   1 anotación</value>
+    <comment>Editor status line with exactly one mark drawn. Singular form of EditorStatus_Many.</comment>
+  </data>
+  <data name="EditorStatusPosition" xml:space="preserve">
+    <value>   ·   {0}, {1}</value>
+    <comment>Appended to the editor status line while the cursor is over the image. {0} and {1} are the pixel coordinates.</comment>
+  </data>
+  <data name="EditorToolArrow" xml:space="preserve">
+    <value>Flecha ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolBlur" xml:space="preserve">
+    <value>Desenfoque ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCrop" xml:space="preserve">
+    <value>Recortar ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCut" xml:space="preserve">
+    <value>Quitar una franja ({0})</value>
+    <comment>Editor toolbar tooltip. Removes a strip from the middle and closes the gap. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolEllipse" xml:space="preserve">
+    <value>Elipse ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolHighlight" xml:space="preserve">
+    <value>Marcador ({0})</value>
+    <comment>Editor toolbar tooltip for the highlighter pen. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolLine" xml:space="preserve">
+    <value>Línea ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolPen" xml:space="preserve">
+    <value>Lápiz ({0})</value>
+    <comment>Editor toolbar tooltip for freehand drawing. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolPixelate" xml:space="preserve">
+    <value>Pixelar ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolRectangle" xml:space="preserve">
+    <value>Rectángulo ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolSelect" xml:space="preserve">
+    <value>Seleccionar ({0})</value>
+    <comment>Editor toolbar tooltip for the tool that picks up and moves marks already drawn. {0} is the key that selects it.</comment>
+  </data>
+  <data name="EditorToolStep" xml:space="preserve">
+    <value>Contador de pasos ({0})</value>
+    <comment>Editor toolbar tooltip for the numbered badges 1, 2, 3 used to walk through a screenshot. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolText" xml:space="preserve">
+    <value>Texto ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorUndo" xml:space="preserve">
+    <value>Deshacer ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Z, supplied by the app.</comment>
+  </data>
+  <data name="EditorZoom" xml:space="preserve">
+    <value>{0}%</value>
+    <comment>Editor status bar, the zoom level at the far end. {0} is a whole number.</comment>
+  </data>
+
+  <!-- ==== Failures reported out of the services ==== -->
+  <data name="ErrorAdminPromptDismissed" xml:space="preserve">
+    <value>Se descartó el aviso de administrador, así que no ha cambiado nada.</value>
+    <comment>Settings page, after the Windows elevation prompt was declined.</comment>
+  </data>
+  <data name="ErrorElevationFailed" xml:space="preserve">
+    <value>Windows no ha querido iniciar el comando con permisos elevados.</value>
+    <comment>Settings page, when the request to allow Shotwin through Windows Security could not even be launched.</comment>
+  </data>
+  <data name="ErrorNoOcrLanguage" xml:space="preserve">
+    <value>Windows no tiene ningún idioma de OCR instalado. Añade uno en Configuración, Hora e idioma, Idioma y región.</value>
+    <comment>Shown wherever text recognition is attempted. Settings, Time and language, and Language and region are the names of Windows Settings pages.</comment>
+  </data>
+  <data name="ErrorOwnPathUnknown" xml:space="preserve">
+    <value>Shotwin no ha podido averiguar su propia ruta.</value>
+    <comment>Settings page, when the app cannot name its own executable to Windows Security.</comment>
+  </data>
+  <data name="ErrorSaveBlocked" xml:space="preserve">
+    <value>Acceso controlado a carpetas o permisos de la carpeta</value>
+    <comment>The reason a save failed, dropped into EditorSaveFailed and TraySaveFailed. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="ErrorSaveFolderBlocked" xml:space="preserve">
+    <value>{0} está bloqueada por Windows ({1})</value>
+    <comment>Said when a shot landed in the fallback folder instead. {0} is the folder that was chosen, {1} is why it refused the write.</comment>
+  </data>
+  <data name="ErrorSecurityRefused" xml:space="preserve">
+    <value>Seguridad de Windows ha rechazado el cambio. Puede que tu organización gestione este ajuste.</value>
+    <comment>Settings page, when the elevated command ran but Windows Security rejected it.</comment>
+  </data>
+
+  <!-- ==== Main window: the navigation rail and the caption buttons ==== -->
+  <data name="NavAbout" xml:space="preserve">
+    <value>Acerca de</value>
+    <comment>Main window navigation rail, the About item.</comment>
+  </data>
+  <data name="NavCapture" xml:space="preserve">
+    <value>Capturar</value>
+    <comment>Main window navigation rail, the Capture item.</comment>
+  </data>
+  <data name="NavCloseToTray" xml:space="preserve">
+    <value>Cerrar al área de notificación</value>
+    <comment>Main window title bar, tooltip on the close button. The app keeps running in the notification area.</comment>
+  </data>
+  <data name="NavMaximise" xml:space="preserve">
+    <value>Maximizar</value>
+    <comment>Title bar tooltip on the maximise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavMinimise" xml:space="preserve">
+    <value>Minimizar</value>
+    <comment>Title bar tooltip on the minimise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavRecent" xml:space="preserve">
+    <value>Recientes</value>
+    <comment>Main window navigation rail, the Recent item.</comment>
+  </data>
+  <data name="NavRestore" xml:space="preserve">
+    <value>Restaurar</value>
+    <comment>Title bar tooltip on the maximise button once the window is maximised, in the main window and the editor.</comment>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>Ajustes</value>
+    <comment>Main window navigation rail, the Settings item.</comment>
+  </data>
+  <data name="NavShortcuts" xml:space="preserve">
+    <value>Atajos</value>
+    <comment>Main window navigation rail, the Shortcuts item.</comment>
+  </data>
+  <data name="NavUpdateDownloading" xml:space="preserve">
+    <value>Descargando {0}%</value>
+    <comment>Main window, on the update button while the new build is coming down. {0} is a whole number.</comment>
+  </data>
+  <data name="NavUpdateTo" xml:space="preserve">
+    <value>Actualizar a {0}</value>
+    <comment>Main window, the button at the foot of the rail when a newer build was found. {0} is the version number.</comment>
+  </data>
+
+  <!-- ==== The full-screen capture overlay ==== -->
+  <data name="OverlayScrollingHint" xml:space="preserve">
+    <value>Arrastra una región: se desplazará y se unirá en una captura alta. Esc detiene y guarda lo capturado.</value>
+    <comment>Drawn across the top of the screen while a scrolling capture region is being chosen. Esc is a key name. This one is painted onto the canvas rather than laid out by Windows, so it is never mirrored for a right-to-left language.</comment>
+  </data>
+
+  <!-- ==== A pinned shot floating above the other windows ==== -->
+  <data name="PinActualSize" xml:space="preserve">
+    <value>Tamaño real</value>
+    <comment>Pinned shot, right-click menu item that puts the zoom back to 100%.</comment>
+  </data>
+  <data name="PinClickThrough" xml:space="preserve">
+    <value>Dejar pasar los clics</value>
+    <comment>Pinned shot, right-click menu item that lets the mouse reach the window underneath.</comment>
+  </data>
+  <data name="PinClose" xml:space="preserve">
+    <value>Cerrar</value>
+    <comment>Pinned shot, right-click menu item that takes it off the screen.</comment>
+  </data>
+  <data name="PinCopy" xml:space="preserve">
+    <value>Copiar</value>
+    <comment>Pinned shot, right-click menu item that copies the image.</comment>
+  </data>
+  <data name="PinFade" xml:space="preserve">
+    <value>Atenuar al 50%</value>
+    <comment>Pinned shot, right-click menu item that makes it half transparent.</comment>
+  </data>
+  <data name="PinFullOpacity" xml:space="preserve">
+    <value>Volver a opacidad total</value>
+    <comment>Pinned shot, what the fade menu item says once it is already faded.</comment>
+  </data>
+  <data name="PinSave" xml:space="preserve">
+    <value>Guardar</value>
+    <comment>Pinned shot, right-click menu item that writes the image to a file.</comment>
+  </data>
+  <data name="PinTitle" xml:space="preserve">
+    <value>Captura fijada</value>
+    <comment>Window title of a pinned shot.</comment>
+  </data>
+
+  <!-- ==== The preview thumbnail that appears after a capture ==== -->
+  <data name="PreviewCopy" xml:space="preserve">
+    <value>Copiar</value>
+    <comment>Preview thumbnail, tooltip on the copy button.</comment>
+  </data>
+  <data name="PreviewDismiss" xml:space="preserve">
+    <value>Descartar</value>
+    <comment>Preview thumbnail, tooltip on the button that sends it away.</comment>
+  </data>
+  <data name="PreviewEdit" xml:space="preserve">
+    <value>Editar</value>
+    <comment>Preview thumbnail, tooltip on the button that opens the editor.</comment>
+  </data>
+  <data name="PreviewNoText" xml:space="preserve">
+    <value>No se ha encontrado texto en esa captura.</value>
+    <comment>Notification after using the preview thumbnail's text button on a shot with no readable words.</comment>
+  </data>
+  <data name="PreviewOcr" xml:space="preserve">
+    <value>Copiar el texto de esta captura</value>
+    <comment>Preview thumbnail, tooltip on the text recognition button.</comment>
+  </data>
+  <data name="PreviewPin" xml:space="preserve">
+    <value>Fijar en pantalla</value>
+    <comment>Preview thumbnail, tooltip on the button that floats the shot above the other windows.</comment>
+  </data>
+  <data name="PreviewSave" xml:space="preserve">
+    <value>Guardar</value>
+    <comment>Preview thumbnail, tooltip on the save button.</comment>
+  </data>
+  <data name="PreviewShowInFolder" xml:space="preserve">
+    <value>Mostrar en la carpeta</value>
+    <comment>Preview thumbnail, tooltip on the button that opens Explorer with the saved file selected.</comment>
+  </data>
+
+  <!-- ==== Recent page ==== -->
+  <data name="RecentCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Second caption line under a thumbnail. {0} is when the file was written, {1} is its size on disk.</comment>
+  </data>
+  <data name="RecentClipboardBusy" xml:space="preserve">
+    <value>El portapapeles estaba ocupado. Inténtalo de nuevo.</value>
+    <comment>Recent page status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="RecentCopied" xml:space="preserve">
+    <value>Copiado al portapapeles.</value>
+    <comment>Recent page status line, after one shot was copied as an image.</comment>
+  </data>
+  <data name="RecentCopiedFiles_Many" xml:space="preserve">
+    <value>Copiados {0} archivos.</value>
+    <comment>Recent page status line, after several shots were copied as files. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentCopiedFiles_One" xml:space="preserve">
+    <value>Copiado 1 archivo.</value>
+    <comment>Recent page status line, singular form of RecentCopiedFiles_Many.</comment>
+  </data>
+  <data name="RecentCopy" xml:space="preserve">
+    <value>Copiar</value>
+    <comment>Recent page, button that copies the selected shots.</comment>
+  </data>
+  <data name="RecentDelete" xml:space="preserve">
+    <value>Eliminar</value>
+    <comment>Recent page, button that deletes the selected shots.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_Many" xml:space="preserve">
+    <value>¿Eliminar estas {0} capturas?</value>
+    <comment>Confirmation asked before deleting several shots. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_One" xml:space="preserve">
+    <value>¿Eliminar {0}?</value>
+    <comment>Confirmation asked before deleting one shot. {0} is its file name.</comment>
+  </data>
+  <data name="RecentDeleted_Many" xml:space="preserve">
+    <value>Eliminadas {0}.</value>
+    <comment>Recent page status line after a delete. {0} is how many were removed, two or more.</comment>
+  </data>
+  <data name="RecentDeleted_One" xml:space="preserve">
+    <value>Eliminada 1.</value>
+    <comment>Recent page status line after deleting exactly one shot.</comment>
+  </data>
+  <data name="RecentDeletedPartial_Many" xml:space="preserve">
+    <value>Eliminadas {0}, no se han podido quitar {1}.</value>
+    <comment>Recent page status line when some files refused to go. {0} is how many were deleted, {1} how many failed, two or more.</comment>
+  </data>
+  <data name="RecentDeletedPartial_One" xml:space="preserve">
+    <value>Eliminadas {0}, no se ha podido quitar 1.</value>
+    <comment>Recent page status line when exactly one file refused to go. {0} is how many were deleted.</comment>
+  </data>
+  <data name="RecentEdit" xml:space="preserve">
+    <value>Editar</value>
+    <comment>Recent page, button that opens the selected shots in the editor.</comment>
+  </data>
+  <data name="RecentEmpty" xml:space="preserve">
+    <value>Aún no hay capturas. Captura algo y aparecerá aquí.</value>
+    <comment>Recent page, shown in the middle of the gallery when the save folder is empty.</comment>
+  </data>
+  <data name="RecentExplorerFailed" xml:space="preserve">
+    <value>No se ha podido abrir el Explorador.</value>
+    <comment>Recent page status line, when Windows refused to open a folder window. Explorer is the Windows file manager.</comment>
+  </data>
+  <data name="RecentFileUnreadable" xml:space="preserve">
+    <value>No se pudo leer ese archivo.</value>
+    <comment>Recent page status line, when a shot could not be decoded to copy it.</comment>
+  </data>
+  <data name="RecentOpenFolder" xml:space="preserve">
+    <value>Abrir carpeta</value>
+    <comment>Recent page, button at the top of the page that opens the save folder.</comment>
+  </data>
+  <data name="RecentPin" xml:space="preserve">
+    <value>Fijar</value>
+    <comment>Recent page, button that floats the selected shots above the other windows.</comment>
+  </data>
+  <data name="RecentSelected_Many" xml:space="preserve">
+    <value>{0} seleccionadas</value>
+    <comment>Recent page status line while several thumbnails are picked. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentSelected_One" xml:space="preserve">
+    <value>1 seleccionada</value>
+    <comment>Recent page status line, singular form of RecentSelected_Many.</comment>
+  </data>
+  <data name="RecentShotCount_Many" xml:space="preserve">
+    <value>{0} capturas   ·   Ctrl o Shift clic para seleccionar varias</value>
+    <comment>Recent page, the line under its heading. {0} is how many shots are listed, two or more. Ctrl and Shift are key names.</comment>
+  </data>
+  <data name="RecentShotCount_One" xml:space="preserve">
+    <value>1 captura</value>
+    <comment>Recent page, the line under its heading when exactly one shot is listed.</comment>
+  </data>
+  <data name="RecentShowInFolder" xml:space="preserve">
+    <value>Mostrar en la carpeta</value>
+    <comment>Recent page, button that opens Explorer with the selected shot highlighted.</comment>
+  </data>
+  <data name="RecentSizeBytes" xml:space="preserve">
+    <value>{0} B</value>
+    <comment>File size under a thumbnail, in bytes. {0} is a whole number; B is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeKilobytes" xml:space="preserve">
+    <value>{0} KB</value>
+    <comment>File size under a thumbnail, in kilobytes. {0} is a whole number; KB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeMegabytes" xml:space="preserve">
+    <value>{0} MB</value>
+    <comment>File size under a thumbnail, in megabytes. {0} has one decimal place; MB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentTitle" xml:space="preserve">
+    <value>Recientes</value>
+    <comment>Recent page, its heading.</comment>
+  </data>
+
+  <!-- ==== Screen recording: the overlay hint, the bar shown while it runs, and its settings ==== -->
+  <data name="RecordBarCancel" xml:space="preserve">
+    <value>Cancelar</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and throws the file away.</comment>
+  </data>
+  <data name="RecordBarStop" xml:space="preserve">
+    <value>Parar</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and keeps the file.</comment>
+  </data>
+  <data name="RecordCaptureButton" xml:space="preserve">
+    <value>Iniciar una grabación</value>
+    <comment>Capture page, button that opens the overlay to pick what to record. The footnote at the bottom of the page already lists what can be picked there, so the button only has to say what it starts.</comment>
+  </data>
+  <data name="RecordCountdown" xml:space="preserve">
+    <value>Cuenta atrás antes de grabar</value>
+    <comment>Settings page, label beside the list of countdown lengths. The countdown runs in the small recording window after the region is chosen and before anything is recorded.</comment>
+  </data>
+  <data name="RecordCountdownNone" xml:space="preserve">
+    <value>Sin cuenta atrás</value>
+    <comment>Settings page, the entry in the list of countdown lengths that starts the recording immediately.</comment>
+  </data>
+  <data name="RecordCountdownOption" xml:space="preserve">
+    <value>{0} segundos</value>
+    <comment>Settings page, one entry in the list of countdown lengths. {0} is a number, always 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="RecordFrameRate" xml:space="preserve">
+    <value>Fotogramas por segundo</value>
+    <comment>Settings page, label beside the list of recording frame rates.</comment>
+  </data>
+  <data name="RecordFrameRateOption" xml:space="preserve">
+    <value>{0} fps</value>
+    <comment>Settings page, one entry in the list of recording frame rates. {0} is a number such as 30.</comment>
+  </data>
+  <data name="RecordOverlayHint" xml:space="preserve">
+    <value>Arrastra una región para grabarla, haz clic en una ventana para grabarla entera, Ctrl+A para toda la pantalla, Esc para cancelar.</value>
+    <comment>Drawn across the top of the screen while what to record is being chosen, and the only place the three ways of choosing are spelled out, so it has to name all of them. Ctrl+A and Esc are key names and stay as they are. This one is painted onto the canvas rather than laid out by Windows, so it is neither mirrored nor shaped for a right-to-left script.</comment>
+  </data>
+  <data name="RecordSettingsHeader" xml:space="preserve">
+    <value>GRABACIÓN</value>
+    <comment>Settings page, section heading over the screen recording options. Upper case in English.</comment>
+  </data>
+  <data name="RecordShortcutDetail" xml:space="preserve">
+    <value>Graba una región, una ventana o toda la pantalla</value>
+    <comment>Shortcuts page, what the recording shortcut does.</comment>
+  </data>
+  <data name="RecordShortcutName" xml:space="preserve">
+    <value>Iniciar una grabación</value>
+    <comment>Shortcuts page, name of the screen recording action. Also names it in the messages about clashing shortcuts.</comment>
+  </data>
+  <data name="RecordShowCursor" xml:space="preserve">
+    <value>Mostrar el puntero del ratón en las grabaciones</value>
+    <comment>Settings page, tick box under RECORDING. The pointer is not in the screen copy Windows hands back, so it is drawn into each frame.</comment>
+  </data>
+  <data name="RecordTrayBusy" xml:space="preserve">
+    <value>Ya hay una grabación en marcha. Detén esa primero.</value>
+    <comment>Notification shown when a recording is asked for while one is already going.</comment>
+  </data>
+  <data name="RecordTrayFailed" xml:space="preserve">
+    <value>No se ha podido grabar esa región.</value>
+    <comment>Notification shown when the video encoder refused the region, or finished with nothing usable in the file.</comment>
+  </data>
+  <data name="RecordTrayCountingIn" xml:space="preserve">
+    <value>Shotwin — grabación en {0}</value>
+    <comment>Tray icon tooltip during the count-in before a recording starts. {0} is the seconds left.</comment>
+  </data>
+  <data name="RecordTrayStopItem" xml:space="preserve">
+    <value>Parar la grabación</value>
+    <comment>Tray menu item, shown only while a recording is running. Keeps the file.</comment>
+  </data>
+  <data name="RecordTrayCancelItem" xml:space="preserve">
+    <value>Cancelar la grabación</value>
+    <comment>Tray menu item, shown only while a recording is running. Throws the file away.</comment>
+  </data>
+  <data name="RecordTrayTip" xml:space="preserve">
+    <value>Shotwin — grabando {0}</value>
+    <comment>Tray icon tooltip while recording. {0} is the elapsed time as m:ss.</comment>
+  </data>
+  <data name="RecordTrayItem" xml:space="preserve">
+    <value>Iniciar una grabación</value>
+    <comment>Notification area menu item that starts a screen recording. A region, a window or a whole screen is chosen in the overlay it opens, so this only has to say what it starts.</comment>
+  </data>
+  <data name="RecordTraySaved" xml:space="preserve">
+    <value>Grabación guardada como {0}. Haz clic para mostrarla en la carpeta.</value>
+    <comment>Notification after a recording is stopped and written. {0} is the file name.</comment>
+  </data>
+
+  <!-- ==== Settings page, and the folder question asked on the first capture ==== -->
+  <data name="SettingsAfterCaptureHeader" xml:space="preserve">
+    <value>DESPUÉS DE CAPTURAR</value>
+    <comment>Settings page, first section heading. Upper case in English.</comment>
+  </data>
+  <data name="SettingsAllowInSecurity" xml:space="preserve">
+    <value>Permitir Shotwin en Seguridad de Windows</value>
+    <comment>Settings page, button that asks Windows to let the app write to a protected folder. Windows Security is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsAutoSave" xml:space="preserve">
+    <value>Guardar cada captura en la carpeta automáticamente</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsBrowse" xml:space="preserve">
+    <value>Examinar</value>
+    <comment>Settings page, button that opens a folder picker beside the save folder box.</comment>
+  </data>
+  <data name="SettingsChooseFolderTitle" xml:space="preserve">
+    <value>Elige dónde se guardan las capturas</value>
+    <comment>Title of the folder picker, opened from Settings and from the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsColourPickerCopies" xml:space="preserve">
+    <value>El selector de color copia</value>
+    <comment>Settings page, label beside the list of colour notations. The notation names Hex, RGB and HSL are not translated.</comment>
+  </data>
+  <data name="SettingsCopyClipboard" xml:space="preserve">
+    <value>Copiar al portapapeles</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsCornerBottomLeft" xml:space="preserve">
+    <value>Abajo a la izquierda</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerBottomRight" xml:space="preserve">
+    <value>Abajo a la derecha</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerCursor" xml:space="preserve">
+    <value>Donde acabó el ratón</value>
+    <comment>Settings page, first choice for where the preview thumbnail appears: beside the spot the drag finished on.</comment>
+  </data>
+  <data name="SettingsCornerTopLeft" xml:space="preserve">
+    <value>Arriba a la izquierda</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerTopRight" xml:space="preserve">
+    <value>Arriba a la derecha</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsFileName" xml:space="preserve">
+    <value>Nombre de archivo</value>
+    <comment>Settings page, label over the file name template box.</comment>
+  </data>
+  <data name="SettingsFileTemplateHint" xml:space="preserve">
+    <value>Los marcadores entre llaves son formatos de fecha, por ejemplo {yyyy-MM-dd}.</value>
+    <comment>Settings page, shown under an empty file name box. The braces and the letters inside them are a date pattern Windows reads, so leave that part exactly as it is.</comment>
+  </data>
+  <data name="SettingsFirstRunDefault" xml:space="preserve">
+    <value>Usar la predeterminada</value>
+    <comment>The folder question asked on the first capture: button that accepts the app's own folder.</comment>
+  </data>
+  <data name="SettingsFirstRunHint" xml:space="preserve">
+    <value>Windows protege Imágenes, Documentos, Escritorio y Vídeos de las apps que no conoce, así que una carpeta propia es la opción fiable. Shotwin comprueba que la carpeta funciona antes de usarla.</value>
+    <comment>The folder question asked on the first capture: why a folder of your own is suggested. Pictures, Documents, Desktop and Videos are Windows folder names.</comment>
+  </data>
+  <data name="SettingsFirstRunPickFolder" xml:space="preserve">
+    <value>Elige una carpeta, o usa la predeterminada.</value>
+    <comment>The folder question asked on the first capture, when the box was left empty.</comment>
+  </data>
+  <data name="SettingsFirstRunProtected" xml:space="preserve">
+    <value>Windows no deja que Shotwin escriba ahí — es una de las carpetas que protege el Acceso controlado a carpetas. Elige otra, o usa la predeterminada.</value>
+    <comment>The folder question asked on the first capture, when the chosen folder is protected. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsFirstRunSubtitle" xml:space="preserve">
+    <value>Tu primera captura está lista. Elige una carpeta ahora y se usará a partir de aquí — puedes cambiarla luego en Ajustes.</value>
+    <comment>The folder question asked on the first capture, the line under its heading.</comment>
+  </data>
+  <data name="SettingsFirstRunTitle" xml:space="preserve">
+    <value>¿Dónde debe guardar Shotwin tus capturas?</value>
+    <comment>Heading of the folder question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFirstRunUnwritable" xml:space="preserve">
+    <value>Shotwin no puede escribir ahí. Comprueba la ruta, o usa la predeterminada.</value>
+    <comment>The folder question asked on the first capture, when the chosen folder refused a test write.</comment>
+  </data>
+  <data name="SettingsFirstRunUse" xml:space="preserve">
+    <value>Usar esta carpeta</value>
+    <comment>The folder question asked on the first capture: button that accepts the typed folder.</comment>
+  </data>
+  <data name="SettingsFolder" xml:space="preserve">
+    <value>Carpeta</value>
+    <comment>Label over the save folder box, in Settings and in the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFolderOpenFailed" xml:space="preserve">
+    <value>No se ha podido abrir esa carpeta.</value>
+    <comment>Settings page, when Windows refused to open the save folder.</comment>
+  </data>
+  <data name="SettingsFolderProtected" xml:space="preserve">
+    <value>El Acceso controlado a carpetas de Windows protege esta carpeta, así que Shotwin no puede escribir en ella. Las capturas van a la carpeta alternativa — no se pierde nada. Permite Shotwin en Seguridad de Windows si quieres usar esta carpeta.</value>
+    <comment>Settings page, under the save folder box when the folder is protected. Controlled Folder Access and Windows Security are Windows feature names.</comment>
+  </data>
+  <data name="SettingsFolderUnwritable" xml:space="preserve">
+    <value>Shotwin no puede escribir en esta carpeta, así que las capturas van a la carpeta alternativa. Comprueba la ruta y que tienes permiso para escribir ahí.</value>
+    <comment>Settings page, under the save folder box when a write failed for any other reason.</comment>
+  </data>
+  <data name="SettingsLanguage" xml:space="preserve">
+    <value>Idioma</value>
+    <comment>Settings page, label beside the language list under SYSTEM.</comment>
+  </data>
+  <data name="SettingsLanguageAutomatic" xml:space="preserve">
+    <value>Automático (seguir a Windows)</value>
+    <comment>Settings page, first entry in the language list: use whatever display language Windows is set to. Every other entry is a language written in its own words and is never translated.</comment>
+  </data>
+  <data name="SettingsNextFile" xml:space="preserve">
+    <value>Siguiente archivo: {0}.png</value>
+    <comment>Settings page, a worked example under the file name box. {0} is the name the template produces right now.</comment>
+  </data>
+  <data name="SettingsOpen" xml:space="preserve">
+    <value>Abrir</value>
+    <comment>Settings page, button that opens the save folder in Explorer.</comment>
+  </data>
+  <data name="SettingsOpenEditor" xml:space="preserve">
+    <value>Abrir el editor</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsOverlayHeader" xml:space="preserve">
+    <value>SUPERPOSICIÓN</value>
+    <comment>Settings page, section heading over the capture overlay options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsPreviewAppears" xml:space="preserve">
+    <value>Aparece</value>
+    <comment>Settings page, label beside the list of corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsPreviewHint" xml:space="preserve">
+    <value>La vista previa es de donde coges la captura: haz clic para editarla, arrástrala a cualquier app para soltar el PNG, o usa los botones del borde inferior. Desaparece cuando vuelves a otra ventana y deja la captura en el portapapeles lista para pegar. Con el guardado automático desactivado, una captura se descarta salvo que pulses Guardar en la vista previa.</value>
+    <comment>Settings page, the paragraph explaining the preview thumbnail. PNG is a file format name.</comment>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>Guardado.</value>
+    <comment>Settings page, the confirmation that floats over the bottom of the list after a change is written.</comment>
+  </data>
+  <data name="SettingsSavingHeader" xml:space="preserve">
+    <value>GUARDADO</value>
+    <comment>Settings page, section heading over the folder and file name options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsSecurityDone" xml:space="preserve">
+    <value>Listo. Shotwin ya puede escribir en esa carpeta.</value>
+    <comment>Settings page, after Windows Security accepted the app and the folder now takes writes.</comment>
+  </data>
+  <data name="SettingsSecurityStillBlocked" xml:space="preserve">
+    <value>Windows ha aceptado el cambio pero la carpeta sigue rechazando la escritura.</value>
+    <comment>Settings page, after Windows Security accepted the app but the folder still refuses writes.</comment>
+  </data>
+  <data name="SettingsShowCoordinates" xml:space="preserve">
+    <value>Mostrar las coordenadas junto al cursor</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsShowPreview" xml:space="preserve">
+    <value>Mostrar una miniatura de vista previa</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsSnapWindows" xml:space="preserve">
+    <value>Ajustar a las ventanas bajo el cursor</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsStartupHint" xml:space="preserve">
+    <value>Arranca directamente en el área de notificación, sin ventana.</value>
+    <comment>Settings page, under the start-at-login tick box.</comment>
+  </data>
+  <data name="SettingsStartupRefused" xml:space="preserve">
+    <value>Windows ha rechazado el cambio de inicio al iniciar sesión.</value>
+    <comment>Settings page, when the registry entry for starting at login could not be written.</comment>
+  </data>
+  <data name="SettingsStartWithWindows" xml:space="preserve">
+    <value>Iniciar Shotwin al iniciar sesión</value>
+    <comment>Settings page, tick box under SYSTEM.</comment>
+  </data>
+  <data name="SettingsSubtitle" xml:space="preserve">
+    <value>Los cambios se aplican según los haces.</value>
+    <comment>Settings page, the line under its heading.</comment>
+  </data>
+  <data name="SettingsSystemHeader" xml:space="preserve">
+    <value>SISTEMA</value>
+    <comment>Settings page, section heading over the language and start-at-login options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Ajustes</value>
+    <comment>Settings page, its heading.</comment>
+  </data>
+  <data name="SettingsWaitingForAdmin" xml:space="preserve">
+    <value>Esperando el aviso de administrador...</value>
+    <comment>Settings page, while the Windows elevation prompt is on screen.</comment>
+  </data>
+
+  <!-- ==== Shortcuts page ==== -->
+  <data name="ShortcutsCaptureArea" xml:space="preserve">
+    <value>Capturar área</value>
+    <comment>Shortcuts page, name of the area capture action. Also names it in the messages about shortcuts Windows refused.</comment>
+  </data>
+  <data name="ShortcutsCaptureAreaDetail" xml:space="preserve">
+    <value>Arrastra cualquier región</value>
+    <comment>Shortcuts page, what the area capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreen" xml:space="preserve">
+    <value>Capturar pantalla</value>
+    <comment>Shortcuts page, name of the whole-screen capture action.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreenDetail" xml:space="preserve">
+    <value>El monitor donde está el cursor</value>
+    <comment>Shortcuts page, what the screen capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsClash" xml:space="preserve">
+    <value>Esa combinación ya la usa otra acción.</value>
+    <comment>Shortcuts page, when the recorded combination is already bound to a different Shotwin action.</comment>
+  </data>
+  <data name="ShortcutsEditorCommands" xml:space="preserve">
+    <value>Ctrl+C copiar · Ctrl+S guardar · Ctrl+Shift+S guardar como · Ctrl+P fijar · Ctrl+Z deshacer · Ctrl+rueda zoom · Ctrl+0 ajustar · Delete quitar · Esc cerrar</value>
+    <comment>Shortcuts page, the editor's command keys. Translate only the word after each key name; the key names themselves stay as they are.</comment>
+  </data>
+  <data name="ShortcutsEditorHeader" xml:space="preserve">
+    <value>EN EL EDITOR</value>
+    <comment>Shortcuts page, heading over the editor's own keys. Upper case in English.</comment>
+  </data>
+  <data name="ShortcutsEditorTools" xml:space="preserve">
+    <value>V seleccionar · A flecha · R rectángulo · O elipse · L línea · P lápiz · H marcador · T texto · S contador de pasos · B pixelar · Shift+B desenfoque</value>
+    <comment>Shortcuts page, the editor's tool keys. Translate only the words after each key name; the letters themselves are fixed keys and stay as they are.</comment>
+  </data>
+  <data name="ShortcutsGrabText" xml:space="preserve">
+    <value>Extraer texto</value>
+    <comment>Shortcuts page, name of the text recognition action.</comment>
+  </data>
+  <data name="ShortcutsGrabTextDetail" xml:space="preserve">
+    <value>Lee un área y copia el texto</value>
+    <comment>Shortcuts page, what the text shortcut does.</comment>
+  </data>
+  <data name="ShortcutsNotSet" xml:space="preserve">
+    <value>Sin asignar</value>
+    <comment>Shown in place of a key combination when an action has none bound.</comment>
+  </data>
+  <data name="ShortcutsPickColour" xml:space="preserve">
+    <value>Elegir un color</value>
+    <comment>Shortcuts page, name of the colour picker action.</comment>
+  </data>
+  <data name="ShortcutsPickColourDetail" xml:space="preserve">
+    <value>Lupa sobre la pantalla; un clic copia el valor</value>
+    <comment>Shortcuts page, what the colour shortcut does. A loupe is a magnifying lens.</comment>
+  </data>
+  <data name="ShortcutsPressCombination" xml:space="preserve">
+    <value>Pulsa una combinación...</value>
+    <comment>Shortcuts page, shown in a box that is waiting for the keys to be pressed.</comment>
+  </data>
+  <data name="ShortcutsRefused" xml:space="preserve">
+    <value>Windows no le ha dado a Shotwin: {0}. Otra app ya es dueña de ellos.</value>
+    <comment>Shortcuts page, when Windows refused to register a combination. {0} is a comma-separated list of action names.</comment>
+  </data>
+  <data name="ShortcutsSaved" xml:space="preserve">
+    <value>Guardado.</value>
+    <comment>Shortcuts page, the confirmation after a new combination is written.</comment>
+  </data>
+  <data name="ShortcutsScrolling" xml:space="preserve">
+    <value>Captura con desplazamiento</value>
+    <comment>Shortcuts page, name of the scrolling capture action.</comment>
+  </data>
+  <data name="ShortcutsScrollingDetail" xml:space="preserve">
+    <value>Desplaza una región y la une</value>
+    <comment>Shortcuts page, what the scrolling shortcut does.</comment>
+  </data>
+  <data name="ShortcutsSubtitle" xml:space="preserve">
+    <value>Haz clic en un atajo y pulsa la combinación que quieras. Esc cancela.</value>
+    <comment>Shortcuts page, the line under its heading. Esc is a key name.</comment>
+  </data>
+  <data name="ShortcutsTitle" xml:space="preserve">
+    <value>Atajos</value>
+    <comment>Shortcuts page, its heading.</comment>
+  </data>
+
+  <!-- ==== Notification area: the menu, and the messages raised from it ==== -->
+  <data name="TrayCaptureArea" xml:space="preserve">
+    <value>Capturar área</value>
+    <comment>Notification area menu item that opens the area overlay.</comment>
+  </data>
+  <data name="TrayCaptureScreen" xml:space="preserve">
+    <value>Capturar pantalla</value>
+    <comment>Notification area menu item that grabs the monitor the cursor is on.</comment>
+  </data>
+  <data name="TrayColourCopied" xml:space="preserve">
+    <value>Copiado {0}</value>
+    <comment>Notification after the colour picker. {0} is the colour value, for example #1B1B1F.</comment>
+  </data>
+  <data name="TrayCrash" xml:space="preserve">
+    <value>Algo ha ido mal: {0}. Detalles en {1}</value>
+    <comment>Notification after an error the app recovered from. {0} is the message from Windows, {1} is the path of the log file. Neither is translated.</comment>
+  </data>
+  <data name="TrayFileUnreadable" xml:space="preserve">
+    <value>No se ha podido abrir ese archivo.</value>
+    <comment>Notification when a saved shot could not be decoded to reopen it.</comment>
+  </data>
+  <data name="TrayGrabText" xml:space="preserve">
+    <value>Extraer texto</value>
+    <comment>Notification area menu item that reads the text out of a region.</comment>
+  </data>
+  <data name="TrayHotkeyConflicts" xml:space="preserve">
+    <value>Otra app ya es dueña de estos atajos: {0}. Cámbialos en Atajos.</value>
+    <comment>Notification at startup when Windows refused a shortcut. {0} is a comma-separated list of action names. Shortcuts is the name of a page in the app.</comment>
+  </data>
+  <data name="TrayNoText" xml:space="preserve">
+    <value>No se ha encontrado texto en esa área.</value>
+    <comment>Notification when text recognition ran on a captured region and read nothing.</comment>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Abrir Shotwin</value>
+    <comment>Notification area menu item that shows the main window.</comment>
+  </data>
+  <data name="TrayPickColour" xml:space="preserve">
+    <value>Elegir un color</value>
+    <comment>Notification area menu item that opens the colour loupe.</comment>
+  </data>
+  <data name="TrayQuit" xml:space="preserve">
+    <value>Salir de Shotwin</value>
+    <comment>Notification area menu item that ends the app.</comment>
+  </data>
+  <data name="TrayRecent" xml:space="preserve">
+    <value>Capturas recientes</value>
+    <comment>Notification area menu item that opens the gallery of saved shots.</comment>
+  </data>
+  <data name="TraySaveFailed" xml:space="preserve">
+    <value>No se ha podido guardar la captura: {0}</value>
+    <comment>Notification when automatic saving failed. {0} is the reason, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="TrayScrollingCapture" xml:space="preserve">
+    <value>Captura con desplazamiento</value>
+    <comment>Notification area menu item that starts a scrolling capture.</comment>
+  </data>
+  <data name="TraySettings" xml:space="preserve">
+    <value>Ajustes</value>
+    <comment>Notification area menu item that opens the settings page.</comment>
+  </data>
+  <data name="VideoCaption" xml:space="preserve">
+    <value>Shotwin — {0}</value>
+    <comment>Video editor window caption. {0} is the file name.</comment>
+  </data>
+  <data name="VideoClipboardBusy" xml:space="preserve">
+    <value>El portapapeles está ocupado. Inténtalo de nuevo.</value>
+    <comment>Shown when another app holds the clipboard.</comment>
+  </data>
+  <data name="VideoCopied" xml:space="preserve">
+    <value>Grabación copiada.</value>
+    <comment>Shown after the file is put on the clipboard.</comment>
+  </data>
+  <data name="VideoCopy" xml:space="preserve">
+    <value>Copiar</value>
+    <comment>Video editor button that copies the file itself.</comment>
+  </data>
+  <data name="VideoCut" xml:space="preserve">
+    <value>Cortar un fragmento</value>
+    <comment>Video editor button that drops a stretch of the recording out of the middle.</comment>
+  </data>
+  <data name="VideoCutCount_One" xml:space="preserve">
+    <value>{0} corte</value>
+    <comment>How many stretches are being dropped. {0} is the number, here one.</comment>
+  </data>
+  <data name="VideoCutCount_Many" xml:space="preserve">
+    <value>{0} cortes</value>
+    <comment>How many stretches are being dropped. {0} is the number, two or more.</comment>
+  </data>
+  <data name="VideoCutRemove" xml:space="preserve">
+    <value>Devolver este fragmento</value>
+    <comment>Tooltip on the small cross that undoes one cut.</comment>
+  </data>
+  <data name="VideoExplorerFailed" xml:space="preserve">
+    <value>No se ha podido abrir el Explorador.</value>
+    <comment>Shown when revealing the file in Explorer fails.</comment>
+  </data>
+  <data name="VideoHintDrawPiece" xml:space="preserve">
+    <value>Arrastra en la pista para otro fragmento</value>
+    <comment>Hint under the video editor's timeline, saying how to add a second kept piece of a recording.</comment>
+  </data>
+  <data name="VideoQualitySharper" xml:space="preserve">
+    <value>Imagen más nítida, menos fotogramas</value>
+    <comment>Tooltip on the video editor button that trades playback smoothness for detail.</comment>
+  </data>
+  <data name="VideoQualitySmoother" xml:space="preserve">
+    <value>Imagen más fluida, menos detalle</value>
+    <comment>Tooltip on the video editor button that trades detail for playback smoothness.</comment>
+  </data>
+  <data name="VideoNothingLeft" xml:space="preserve">
+    <value>Con esos cortes no queda nada que guardar.</value>
+    <comment>Shown when every part of the recording has been cut away.</comment>
+  </data>
+  <data name="VideoPause" xml:space="preserve">
+    <value>Pausa</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPlay" xml:space="preserve">
+    <value>Reproducir</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPosition" xml:space="preserve">
+    <value>{0} / {1}</value>
+    <comment>Video editor position readout: current time over total, both m:ss.</comment>
+  </data>
+  <data name="VideoSave" xml:space="preserve">
+    <value>Guardar recorte</value>
+    <comment>Video editor button that exports the selected span as a new file.</comment>
+  </data>
+  <data name="VideoSaveFailed" xml:space="preserve">
+    <value>No se ha podido guardar: {0}</value>
+    <comment>Shown when the trim export fails. {0} is the reason.</comment>
+  </data>
+  <data name="VideoSaved" xml:space="preserve">
+    <value>Guardado como {0}</value>
+    <comment>Shown after a trimmed copy is written. {0} is the file name.</comment>
+  </data>
+  <data name="VideoSaving" xml:space="preserve">
+    <value>Guardando… {0}%</value>
+    <comment>Video editor progress while the trimmed copy is written. {0} is percent.</comment>
+  </data>
+  <data name="VideoShowInFolder" xml:space="preserve">
+    <value>Mostrar en la carpeta</value>
+    <comment>Video editor button that reveals the file in Explorer.</comment>
+  </data>
+  <data name="VideoSpanTooShort" xml:space="preserve">
+    <value>Elige un fragmento más largo para guardar.</value>
+    <comment>Shown when the trim handles are too close together.</comment>
+  </data>
+  <data name="VideoTrimSpan" xml:space="preserve">
+    <value>Recorte: {0} — {1}</value>
+    <comment>Video editor readout of the selected span, both m:ss.</comment>
+  </data>
+  <data name="VideoUnreadable" xml:space="preserve">
+    <value>No se ha podido abrir esa grabación.</value>
+    <comment>Shown when the video file will not load.</comment>
+  </data>
+  <data name="VideoCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Detail line on a recording's card in Recent: {0} is the date and size, {1} is how long it runs.</comment>
+  </data>
+</root>

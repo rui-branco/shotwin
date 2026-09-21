@@ -1,0 +1,1220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    The English baseline, and the only resource file compiled into the main assembly.
+    Every other language is a satellite built from a Strings.<culture>.resx beside this
+    one; nothing in the code names a culture, so adding a file is the whole job.
+
+    Each entry carries a comment saying where it shows up, because a translator sees the
+    string and nothing else. Numbered placeholders are filled by string.Format, so a
+    language that needs a different word order can move them.
+
+    Deliberately not in here: the app name, log and crash text, exception messages,
+    file-name templates, key names such as Ctrl+Shift+2, and the colour notations
+    Hex, RGB and HSL.
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- ==== About page ==== -->
+  <data name="AboutAroundDetail" xml:space="preserve">
+    <value>ग्लोबल शॉर्टकट · प्रीव्यू थंबनेल जिसे सीधे दूसरे ऐप में खींचा जा सकता है · अपने आप सेव · PNG और क्लिपबोर्ड आउटपुट · कमांड-लाइन से शुरू · नोटिफ़िकेशन एरिया में चलता है</value>
+    <comment>About page, the single line under the AROUND IT heading.</comment>
+  </data>
+  <data name="AboutAroundHeader" xml:space="preserve">
+    <value>इसके अलावा</value>
+    <comment>About page, section heading over the miscellaneous features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureArea" xml:space="preserve">
+    <value>क्षेत्र</value>
+    <comment>About page, name of the area capture feature in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureAreaDetail" xml:space="preserve">
+    <value>कोई भी हिस्सा खींचकर चुनें, निर्देशांक और आकार साथ दिखते हैं। विंडो पर क्लिक करें, वह पूरी आ जाएगी।</value>
+    <comment>About page, what area capture does. Sits beside AboutCaptureArea.</comment>
+  </data>
+  <data name="AboutCaptureColour" xml:space="preserve">
+    <value>रंग</value>
+    <comment>About page, name of the colour picker in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureColourDetail" xml:space="preserve">
+    <value>स्क्रीन पर बड़ा करके दिखाने वाला लेंस; क्लिक करते ही मान Hex, RGB या HSL में कॉपी।</value>
+    <comment>About page, what the colour picker does. Hex, RGB and HSL are notation names and stay as they are.</comment>
+  </data>
+  <data name="AboutCaptureHeader" xml:space="preserve">
+    <value>कैप्चर</value>
+    <comment>About page, section heading over the capture features. Upper case in English.</comment>
+  </data>
+  <data name="AboutCaptureScreen" xml:space="preserve">
+    <value>स्क्रीन</value>
+    <comment>About page, name of the whole-screen capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScreenDetail" xml:space="preserve">
+    <value>जिस मॉनिटर पर कर्सर है, उसके पूरे रिज़ॉल्यूशन में।</value>
+    <comment>About page, what screen capture does.</comment>
+  </data>
+  <data name="AboutCaptureScrolling" xml:space="preserve">
+    <value>स्क्रॉलिंग</value>
+    <comment>About page, name of scrolling capture in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureScrollingDetail" xml:space="preserve">
+    <value>स्क्रीन से लंबा पेज, स्क्रॉल करके एक ही तस्वीर में जोड़ा जाता है। नीचे पहुँचकर अपने आप रुक जाता है।</value>
+    <comment>About page, what scrolling capture does.</comment>
+  </data>
+  <data name="AboutCaptureText" xml:space="preserve">
+    <value>टेक्स्ट</value>
+    <comment>About page, name of text recognition in the CAPTURE list.</comment>
+  </data>
+  <data name="AboutCaptureTextDetail" xml:space="preserve">
+    <value>किसी हिस्से के शब्द पढ़कर तस्वीर की जगह वही कॉपी करता है। ऑफ़लाइन, Windows की अपनी पहचान से।</value>
+    <comment>About page, what text capture does.</comment>
+  </data>
+  <data name="AboutCheckAgain" xml:space="preserve">
+    <value>फिर जाँचें</value>
+    <comment>About page, button that looks for a newer version.</comment>
+  </data>
+  <data name="AboutChecking" xml:space="preserve">
+    <value>नया संस्करण खोजा जा रहा है…</value>
+    <comment>About page, shown while an update check asked for by hand is running.</comment>
+  </data>
+  <data name="AboutEditorAnnotate" xml:space="preserve">
+    <value>निशान</value>
+    <comment>About page, name of the annotation tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorAnnotateDetail" xml:space="preserve">
+    <value>तीर, आकृतियाँ, रेखाएँ, पेन, हाइलाइटर, टेक्स्ट और क्रम बताने वाले नंबर।</value>
+    <comment>About page, what the annotation tools are.</comment>
+  </data>
+  <data name="AboutEditorCompose" xml:space="preserve">
+    <value>जोड़ना</value>
+    <comment>About page, name of the composition tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorComposeDetail" xml:space="preserve">
+    <value>काटें, बीच से एक पट्टी हटाएँ, या दूसरी तस्वीर डालकर दोनों को सजाएँ।</value>
+    <comment>About page, what the composition tools do.</comment>
+  </data>
+  <data name="AboutEditorHeader" xml:space="preserve">
+    <value>एडिटर</value>
+    <comment>About page, section heading over the editor features. Upper case in English.</comment>
+  </data>
+  <data name="AboutEditorPin" xml:space="preserve">
+    <value>पिन</value>
+    <comment>About page, name of the pin feature in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorPinDetail" xml:space="preserve">
+    <value>काम करते समय एक शॉट को बाकी सभी विंडो के ऊपर रखें।</value>
+    <comment>About page, what pinning does.</comment>
+  </data>
+  <data name="AboutEditorRedact" xml:space="preserve">
+    <value>छिपाना</value>
+    <comment>About page, name of the redaction tools in the EDITOR list.</comment>
+  </data>
+  <data name="AboutEditorRedactDetail" xml:space="preserve">
+    <value>जो कुछ इस मशीन से बाहर नहीं जाना चाहिए, उसे पिक्सलेट या धुंधला करें।</value>
+    <comment>About page, what the redaction tools do.</comment>
+  </data>
+  <data name="AboutSummary" xml:space="preserve">
+    <value>पिक्सेल-स्तर के काम के लिए बना स्क्रीनशॉट टूल: कैप्चर करें, निशान लगाएँ, तस्वीर का टेक्स्ट पढ़ें, और इस्तेमाल करते समय शॉट को ऊपर टिकाए रखें।</value>
+    <comment>About page, the paragraph in the card at the top. .NET, WPF, SkiaSharp and Electron are product names and stay as they are.</comment>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>परिचय</value>
+    <comment>About page, its heading.</comment>
+  </data>
+  <data name="AboutUpdateAvailable" xml:space="preserve">
+    <value>Shotwin {0} उपलब्ध है। पट्टी के नीचे वाला बटन इसे इंस्टॉल कर देगा।</value>
+    <comment>About page, shown when a check found a newer build. {0} is the version number, for example 1.2.0.</comment>
+  </data>
+  <data name="AboutUpToDate" xml:space="preserve">
+    <value>आपके पास नवीनतम संस्करण है।</value>
+    <comment>About page, shown when a check found nothing newer.</comment>
+  </data>
+  <data name="AboutVersionLine" xml:space="preserve">
+    <value>Shotwin {0}   ·   Windows के लिए स्क्रीनशॉट टूल</value>
+    <comment>About page, the line under the heading. {0} is the running version number.</comment>
+  </data>
+  <data name="CaptureArea" xml:space="preserve">
+    <value>क्षेत्र कैप्चर करें</value>
+    <comment>Capture page, the main button. Opens the overlay to drag a region out.</comment>
+  </data>
+  <data name="CaptureCountdown" xml:space="preserve">
+    <value>{0}…</value>
+    <comment>Capture page, the delayed-capture countdown beside the delay buttons. {0} is the seconds left.</comment>
+  </data>
+  <data name="CaptureDelayedHeader" xml:space="preserve">
+    <value>देरी से</value>
+    <comment>Capture page, heading of the delayed capture card. Upper case in English.</comment>
+  </data>
+  <data name="CaptureDelayedHint" xml:space="preserve">
+    <value>गिनती पूरी होते ही क्षेत्र ओवरले खुलता है। उन मेन्यू और हॉवर के लिए जो शॉर्टकट दबाते ही गायब हो जाते हैं।</value>
+    <comment>Capture page, what delayed capture is for.</comment>
+  </data>
+  <data name="CaptureDelaySeconds" xml:space="preserve">
+    <value>{0} सेकंड</value>
+    <comment>Capture page, the three delay buttons. {0} is only ever 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="CaptureGrabText" xml:space="preserve">
+    <value>टेक्स्ट लें</value>
+    <comment>Capture page, button that reads the text out of a region instead of taking a picture.</comment>
+  </data>
+  <data name="CaptureOverlayHint" xml:space="preserve">
+    <value>ओवरले में: चुनने के लिए खींचें, पूरी विंडो लेने के लिए उस पर क्लिक करें, वर्गाकार के लिए Shift, चयन खिसकाने के लिए Space, पूरे मॉनिटर के लिए Ctrl+A, रद्द करने के लिए Esc।</value>
+    <comment>Capture page, the footnote at the bottom. Shift, Space, Ctrl+A and Esc are key names and stay as they are.</comment>
+  </data>
+  <data name="CapturePickColour" xml:space="preserve">
+    <value>रंग चुनें</value>
+    <comment>Capture page, button that opens the colour loupe.</comment>
+  </data>
+  <data name="CaptureScreen" xml:space="preserve">
+    <value>स्क्रीन कैप्चर करें</value>
+    <comment>Capture page, button that grabs the whole monitor the cursor is on.</comment>
+  </data>
+  <data name="CaptureScrolling" xml:space="preserve">
+    <value>स्क्रॉलिंग कैप्चर</value>
+    <comment>Capture page, button that scrolls a region and stitches the frames together.</comment>
+  </data>
+  <data name="CaptureScrollingProgress" xml:space="preserve">
+    <value>कैप्चर हो रहा है… {0} px</value>
+    <comment>The small window shown while a scrolling capture runs. {0} is how many pixels tall the result is so far.</comment>
+  </data>
+  <data name="CaptureScrollingStop" xml:space="preserve">
+    <value>रोकें</value>
+    <comment>The small window shown while a scrolling capture runs: the button that ends it and keeps what was captured.</comment>
+  </data>
+  <data name="CaptureSecondaryHint" xml:space="preserve">
+    <value>दोनों सीधे क्लिपबोर्ड पर कॉपी करते हैं। टेक्स्ट इनमें पढ़ा जाता है: {0}।</value>
+    <comment>Capture page, under the colour and text buttons. {0} is a comma-separated list of recognition language names supplied by Windows.</comment>
+  </data>
+  <data name="CaptureSecondaryHintNoOcr" xml:space="preserve">
+    <value>रंग चुनें सीधे क्लिपबोर्ड पर कॉपी करता है। टेक्स्ट लें के लिए Windows में OCR भाषा चाहिए, समय और भाषा में जाकर जोड़ें।</value>
+    <comment>Capture page, replaces CaptureSecondaryHint when Windows has no recognition language installed. Time and language is the name of a Windows Settings page.</comment>
+  </data>
+  <data name="CaptureSubtitle" xml:space="preserve">
+    <value>शॉर्टकट कहीं से भी चलते हैं। ये बटन पहले इस विंडो को छिपा देते हैं, ताकि यह शॉट में न आए।</value>
+    <comment>Capture page, the line under its heading.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_Many" xml:space="preserve">
+    <value>टेक्स्ट की {0} पंक्तियाँ कॉपी हुईं।</value>
+    <comment>Shown after text recognition succeeds, in the editor, on the preview thumbnail and as a notification. {0} is the number of lines, always two or more.</comment>
+  </data>
+  <data name="CaptureTextCopiedLines_One" xml:space="preserve">
+    <value>टेक्स्ट की 1 पंक्ति कॉपी हुई।</value>
+    <comment>Shown after text recognition read exactly one line. Singular form of CaptureTextCopiedLines_Many.</comment>
+  </data>
+  <data name="CaptureTitle" xml:space="preserve">
+    <value>कैप्चर</value>
+    <comment>Capture page, its heading.</comment>
+  </data>
+  <data name="EditorAddedBelow" xml:space="preserve">
+    <value>नीचे जोड़ा गया — खिसकाने के लिए खींचें।</value>
+    <comment>Editor status line, after another image was dropped in under the shot.</comment>
+  </data>
+  <data name="EditorAddedRight" xml:space="preserve">
+    <value>दाईं ओर जोड़ा गया — खिसकाने के लिए खींचें।</value>
+    <comment>Editor status line, after another image was dropped in beside the shot.</comment>
+  </data>
+  <data name="EditorAddImage" xml:space="preserve">
+    <value>कैनवास में एक और तस्वीर जोड़ें ({0}, या {1} से पेस्ट करें)</value>
+    <comment>Editor toolbar tooltip. {0} and {1} are the key names Ctrl+Shift+A and Ctrl+V, supplied by the app.</comment>
+  </data>
+  <data name="EditorAddImageTitle" xml:space="preserve">
+    <value>कैनवास में तस्वीर जोड़ें</value>
+    <comment>Title of the file picker the editor opens to add a second image.</comment>
+  </data>
+  <data name="EditorCaption" xml:space="preserve">
+    <value>Shotwin  ·  {0} x {1}</value>
+    <comment>Editor title bar. {0} and {1} are the width and height of the shot in pixels.</comment>
+  </data>
+  <data name="EditorClipboardBusy" xml:space="preserve">
+    <value>क्लिपबोर्ड व्यस्त था। फिर कोशिश करें।</value>
+    <comment>Editor status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="EditorClipboardUnreadable" xml:space="preserve">
+    <value>क्लिपबोर्ड की वह तस्वीर पढ़ी नहीं जा सकी।</value>
+    <comment>Editor status line, when the image on the clipboard could not be decoded.</comment>
+  </data>
+  <data name="EditorClose" xml:space="preserve">
+    <value>बंद करें</value>
+    <comment>Editor title bar, tooltip on the close button. Closes the window rather than hiding it.</comment>
+  </data>
+  <data name="EditorCopiedToClipboard" xml:space="preserve">
+    <value>क्लिपबोर्ड पर कॉपी हुआ</value>
+    <comment>Editor status line, after the shot was copied.</comment>
+  </data>
+  <data name="EditorCopy" xml:space="preserve">
+    <value>कॉपी ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+C, supplied by the app.</comment>
+  </data>
+  <data name="EditorCropped" xml:space="preserve">
+    <value>काट दिया गया।</value>
+    <comment>Editor status line, after a crop was applied.</comment>
+  </data>
+  <data name="EditorCutOut" xml:space="preserve">
+    <value>पट्टी हटा दी गई।</value>
+    <comment>Editor status line, after a band was cut out of the middle of the shot.</comment>
+  </data>
+  <data name="EditorFileUnreadable" xml:space="preserve">
+    <value>वह फ़ाइल पढ़ी नहीं जा सकी।</value>
+    <comment>Editor status line, when a chosen image file could not be decoded.</comment>
+  </data>
+  <data name="EditorImageNotAdded" xml:space="preserve">
+    <value>वह तस्वीर जोड़ी नहीं जा सकी।</value>
+    <comment>Editor status line, when a second image would not fit onto the canvas.</comment>
+  </data>
+  <data name="EditorNoClipboardImage" xml:space="preserve">
+    <value>क्लिपबोर्ड पर कोई तस्वीर नहीं है।</value>
+    <comment>Editor status line, after pasting with nothing to paste.</comment>
+  </data>
+  <data name="EditorNoText" xml:space="preserve">
+    <value>इस शॉट में कोई टेक्स्ट नहीं मिला।</value>
+    <comment>Editor status line, when recognition ran but read nothing.</comment>
+  </data>
+  <data name="EditorOcr" xml:space="preserve">
+    <value>इस शॉट का टेक्स्ट कॉपी करें ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Shift+T, supplied by the app.</comment>
+  </data>
+  <data name="EditorOpenFilter" xml:space="preserve">
+    <value>तस्वीरें|*.png;*.jpg;*.jpeg;*.bmp|सभी फ़ाइलें|*.*</value>
+    <comment>File type list in the editor's Add image dialog. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorPin" xml:space="preserve">
+    <value>स्क्रीन पर पिन करें ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+P, supplied by the app.</comment>
+  </data>
+  <data name="EditorPinned" xml:space="preserve">
+    <value>पिन हो गया</value>
+    <comment>Editor status line, after the shot was floated above the other windows.</comment>
+  </data>
+  <data name="EditorReadingText" xml:space="preserve">
+    <value>टेक्स्ट पढ़ा जा रहा है...</value>
+    <comment>Editor status line, while the words in the shot are being recognised.</comment>
+  </data>
+  <data name="EditorRegionTooSmall" xml:space="preserve">
+    <value>वह हिस्सा बहुत छोटा है।</value>
+    <comment>Editor status line, when a crop or cut rectangle was too small to apply.</comment>
+  </data>
+  <data name="EditorSave" xml:space="preserve">
+    <value>सेव ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+S, supplied by the app.</comment>
+  </data>
+  <data name="EditorSavedTo" xml:space="preserve">
+    <value>{0} में सेव हुआ</value>
+    <comment>Editor status line. {0} is the full path the shot was written to.</comment>
+  </data>
+  <data name="EditorSavedToWithProblem" xml:space="preserve">
+    <value>{0} में सेव हुआ — {1}</value>
+    <comment>Editor status line when the shot landed somewhere other than the chosen folder. {0} is the path, {1} is why the chosen folder was not used.</comment>
+  </data>
+  <data name="EditorSaveFailed" xml:space="preserve">
+    <value>सेव नहीं हो सका: {0}</value>
+    <comment>Editor status line. {0} is the reason the write failed, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="EditorSaveFailedShort" xml:space="preserve">
+    <value>सेव नहीं हुआ</value>
+    <comment>Editor status line, when Save as could not write the file.</comment>
+  </data>
+  <data name="EditorSaveFilter" xml:space="preserve">
+    <value>PNG तस्वीर|*.png|JPEG तस्वीर|*.jpg</value>
+    <comment>File type list in the Save as dialogs of the editor, the preview thumbnail and a pinned shot. Translate only the words: the vertical bars and the *.ext patterns are syntax Windows reads, and there must stay exactly two name-and-pattern pairs.</comment>
+  </data>
+  <data name="EditorSize" xml:space="preserve">
+    <value>आकार</value>
+    <comment>Editor toolbar, label on the stroke thickness slider.</comment>
+  </data>
+  <data name="EditorStatus_Many" xml:space="preserve">
+    <value>{0} x {1}   ·   {2} निशान</value>
+    <comment>Editor status line. {0} and {1} are the pixel size, {2} is how many marks have been drawn, two or more.</comment>
+  </data>
+  <data name="EditorStatus_One" xml:space="preserve">
+    <value>{0} x {1}   ·   1 निशान</value>
+    <comment>Editor status line with exactly one mark drawn. Singular form of EditorStatus_Many.</comment>
+  </data>
+  <data name="EditorStatusPosition" xml:space="preserve">
+    <value>   ·   {0}, {1}</value>
+    <comment>Appended to the editor status line while the cursor is over the image. {0} and {1} are the pixel coordinates.</comment>
+  </data>
+  <data name="EditorToolArrow" xml:space="preserve">
+    <value>तीर ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolBlur" xml:space="preserve">
+    <value>धुंधला ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCrop" xml:space="preserve">
+    <value>काटें ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolCut" xml:space="preserve">
+    <value>बीच से पट्टी हटाएँ ({0})</value>
+    <comment>Editor toolbar tooltip. Removes a strip from the middle and closes the gap. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolEllipse" xml:space="preserve">
+    <value>दीर्घवृत्त ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolHighlight" xml:space="preserve">
+    <value>हाइलाइटर ({0})</value>
+    <comment>Editor toolbar tooltip for the highlighter pen. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolLine" xml:space="preserve">
+    <value>रेखा ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolPen" xml:space="preserve">
+    <value>पेन ({0})</value>
+    <comment>Editor toolbar tooltip for freehand drawing. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolPixelate" xml:space="preserve">
+    <value>पिक्सलेट ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolRectangle" xml:space="preserve">
+    <value>आयत ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorToolSelect" xml:space="preserve">
+    <value>चुनें ({0})</value>
+    <comment>Editor toolbar tooltip for the tool that picks up and moves marks already drawn. {0} is the key that selects it.</comment>
+  </data>
+  <data name="EditorToolStep" xml:space="preserve">
+    <value>क्रम संख्या ({0})</value>
+    <comment>Editor toolbar tooltip for the numbered badges 1, 2, 3 used to walk through a screenshot. {0} is the key that selects the tool.</comment>
+  </data>
+  <data name="EditorToolText" xml:space="preserve">
+    <value>टेक्स्ट ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key that selects the tool, supplied by the app.</comment>
+  </data>
+  <data name="EditorUndo" xml:space="preserve">
+    <value>पूर्ववत ({0})</value>
+    <comment>Editor toolbar tooltip. {0} is the key name Ctrl+Z, supplied by the app.</comment>
+  </data>
+  <data name="EditorZoom" xml:space="preserve">
+    <value>{0}%</value>
+    <comment>Editor status bar, the zoom level at the far end. {0} is a whole number.</comment>
+  </data>
+  <data name="ErrorAdminPromptDismissed" xml:space="preserve">
+    <value>एडमिन वाला संकेत बंद कर दिया गया, इसलिए कुछ नहीं बदला।</value>
+    <comment>Settings page, after the Windows elevation prompt was declined.</comment>
+  </data>
+  <data name="ErrorElevationFailed" xml:space="preserve">
+    <value>Windows ने एडमिन अधिकार वाली कमांड शुरू नहीं की।</value>
+    <comment>Settings page, when the request to allow Shotwin through Windows Security could not even be launched.</comment>
+  </data>
+  <data name="ErrorNoOcrLanguage" xml:space="preserve">
+    <value>Windows में कोई OCR भाषा इंस्टॉल नहीं है। सेटिंग्स, समय और भाषा, भाषा और क्षेत्र में जाकर एक जोड़ें।</value>
+    <comment>Shown wherever text recognition is attempted. Settings, Time and language, and Language and region are the names of Windows Settings pages.</comment>
+  </data>
+  <data name="ErrorOwnPathUnknown" xml:space="preserve">
+    <value>Shotwin अपना ही पथ नहीं पहचान सका।</value>
+    <comment>Settings page, when the app cannot name its own executable to Windows Security.</comment>
+  </data>
+  <data name="ErrorSaveBlocked" xml:space="preserve">
+    <value>नियंत्रित फ़ोल्डर पहुँच या फ़ोल्डर की अनुमतियाँ</value>
+    <comment>The reason a save failed, dropped into EditorSaveFailed and TraySaveFailed. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="ErrorSaveFolderBlocked" xml:space="preserve">
+    <value>Windows ने {0} को रोक रखा है ({1})</value>
+    <comment>Said when a shot landed in the fallback folder instead. {0} is the folder that was chosen, {1} is why it refused the write.</comment>
+  </data>
+  <data name="ErrorSecurityRefused" xml:space="preserve">
+    <value>Windows सुरक्षा ने यह बदलाव नहीं माना। हो सकता है यह सेटिंग आपका संगठन तय करता हो।</value>
+    <comment>Settings page, when the elevated command ran but Windows Security rejected it.</comment>
+  </data>
+  <data name="NavAbout" xml:space="preserve">
+    <value>परिचय</value>
+    <comment>Main window navigation rail, the About item.</comment>
+  </data>
+  <data name="NavCapture" xml:space="preserve">
+    <value>कैप्चर</value>
+    <comment>Main window navigation rail, the Capture item.</comment>
+  </data>
+  <data name="NavCloseToTray" xml:space="preserve">
+    <value>नोटिफ़िकेशन एरिया में भेजें</value>
+    <comment>Main window title bar, tooltip on the close button. The app keeps running in the notification area.</comment>
+  </data>
+  <data name="NavMaximise" xml:space="preserve">
+    <value>बड़ा करें</value>
+    <comment>Title bar tooltip on the maximise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavMinimise" xml:space="preserve">
+    <value>छोटा करें</value>
+    <comment>Title bar tooltip on the minimise button, in the main window and the editor.</comment>
+  </data>
+  <data name="NavRecent" xml:space="preserve">
+    <value>हाल के</value>
+    <comment>Main window navigation rail, the Recent item.</comment>
+  </data>
+  <data name="NavRestore" xml:space="preserve">
+    <value>पहले जैसा</value>
+    <comment>Title bar tooltip on the maximise button once the window is maximised, in the main window and the editor.</comment>
+  </data>
+  <data name="NavSettings" xml:space="preserve">
+    <value>सेटिंग्स</value>
+    <comment>Main window navigation rail, the Settings item.</comment>
+  </data>
+  <data name="NavShortcuts" xml:space="preserve">
+    <value>शॉर्टकट</value>
+    <comment>Main window navigation rail, the Shortcuts item.</comment>
+  </data>
+  <data name="NavUpdateDownloading" xml:space="preserve">
+    <value>डाउनलोड {0}%</value>
+    <comment>Main window, on the update button while the new build is coming down. {0} is a whole number.</comment>
+  </data>
+  <data name="NavUpdateTo" xml:space="preserve">
+    <value>{0} में अपडेट करें</value>
+    <comment>Main window, the button at the foot of the rail when a newer build was found. {0} is the version number.</comment>
+  </data>
+  <data name="OverlayScrollingHint" xml:space="preserve">
+    <value>एक हिस्सा खींचें: उसे स्क्रॉल करके एक लंबे शॉट में जोड़ा जाएगा। Esc रोक देता है और जितना मिला उतना रख लेता है।</value>
+    <comment>Drawn across the top of the screen while a scrolling capture region is being chosen. Esc is a key name. This one is painted onto the canvas rather than laid out by Windows, so it is never mirrored for a right-to-left language.</comment>
+  </data>
+  <data name="PinActualSize" xml:space="preserve">
+    <value>वास्तविक आकार</value>
+    <comment>Pinned shot, right-click menu item that puts the zoom back to 100%.</comment>
+  </data>
+  <data name="PinClickThrough" xml:space="preserve">
+    <value>क्लिक आर-पार</value>
+    <comment>Pinned shot, right-click menu item that lets the mouse reach the window underneath.</comment>
+  </data>
+  <data name="PinClose" xml:space="preserve">
+    <value>बंद करें</value>
+    <comment>Pinned shot, right-click menu item that takes it off the screen.</comment>
+  </data>
+  <data name="PinCopy" xml:space="preserve">
+    <value>कॉपी</value>
+    <comment>Pinned shot, right-click menu item that copies the image.</comment>
+  </data>
+  <data name="PinFade" xml:space="preserve">
+    <value>50% तक हल्का करें</value>
+    <comment>Pinned shot, right-click menu item that makes it half transparent.</comment>
+  </data>
+  <data name="PinFullOpacity" xml:space="preserve">
+    <value>फिर पूरी तरह गाढ़ा</value>
+    <comment>Pinned shot, what the fade menu item says once it is already faded.</comment>
+  </data>
+  <data name="PinSave" xml:space="preserve">
+    <value>सेव</value>
+    <comment>Pinned shot, right-click menu item that writes the image to a file.</comment>
+  </data>
+  <data name="PinTitle" xml:space="preserve">
+    <value>पिन किया शॉट</value>
+    <comment>Window title of a pinned shot.</comment>
+  </data>
+  <data name="PreviewCopy" xml:space="preserve">
+    <value>कॉपी</value>
+    <comment>Preview thumbnail, tooltip on the copy button.</comment>
+  </data>
+  <data name="PreviewDismiss" xml:space="preserve">
+    <value>हटाएँ</value>
+    <comment>Preview thumbnail, tooltip on the button that sends it away.</comment>
+  </data>
+  <data name="PreviewEdit" xml:space="preserve">
+    <value>एडिट</value>
+    <comment>Preview thumbnail, tooltip on the button that opens the editor.</comment>
+  </data>
+  <data name="PreviewNoText" xml:space="preserve">
+    <value>उस शॉट में कोई टेक्स्ट नहीं मिला।</value>
+    <comment>Notification after using the preview thumbnail's text button on a shot with no readable words.</comment>
+  </data>
+  <data name="PreviewOcr" xml:space="preserve">
+    <value>इस शॉट का टेक्स्ट कॉपी करें</value>
+    <comment>Preview thumbnail, tooltip on the text recognition button.</comment>
+  </data>
+  <data name="PreviewPin" xml:space="preserve">
+    <value>स्क्रीन पर पिन करें</value>
+    <comment>Preview thumbnail, tooltip on the button that floats the shot above the other windows.</comment>
+  </data>
+  <data name="PreviewSave" xml:space="preserve">
+    <value>सेव</value>
+    <comment>Preview thumbnail, tooltip on the save button.</comment>
+  </data>
+  <data name="PreviewShowInFolder" xml:space="preserve">
+    <value>फ़ोल्डर में दिखाएँ</value>
+    <comment>Preview thumbnail, tooltip on the button that opens Explorer with the saved file selected.</comment>
+  </data>
+  <data name="RecentCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Second caption line under a thumbnail. {0} is when the file was written, {1} is its size on disk.</comment>
+  </data>
+  <data name="RecentClipboardBusy" xml:space="preserve">
+    <value>क्लिपबोर्ड व्यस्त था। फिर कोशिश करें।</value>
+    <comment>Recent page status line, when another app was holding the clipboard open.</comment>
+  </data>
+  <data name="RecentCopied" xml:space="preserve">
+    <value>क्लिपबोर्ड पर कॉपी हुआ।</value>
+    <comment>Recent page status line, after one shot was copied as an image.</comment>
+  </data>
+  <data name="RecentCopiedFiles_Many" xml:space="preserve">
+    <value>{0} फ़ाइलें कॉपी हुईं।</value>
+    <comment>Recent page status line, after several shots were copied as files. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentCopiedFiles_One" xml:space="preserve">
+    <value>1 फ़ाइल कॉपी हुई।</value>
+    <comment>Recent page status line, singular form of RecentCopiedFiles_Many.</comment>
+  </data>
+  <data name="RecentCopy" xml:space="preserve">
+    <value>कॉपी</value>
+    <comment>Recent page, button that copies the selected shots.</comment>
+  </data>
+  <data name="RecentDelete" xml:space="preserve">
+    <value>मिटाएँ</value>
+    <comment>Recent page, button that deletes the selected shots.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_Many" xml:space="preserve">
+    <value>ये {0} शॉट मिटाएँ?</value>
+    <comment>Confirmation asked before deleting several shots. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentDeleteConfirm_One" xml:space="preserve">
+    <value>{0} मिटाएँ?</value>
+    <comment>Confirmation asked before deleting one shot. {0} is its file name.</comment>
+  </data>
+  <data name="RecentDeleted_Many" xml:space="preserve">
+    <value>{0} मिटाए गए।</value>
+    <comment>Recent page status line after a delete. {0} is how many were removed, two or more.</comment>
+  </data>
+  <data name="RecentDeleted_One" xml:space="preserve">
+    <value>1 मिटाया गया।</value>
+    <comment>Recent page status line after deleting exactly one shot.</comment>
+  </data>
+  <data name="RecentDeletedPartial_Many" xml:space="preserve">
+    <value>{0} मिटाए गए, {1} नहीं हट सके।</value>
+    <comment>Recent page status line when some files refused to go. {0} is how many were deleted, {1} how many failed, two or more.</comment>
+  </data>
+  <data name="RecentDeletedPartial_One" xml:space="preserve">
+    <value>{0} मिटाए गए, 1 नहीं हट सका।</value>
+    <comment>Recent page status line when exactly one file refused to go. {0} is how many were deleted.</comment>
+  </data>
+  <data name="RecentEdit" xml:space="preserve">
+    <value>एडिट</value>
+    <comment>Recent page, button that opens the selected shots in the editor.</comment>
+  </data>
+  <data name="RecentEmpty" xml:space="preserve">
+    <value>अभी कोई शॉट नहीं। कुछ कैप्चर करें, वह यहाँ दिखेगा।</value>
+    <comment>Recent page, shown in the middle of the gallery when the save folder is empty.</comment>
+  </data>
+  <data name="RecentExplorerFailed" xml:space="preserve">
+    <value>Explorer नहीं खुल सका।</value>
+    <comment>Recent page status line, when Windows refused to open a folder window. Explorer is the Windows file manager.</comment>
+  </data>
+  <data name="RecentFileUnreadable" xml:space="preserve">
+    <value>वह फ़ाइल पढ़ी नहीं जा सकी।</value>
+    <comment>Recent page status line, when a shot could not be decoded to copy it.</comment>
+  </data>
+  <data name="RecentOpenFolder" xml:space="preserve">
+    <value>फ़ोल्डर खोलें</value>
+    <comment>Recent page, button at the top of the page that opens the save folder.</comment>
+  </data>
+  <data name="RecentPin" xml:space="preserve">
+    <value>पिन</value>
+    <comment>Recent page, button that floats the selected shots above the other windows.</comment>
+  </data>
+  <data name="RecentSelected_Many" xml:space="preserve">
+    <value>{0} चुने गए</value>
+    <comment>Recent page status line while several thumbnails are picked. {0} is the count, two or more.</comment>
+  </data>
+  <data name="RecentSelected_One" xml:space="preserve">
+    <value>1 चुना गया</value>
+    <comment>Recent page status line, singular form of RecentSelected_Many.</comment>
+  </data>
+  <data name="RecentShotCount_Many" xml:space="preserve">
+    <value>{0} शॉट   ·   कई चुनने के लिए Ctrl या Shift के साथ क्लिक करें</value>
+    <comment>Recent page, the line under its heading. {0} is how many shots are listed, two or more. Ctrl and Shift are key names.</comment>
+  </data>
+  <data name="RecentShotCount_One" xml:space="preserve">
+    <value>1 शॉट</value>
+    <comment>Recent page, the line under its heading when exactly one shot is listed.</comment>
+  </data>
+  <data name="RecentShowInFolder" xml:space="preserve">
+    <value>फ़ोल्डर में दिखाएँ</value>
+    <comment>Recent page, button that opens Explorer with the selected shot highlighted.</comment>
+  </data>
+  <data name="RecentSizeBytes" xml:space="preserve">
+    <value>{0} B</value>
+    <comment>File size under a thumbnail, in bytes. {0} is a whole number; B is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeKilobytes" xml:space="preserve">
+    <value>{0} KB</value>
+    <comment>File size under a thumbnail, in kilobytes. {0} is a whole number; KB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentSizeMegabytes" xml:space="preserve">
+    <value>{0} MB</value>
+    <comment>File size under a thumbnail, in megabytes. {0} has one decimal place; MB is the unit abbreviation.</comment>
+  </data>
+  <data name="RecentTitle" xml:space="preserve">
+    <value>हाल के</value>
+    <comment>Recent page, its heading.</comment>
+  </data>
+  <data name="RecordBarCancel" xml:space="preserve">
+    <value>रद्द करें</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and throws the file away.</comment>
+  </data>
+  <data name="RecordBarStop" xml:space="preserve">
+    <value>रोकें</value>
+    <comment>The small window shown while a screen recording runs: the button that ends it and keeps the file.</comment>
+  </data>
+  <data name="RecordCaptureButton" xml:space="preserve">
+    <value>रिकॉर्डिंग शुरू करें</value>
+    <comment>Capture page, button that opens the overlay to pick what to record. The footnote at the bottom of the page already lists what can be picked there, so the button only has to say what it starts.</comment>
+  </data>
+  <data name="RecordCountdown" xml:space="preserve">
+    <value>रिकॉर्डिंग से पहले गिनती</value>
+    <comment>Settings page, label beside the list of countdown lengths. The countdown runs in the small recording window after the region is chosen and before anything is recorded.</comment>
+  </data>
+  <data name="RecordCountdownNone" xml:space="preserve">
+    <value>कोई गिनती नहीं</value>
+    <comment>Settings page, the entry in the list of countdown lengths that starts the recording immediately.</comment>
+  </data>
+  <data name="RecordCountdownOption" xml:space="preserve">
+    <value>{0} सेकंड</value>
+    <comment>Settings page, one entry in the list of countdown lengths. {0} is a number, always 3, 5 or 10, so no singular form is needed.</comment>
+  </data>
+  <data name="RecordFrameRate" xml:space="preserve">
+    <value>फ़्रेम प्रति सेकंड</value>
+    <comment>Settings page, label beside the list of recording frame rates.</comment>
+  </data>
+  <data name="RecordFrameRateOption" xml:space="preserve">
+    <value>{0} fps</value>
+    <comment>Settings page, one entry in the list of recording frame rates. {0} is a number such as 30.</comment>
+  </data>
+  <data name="RecordOverlayHint" xml:space="preserve">
+    <value>रिकॉर्ड करने के लिए हिस्सा खींचें, पूरी विंडो रिकॉर्ड करने के लिए उस पर क्लिक करें, पूरी स्क्रीन के लिए Ctrl+A, रद्द करने के लिए Esc।</value>
+    <comment>Drawn across the top of the screen while what to record is being chosen, and the only place the three ways of choosing are spelled out, so it has to name all of them. Ctrl+A and Esc are key names and stay as they are. This one is painted onto the canvas rather than laid out by Windows, so it is neither mirrored nor shaped for a right-to-left script.</comment>
+  </data>
+  <data name="RecordSettingsHeader" xml:space="preserve">
+    <value>रिकॉर्डिंग</value>
+    <comment>Settings page, section heading over the screen recording options. Upper case in English.</comment>
+  </data>
+  <data name="RecordShortcutDetail" xml:space="preserve">
+    <value>एक हिस्सा, विंडो या पूरी स्क्रीन रिकॉर्ड करता है</value>
+    <comment>Shortcuts page, what the recording shortcut does.</comment>
+  </data>
+  <data name="RecordShortcutName" xml:space="preserve">
+    <value>रिकॉर्डिंग शुरू करें</value>
+    <comment>Shortcuts page, name of the screen recording action. Also names it in the messages about clashing shortcuts.</comment>
+  </data>
+  <data name="RecordShowCursor" xml:space="preserve">
+    <value>रिकॉर्डिंग में माउस पॉइंटर दिखाएँ</value>
+    <comment>Settings page, tick box under RECORDING. The pointer is not in the screen copy Windows hands back, so it is drawn into each frame.</comment>
+  </data>
+  <data name="RecordTrayBusy" xml:space="preserve">
+    <value>एक रिकॉर्डिंग पहले से चल रही है। पहले उसे रोकें।</value>
+    <comment>Notification shown when a recording is asked for while one is already going.</comment>
+  </data>
+  <data name="RecordTrayFailed" xml:space="preserve">
+    <value>उस हिस्से की रिकॉर्डिंग नहीं हो सकी।</value>
+    <comment>Notification shown when the video encoder refused the region, or finished with nothing usable in the file.</comment>
+  </data>
+  <data name="RecordTrayCountingIn" xml:space="preserve">
+    <value>Shotwin — रिकॉर्डिंग {0} में</value>
+    <comment>Tray icon tooltip during the count-in before a recording starts. {0} is the seconds left.</comment>
+  </data>
+  <data name="RecordTrayStopItem" xml:space="preserve">
+    <value>रिकॉर्डिंग रोकें</value>
+    <comment>Tray menu item, shown only while a recording is running. Keeps the file.</comment>
+  </data>
+  <data name="RecordTrayCancelItem" xml:space="preserve">
+    <value>रिकॉर्डिंग रद्द करें</value>
+    <comment>Tray menu item, shown only while a recording is running. Throws the file away.</comment>
+  </data>
+  <data name="RecordTrayTip" xml:space="preserve">
+    <value>Shotwin — रिकॉर्डिंग {0}</value>
+    <comment>Tray icon tooltip while recording. {0} is the elapsed time as m:ss.</comment>
+  </data>
+  <data name="RecordTrayItem" xml:space="preserve">
+    <value>रिकॉर्डिंग शुरू करें</value>
+    <comment>Notification area menu item that starts a screen recording. A region, a window or a whole screen is chosen in the overlay it opens, so this only has to say what it starts.</comment>
+  </data>
+  <data name="RecordTraySaved" xml:space="preserve">
+    <value>रिकॉर्डिंग {0} के नाम से सेव हुई। फ़ोल्डर में देखने के लिए क्लिक करें।</value>
+    <comment>Notification after a recording is stopped and written. {0} is the file name.</comment>
+  </data>
+  <data name="SettingsAfterCaptureHeader" xml:space="preserve">
+    <value>कैप्चर के बाद</value>
+    <comment>Settings page, first section heading. Upper case in English.</comment>
+  </data>
+  <data name="SettingsAllowInSecurity" xml:space="preserve">
+    <value>Windows सुरक्षा में Shotwin को अनुमति दें</value>
+    <comment>Settings page, button that asks Windows to let the app write to a protected folder. Windows Security is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsAutoSave" xml:space="preserve">
+    <value>हर कैप्चर अपने आप फ़ोल्डर में सेव करें</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsBrowse" xml:space="preserve">
+    <value>ब्राउज़ करें</value>
+    <comment>Settings page, button that opens a folder picker beside the save folder box.</comment>
+  </data>
+  <data name="SettingsChooseFolderTitle" xml:space="preserve">
+    <value>चुनें कि शॉट कहाँ सेव हों</value>
+    <comment>Title of the folder picker, opened from Settings and from the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsColourPickerCopies" xml:space="preserve">
+    <value>रंग चुनने पर कॉपी हो</value>
+    <comment>Settings page, label beside the list of colour notations. The notation names Hex, RGB and HSL are not translated.</comment>
+  </data>
+  <data name="SettingsCopyClipboard" xml:space="preserve">
+    <value>क्लिपबोर्ड पर कॉपी करें</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsCornerBottomLeft" xml:space="preserve">
+    <value>नीचे बाएँ</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerBottomRight" xml:space="preserve">
+    <value>नीचे दाएँ</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerCursor" xml:space="preserve">
+    <value>जहाँ माउस छोड़ा</value>
+    <comment>Settings page, first choice for where the preview thumbnail appears: beside the spot the drag finished on.</comment>
+  </data>
+  <data name="SettingsCornerTopLeft" xml:space="preserve">
+    <value>ऊपर बाएँ</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsCornerTopRight" xml:space="preserve">
+    <value>ऊपर दाएँ</value>
+    <comment>Settings page, one of the corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsFileName" xml:space="preserve">
+    <value>फ़ाइल का नाम</value>
+    <comment>Settings page, label over the file name template box.</comment>
+  </data>
+  <data name="SettingsFileTemplateHint" xml:space="preserve">
+    <value>घुंघराले कोष्ठकों में तारीख़ के प्रारूप आते हैं, जैसे {yyyy-MM-dd}।</value>
+    <comment>Settings page, shown under an empty file name box. The braces and the letters inside them are a date pattern Windows reads, so leave that part exactly as it is.</comment>
+  </data>
+  <data name="SettingsFirstRunDefault" xml:space="preserve">
+    <value>डिफ़ॉल्ट रखें</value>
+    <comment>The folder question asked on the first capture: button that accepts the app's own folder.</comment>
+  </data>
+  <data name="SettingsFirstRunHint" xml:space="preserve">
+    <value>Windows अनजान ऐप्स से Pictures, Documents, Desktop और Videos की रक्षा करता है, इसलिए अपना बनाया फ़ोल्डर भरोसेमंद विकल्प है। Shotwin इस्तेमाल से पहले जाँच लेता है कि फ़ोल्डर चलता है।</value>
+    <comment>The folder question asked on the first capture: why a folder of your own is suggested. Pictures, Documents, Desktop and Videos are Windows folder names.</comment>
+  </data>
+  <data name="SettingsFirstRunPickFolder" xml:space="preserve">
+    <value>कोई फ़ोल्डर चुनें, या डिफ़ॉल्ट रखें।</value>
+    <comment>The folder question asked on the first capture, when the box was left empty.</comment>
+  </data>
+  <data name="SettingsFirstRunProtected" xml:space="preserve">
+    <value>Windows यहाँ Shotwin को लिखने नहीं देगा — यह नियंत्रित फ़ोल्डर पहुँच से सुरक्षित फ़ोल्डरों में से एक है। दूसरा चुनें, या डिफ़ॉल्ट रखें।</value>
+    <comment>The folder question asked on the first capture, when the chosen folder is protected. Controlled Folder Access is a Windows feature name.</comment>
+  </data>
+  <data name="SettingsFirstRunSubtitle" xml:space="preserve">
+    <value>आपका पहला शॉट तैयार है। अभी फ़ोल्डर चुनें, आगे से वही चलेगा — बाद में सेटिंग्स से बदल सकते हैं।</value>
+    <comment>The folder question asked on the first capture, the line under its heading.</comment>
+  </data>
+  <data name="SettingsFirstRunTitle" xml:space="preserve">
+    <value>Shotwin आपके स्क्रीनशॉट कहाँ रखे?</value>
+    <comment>Heading of the folder question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFirstRunUnwritable" xml:space="preserve">
+    <value>Shotwin वहाँ लिख नहीं सकता। पथ जाँचें, या डिफ़ॉल्ट रखें।</value>
+    <comment>The folder question asked on the first capture, when the chosen folder refused a test write.</comment>
+  </data>
+  <data name="SettingsFirstRunUse" xml:space="preserve">
+    <value>यही फ़ोल्डर रखें</value>
+    <comment>The folder question asked on the first capture: button that accepts the typed folder.</comment>
+  </data>
+  <data name="SettingsFolder" xml:space="preserve">
+    <value>फ़ोल्डर</value>
+    <comment>Label over the save folder box, in Settings and in the question asked on the first capture.</comment>
+  </data>
+  <data name="SettingsFolderOpenFailed" xml:space="preserve">
+    <value>वह फ़ोल्डर नहीं खुल सका।</value>
+    <comment>Settings page, when Windows refused to open the save folder.</comment>
+  </data>
+  <data name="SettingsFolderProtected" xml:space="preserve">
+    <value>Windows की नियंत्रित फ़ोल्डर पहुँच इस फ़ोल्डर की रक्षा करती है, इसलिए Shotwin इसमें नहीं लिख सकता। शॉट इसके बजाय बैकअप फ़ोल्डर में जाते हैं — कुछ खोता नहीं। यही फ़ोल्डर चाहिए तो Windows सुरक्षा में Shotwin को अनुमति दें।</value>
+    <comment>Settings page, under the save folder box when the folder is protected. Controlled Folder Access and Windows Security are Windows feature names.</comment>
+  </data>
+  <data name="SettingsFolderUnwritable" xml:space="preserve">
+    <value>Shotwin इस फ़ोल्डर में नहीं लिख सकता, इसलिए शॉट बैकअप फ़ोल्डर में जाते हैं। पथ जाँचें और यह भी कि वहाँ लिखने की अनुमति आपके पास है।</value>
+    <comment>Settings page, under the save folder box when a write failed for any other reason.</comment>
+  </data>
+  <data name="SettingsLanguage" xml:space="preserve">
+    <value>भाषा</value>
+    <comment>Settings page, label beside the language list under SYSTEM.</comment>
+  </data>
+  <data name="SettingsLanguageAutomatic" xml:space="preserve">
+    <value>अपने आप (Windows के अनुसार)</value>
+    <comment>Settings page, first entry in the language list: use whatever display language Windows is set to. Every other entry is a language written in its own words and is never translated.</comment>
+  </data>
+  <data name="SettingsNextFile" xml:space="preserve">
+    <value>अगली फ़ाइल: {0}.png</value>
+    <comment>Settings page, a worked example under the file name box. {0} is the name the template produces right now.</comment>
+  </data>
+  <data name="SettingsOpen" xml:space="preserve">
+    <value>खोलें</value>
+    <comment>Settings page, button that opens the save folder in Explorer.</comment>
+  </data>
+  <data name="SettingsOpenEditor" xml:space="preserve">
+    <value>एडिटर खोलें</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsOverlayHeader" xml:space="preserve">
+    <value>ओवरले</value>
+    <comment>Settings page, section heading over the capture overlay options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsPreviewAppears" xml:space="preserve">
+    <value>कहाँ दिखे</value>
+    <comment>Settings page, label beside the list of corners the preview thumbnail can appear in.</comment>
+  </data>
+  <data name="SettingsPreviewHint" xml:space="preserve">
+    <value>प्रीव्यू वहीं से आप शॉट उठाते हैं: एडिट के लिए उस पर क्लिक करें, PNG छोड़ने के लिए उसे किसी भी ऐप में खींचें, या नीचे की पट्टी के बटन इस्तेमाल करें। किसी दूसरी विंडो पर जाते ही वह गायब हो जाता है और शॉट क्लिपबोर्ड पर पेस्ट के लिए तैयार छोड़ जाता है। अपने आप सेव बंद हो तो प्रीव्यू पर सेव दबाए बिना कैप्चर मिट जाता है।</value>
+    <comment>Settings page, the paragraph explaining the preview thumbnail. PNG is a file format name.</comment>
+  </data>
+  <data name="SettingsSaved" xml:space="preserve">
+    <value>सेव हुआ।</value>
+    <comment>Settings page, the confirmation that floats over the bottom of the list after a change is written.</comment>
+  </data>
+  <data name="SettingsSavingHeader" xml:space="preserve">
+    <value>सेव करना</value>
+    <comment>Settings page, section heading over the folder and file name options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsSecurityDone" xml:space="preserve">
+    <value>हो गया। Shotwin अब उस फ़ोल्डर में लिख सकता है।</value>
+    <comment>Settings page, after Windows Security accepted the app and the folder now takes writes.</comment>
+  </data>
+  <data name="SettingsSecurityStillBlocked" xml:space="preserve">
+    <value>Windows ने बदलाव तो माना, पर फ़ोल्डर अब भी लिखने नहीं देता।</value>
+    <comment>Settings page, after Windows Security accepted the app but the folder still refuses writes.</comment>
+  </data>
+  <data name="SettingsShowCoordinates" xml:space="preserve">
+    <value>कर्सर के पास निर्देशांक दिखाएँ</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsShowPreview" xml:space="preserve">
+    <value>प्रीव्यू थंबनेल दिखाएँ</value>
+    <comment>Settings page, tick box under AFTER CAPTURE.</comment>
+  </data>
+  <data name="SettingsSnapWindows" xml:space="preserve">
+    <value>कर्सर के नीचे की विंडो से चिपकें</value>
+    <comment>Settings page, tick box under OVERLAY.</comment>
+  </data>
+  <data name="SettingsStartupHint" xml:space="preserve">
+    <value>बिना विंडो खोले सीधे नोटिफ़िकेशन एरिया में शुरू होता है।</value>
+    <comment>Settings page, under the start-at-login tick box.</comment>
+  </data>
+  <data name="SettingsStartupRefused" xml:space="preserve">
+    <value>Windows ने साइन इन पर शुरू होने का बदलाव नहीं माना।</value>
+    <comment>Settings page, when the registry entry for starting at login could not be written.</comment>
+  </data>
+  <data name="SettingsStartWithWindows" xml:space="preserve">
+    <value>साइन इन करते ही Shotwin शुरू करें</value>
+    <comment>Settings page, tick box under SYSTEM.</comment>
+  </data>
+  <data name="SettingsSubtitle" xml:space="preserve">
+    <value>बदलाव करते ही लागू हो जाते हैं।</value>
+    <comment>Settings page, the line under its heading.</comment>
+  </data>
+  <data name="SettingsSystemHeader" xml:space="preserve">
+    <value>सिस्टम</value>
+    <comment>Settings page, section heading over the language and start-at-login options. Upper case in English.</comment>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>सेटिंग्स</value>
+    <comment>Settings page, its heading.</comment>
+  </data>
+  <data name="SettingsWaitingForAdmin" xml:space="preserve">
+    <value>एडमिन संकेत की प्रतीक्षा...</value>
+    <comment>Settings page, while the Windows elevation prompt is on screen.</comment>
+  </data>
+  <data name="ShortcutsCaptureArea" xml:space="preserve">
+    <value>क्षेत्र कैप्चर</value>
+    <comment>Shortcuts page, name of the area capture action. Also names it in the messages about shortcuts Windows refused.</comment>
+  </data>
+  <data name="ShortcutsCaptureAreaDetail" xml:space="preserve">
+    <value>कोई भी हिस्सा खींचकर चुनें</value>
+    <comment>Shortcuts page, what the area capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreen" xml:space="preserve">
+    <value>स्क्रीन कैप्चर</value>
+    <comment>Shortcuts page, name of the whole-screen capture action.</comment>
+  </data>
+  <data name="ShortcutsCaptureScreenDetail" xml:space="preserve">
+    <value>जिस मॉनिटर पर कर्सर है</value>
+    <comment>Shortcuts page, what the screen capture shortcut does.</comment>
+  </data>
+  <data name="ShortcutsClash" xml:space="preserve">
+    <value>यह संयोजन पहले से किसी और काम में लगा है।</value>
+    <comment>Shortcuts page, when the recorded combination is already bound to a different Shotwin action.</comment>
+  </data>
+  <data name="ShortcutsEditorCommands" xml:space="preserve">
+    <value>Ctrl+C कॉपी · Ctrl+S सेव · Ctrl+Shift+S ऐसे सेव · Ctrl+P पिन · Ctrl+Z पूर्ववत · Ctrl+व्हील ज़ूम · Ctrl+0 फ़िट · Delete हटाएँ · Esc बंद</value>
+    <comment>Shortcuts page, the editor's command keys. Translate only the word after each key name; the key names themselves stay as they are.</comment>
+  </data>
+  <data name="ShortcutsEditorHeader" xml:space="preserve">
+    <value>एडिटर में</value>
+    <comment>Shortcuts page, heading over the editor's own keys. Upper case in English.</comment>
+  </data>
+  <data name="ShortcutsEditorTools" xml:space="preserve">
+    <value>V चुनें · A तीर · R आयत · O दीर्घवृत्त · L रेखा · P पेन · H हाइलाइटर · T टेक्स्ट · S क्रम संख्या · B पिक्सलेट · Shift+B धुंधला</value>
+    <comment>Shortcuts page, the editor's tool keys. Translate only the words after each key name; the letters themselves are fixed keys and stay as they are.</comment>
+  </data>
+  <data name="ShortcutsGrabText" xml:space="preserve">
+    <value>टेक्स्ट लें</value>
+    <comment>Shortcuts page, name of the text recognition action.</comment>
+  </data>
+  <data name="ShortcutsGrabTextDetail" xml:space="preserve">
+    <value>एक हिस्सा पढ़कर टेक्स्ट कॉपी करता है</value>
+    <comment>Shortcuts page, what the text shortcut does.</comment>
+  </data>
+  <data name="ShortcutsNotSet" xml:space="preserve">
+    <value>तय नहीं</value>
+    <comment>Shown in place of a key combination when an action has none bound.</comment>
+  </data>
+  <data name="ShortcutsPickColour" xml:space="preserve">
+    <value>रंग चुनें</value>
+    <comment>Shortcuts page, name of the colour picker action.</comment>
+  </data>
+  <data name="ShortcutsPickColourDetail" xml:space="preserve">
+    <value>स्क्रीन पर लेंस; क्लिक करते ही मान कॉपी</value>
+    <comment>Shortcuts page, what the colour shortcut does. A loupe is a magnifying lens.</comment>
+  </data>
+  <data name="ShortcutsPressCombination" xml:space="preserve">
+    <value>कोई संयोजन दबाएँ...</value>
+    <comment>Shortcuts page, shown in a box that is waiting for the keys to be pressed.</comment>
+  </data>
+  <data name="ShortcutsRefused" xml:space="preserve">
+    <value>Windows ने Shotwin को ये नहीं दिए: {0}। ये पहले से किसी और ऐप के पास हैं।</value>
+    <comment>Shortcuts page, when Windows refused to register a combination. {0} is a comma-separated list of action names.</comment>
+  </data>
+  <data name="ShortcutsSaved" xml:space="preserve">
+    <value>सेव हुआ।</value>
+    <comment>Shortcuts page, the confirmation after a new combination is written.</comment>
+  </data>
+  <data name="ShortcutsScrolling" xml:space="preserve">
+    <value>स्क्रॉलिंग कैप्चर</value>
+    <comment>Shortcuts page, name of the scrolling capture action.</comment>
+  </data>
+  <data name="ShortcutsScrollingDetail" xml:space="preserve">
+    <value>एक हिस्से को स्क्रॉल करके जोड़ता है</value>
+    <comment>Shortcuts page, what the scrolling shortcut does.</comment>
+  </data>
+  <data name="ShortcutsSubtitle" xml:space="preserve">
+    <value>किसी शॉर्टकट पर क्लिक करें, फिर मनचाहा संयोजन दबाएँ। Esc रद्द कर देता है।</value>
+    <comment>Shortcuts page, the line under its heading. Esc is a key name.</comment>
+  </data>
+  <data name="ShortcutsTitle" xml:space="preserve">
+    <value>शॉर्टकट</value>
+    <comment>Shortcuts page, its heading.</comment>
+  </data>
+  <data name="TrayCaptureArea" xml:space="preserve">
+    <value>क्षेत्र कैप्चर</value>
+    <comment>Notification area menu item that opens the area overlay.</comment>
+  </data>
+  <data name="TrayCaptureScreen" xml:space="preserve">
+    <value>स्क्रीन कैप्चर</value>
+    <comment>Notification area menu item that grabs the monitor the cursor is on.</comment>
+  </data>
+  <data name="TrayColourCopied" xml:space="preserve">
+    <value>{0} कॉपी हुआ</value>
+    <comment>Notification after the colour picker. {0} is the colour value, for example #1B1B1F.</comment>
+  </data>
+  <data name="TrayCrash" xml:space="preserve">
+    <value>कुछ गड़बड़ हुई: {0}. ब्योरा {1} में</value>
+    <comment>Notification after an error the app recovered from. {0} is the message from Windows, {1} is the path of the log file. Neither is translated.</comment>
+  </data>
+  <data name="TrayFileUnreadable" xml:space="preserve">
+    <value>वह फ़ाइल नहीं खुल सकी।</value>
+    <comment>Notification when a saved shot could not be decoded to reopen it.</comment>
+  </data>
+  <data name="TrayGrabText" xml:space="preserve">
+    <value>टेक्स्ट लें</value>
+    <comment>Notification area menu item that reads the text out of a region.</comment>
+  </data>
+  <data name="TrayHotkeyConflicts" xml:space="preserve">
+    <value>ये शॉर्टकट पहले से किसी और ऐप के पास हैं: {0}। इन्हें शॉर्टकट में बदलें।</value>
+    <comment>Notification at startup when Windows refused a shortcut. {0} is a comma-separated list of action names. Shortcuts is the name of a page in the app.</comment>
+  </data>
+  <data name="TrayNoText" xml:space="preserve">
+    <value>उस हिस्से में कोई टेक्स्ट नहीं मिला।</value>
+    <comment>Notification when text recognition ran on a captured region and read nothing.</comment>
+  </data>
+  <data name="TrayOpen" xml:space="preserve">
+    <value>Shotwin खोलें</value>
+    <comment>Notification area menu item that shows the main window.</comment>
+  </data>
+  <data name="TrayPickColour" xml:space="preserve">
+    <value>रंग चुनें</value>
+    <comment>Notification area menu item that opens the colour loupe.</comment>
+  </data>
+  <data name="TrayQuit" xml:space="preserve">
+    <value>Shotwin बंद करें</value>
+    <comment>Notification area menu item that ends the app.</comment>
+  </data>
+  <data name="TrayRecent" xml:space="preserve">
+    <value>हाल के शॉट</value>
+    <comment>Notification area menu item that opens the gallery of saved shots.</comment>
+  </data>
+  <data name="TraySaveFailed" xml:space="preserve">
+    <value>शॉट सेव नहीं हो सका: {0}</value>
+    <comment>Notification when automatic saving failed. {0} is the reason, from ErrorSaveBlocked or from Windows.</comment>
+  </data>
+  <data name="TrayScrollingCapture" xml:space="preserve">
+    <value>स्क्रॉलिंग कैप्चर</value>
+    <comment>Notification area menu item that starts a scrolling capture.</comment>
+  </data>
+  <data name="TraySettings" xml:space="preserve">
+    <value>सेटिंग्स</value>
+    <comment>Notification area menu item that opens the settings page.</comment>
+  </data>
+  <data name="VideoCaption" xml:space="preserve">
+    <value>Shotwin — {0}</value>
+    <comment>Video editor window caption. {0} is the file name.</comment>
+  </data>
+  <data name="VideoClipboardBusy" xml:space="preserve">
+    <value>क्लिपबोर्ड व्यस्त है। फिर कोशिश करें।</value>
+    <comment>Shown when another app holds the clipboard.</comment>
+  </data>
+  <data name="VideoCopied" xml:space="preserve">
+    <value>रिकॉर्डिंग कॉपी हो गई।</value>
+    <comment>Shown after the file is put on the clipboard.</comment>
+  </data>
+  <data name="VideoCopy" xml:space="preserve">
+    <value>कॉपी</value>
+    <comment>Video editor button that copies the file itself.</comment>
+  </data>
+  <data name="VideoCut" xml:space="preserve">
+    <value>एक हिस्सा काटें</value>
+    <comment>Video editor button that drops a stretch of the recording out of the middle.</comment>
+  </data>
+  <data name="VideoCutCount_One" xml:space="preserve">
+    <value>{0} कट</value>
+    <comment>How many stretches are being dropped. {0} is the number, here one.</comment>
+  </data>
+  <data name="VideoCutCount_Many" xml:space="preserve">
+    <value>{0} कट</value>
+    <comment>How many stretches are being dropped. {0} is the number, two or more.</comment>
+  </data>
+  <data name="VideoCutRemove" xml:space="preserve">
+    <value>यह हिस्सा वापस लाएँ</value>
+    <comment>Tooltip on the small cross that undoes one cut.</comment>
+  </data>
+  <data name="VideoExplorerFailed" xml:space="preserve">
+    <value>Explorer नहीं खुल सका।</value>
+    <comment>Shown when revealing the file in Explorer fails.</comment>
+  </data>
+  <data name="VideoHintDrawPiece" xml:space="preserve">
+    <value>दूसरा हिस्सा रखने के लिए ट्रैक पर खींचें</value>
+    <comment>Hint under the video editor's timeline, saying how to add a second kept piece of a recording.</comment>
+  </data>
+  <data name="VideoQualitySharper" xml:space="preserve">
+    <value>साफ़ तस्वीर, कम फ़्रेम</value>
+    <comment>Tooltip on the video editor button that trades playback smoothness for detail.</comment>
+  </data>
+  <data name="VideoQualitySmoother" xml:space="preserve">
+    <value>स्मूद तस्वीर, कम बारीकी</value>
+    <comment>Tooltip on the video editor button that trades detail for playback smoothness.</comment>
+  </data>
+  <data name="VideoNothingLeft" xml:space="preserve">
+    <value>कट के बाद सेव करने को कुछ नहीं बचा।</value>
+    <comment>Shown when every part of the recording has been cut away.</comment>
+  </data>
+  <data name="VideoPause" xml:space="preserve">
+    <value>रोकें</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPlay" xml:space="preserve">
+    <value>चलाएँ</value>
+    <comment>Video editor transport button.</comment>
+  </data>
+  <data name="VideoPosition" xml:space="preserve">
+    <value>{0} / {1}</value>
+    <comment>Video editor position readout: current time over total, both m:ss.</comment>
+  </data>
+  <data name="VideoSave" xml:space="preserve">
+    <value>चुना हिस्सा सेव करें</value>
+    <comment>Video editor button that exports the selected span as a new file.</comment>
+  </data>
+  <data name="VideoSaveFailed" xml:space="preserve">
+    <value>वह सेव नहीं हो सका: {0}</value>
+    <comment>Shown when the trim export fails. {0} is the reason.</comment>
+  </data>
+  <data name="VideoSaved" xml:space="preserve">
+    <value>{0} सेव हो गई</value>
+    <comment>Shown after a trimmed copy is written. {0} is the file name.</comment>
+  </data>
+  <data name="VideoSaving" xml:space="preserve">
+    <value>सेव हो रहा है… {0}%</value>
+    <comment>Video editor progress while the trimmed copy is written. {0} is percent.</comment>
+  </data>
+  <data name="VideoShowInFolder" xml:space="preserve">
+    <value>फ़ोल्डर में दिखाएँ</value>
+    <comment>Video editor button that reveals the file in Explorer.</comment>
+  </data>
+  <data name="VideoSpanTooShort" xml:space="preserve">
+    <value>सेव करने के लिए लंबा हिस्सा चुनें।</value>
+    <comment>Shown when the trim handles are too close together.</comment>
+  </data>
+  <data name="VideoTrimSpan" xml:space="preserve">
+    <value>हिस्सा: {0} — {1}</value>
+    <comment>Video editor readout of the selected span, both m:ss.</comment>
+  </data>
+  <data name="VideoUnreadable" xml:space="preserve">
+    <value>वह रिकॉर्डिंग नहीं खुल सकी।</value>
+    <comment>Shown when the video file will not load.</comment>
+  </data>
+  <data name="VideoCardDetail" xml:space="preserve">
+    <value>{0}   ·   {1}</value>
+    <comment>Detail line on a recording's card in Recent: {0} is the date and size, {1} is how long it runs.</comment>
+  </data>
+</root>
