@@ -44,6 +44,10 @@ install alongside it.
 - **Thirty languages**, following Windows or set by hand.
 - **Self-updating**, per user, no installer and no admin rights.
 
+<p align="center">
+  <img src="docs/editor.png" alt="The Shotwin editor, marking up a screenshot" width="722">
+</p>
+
 ## Install
 
 Download `Shotwin.exe` from [Releases](../../releases) and run it.
