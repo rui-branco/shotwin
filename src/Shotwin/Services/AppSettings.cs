@@ -127,6 +127,14 @@ public static class SettingsService
     {
         WriteIndented = true,
         DefaultIgnoreCondition = JsonIgnoreCondition.Never,
+
+        // NaN and the infinities are not JSON numbers, and by default the serializer
+        // throws rather than writing them — which took the whole file down, not just the
+        // one value. A window coordinate is NaN until the window is placed, and a zoom
+        // factor divided by a zero-sized document is Infinity, so any float setting taken
+        // from the UI can be one of them for a moment. Written as "NaN"/"Infinity" and
+        // read back the same way, they cost a strange-looking value instead of a crash.
+        NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
     };
 
     private static AppSettings? _current;
@@ -244,6 +252,16 @@ public static class SettingsService
         }
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
         {
+            TryDelete(TempPath);
+        }
+        catch (Exception ex) when (ex is ArgumentException or NotSupportedException)
+        {
+            // The serializer refusing the object outright, which is a fault in the
+            // settings model rather than anything to do with the disk. It used to fall
+            // straight through this filter to the dispatcher and close the app — on the
+            // way out of OnExit, where the only sign was a line in the log. Settings that
+            // cannot be written are worth losing; the session is not.
+            CrashLog.Write("Settings", ex);
             TryDelete(TempPath);
         }
     }
