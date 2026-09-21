@@ -90,6 +90,10 @@ capture, so neither appears in the recording, and the ring passes clicks through
 Encoding is H.264 through the encoder built into Windows: no FFmpeg, hardware accelerated
 where the machine has it, 15 to 120 frames a second. Video only, no audio.
 
+<p align="center">
+  <img src="docs/video.png" alt="The Shotwin video editor, with the clip shown as kept pieces on the timeline" width="722">
+</p>
+
 Opening a recording from **Recent** opens the video editor. It plays through Windows' own
 playback pipeline, at full resolution. The timeline shows the clip as blue pieces: drag
 across empty track to keep another piece, drag a piece's ends or middle, click inside one
