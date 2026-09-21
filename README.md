@@ -30,16 +30,21 @@ with in-place updates. See [Roadmap](#roadmap) for what is not built yet.
 
 ## Install
 
+Download `Shotwin.exe` from [Releases](../../releases) and run it. That is the whole
+install: it is self-contained, so there is no .NET runtime to fetch, no installer and no
+admin rights. It keeps itself up to date from there.
+
+To build it yourself instead:
+
 ```powershell
 .\install.ps1                      # or -StartWithWindows to run at login
 ```
 
-Publishes a self-contained single-file exe (no .NET runtime needed at runtime),
-installs it to `%LOCALAPPDATA%\Programs\Shotwin`, and adds a Start menu entry you can
-search for and pin. Per-user, so no admin rights and no UAC prompt. `.\install.ps1
--Uninstall` removes all of it.
-
-Building needs the .NET 10 SDK (`winget install Microsoft.DotNet.SDK.10`).
+That publishes the same single-file exe, installs it to
+`%LOCALAPPDATA%\Programs\Shotwin` and adds a Start menu entry you can search for and
+pin. Per-user, so still no admin rights and no UAC prompt. `.\install.ps1 -Uninstall`
+removes all of it. Building needs the .NET 10 SDK
+(`winget install Microsoft.DotNet.SDK.10`).
 
 Opening Shotwin from the Start menu shows its main window, which has everything in one
 place as pages in a left rail — **Capture**, **Recent**, **Shortcuts**, **Settings**,
