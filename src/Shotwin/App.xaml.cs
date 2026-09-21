@@ -1076,6 +1076,18 @@ public partial class App : Application
         _instanceMutex = null;
     }
 
+    /// <summary>
+    /// Windows is signing out or restarting. The app is set to OnExplicitShutdown, so WPF
+    /// will not close it for us and <see cref="OnExit"/> never runs — the process is simply
+    /// ended. Without this, the last save of the session is the one that never happens, and
+    /// a reboot is exactly when the user notices.
+    /// </summary>
+    protected override void OnSessionEnding(SessionEndingCancelEventArgs e)
+    {
+        base.OnSessionEnding(e);
+        SettingsService.Save();
+    }
+
     protected override void OnExit(ExitEventArgs e)
     {
         // Quitting mid-recording. There is no time left to wait for the encoder to

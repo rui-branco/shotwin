@@ -104,7 +104,13 @@ public partial class EditorWindow : Window
         StrokeSlider.ValueChanged += (_, e) =>
         {
             _strokeWidth = (float)e.NewValue;
-            SettingsService.Current.LastStrokeWidth = _strokeWidth;
+
+            // The slider reports NaN while it is being sized against a range it does not
+            // have yet, and a stroke width of NaN draws nothing at all. Keeping it out of
+            // the setting is what stops that one moment reaching the file and coming back
+            // in every session after it.
+            if (float.IsFinite(_strokeWidth))
+                SettingsService.Current.LastStrokeWidth = _strokeWidth;
 
             // Dragging the slider raises this dozens of times a second, so the write is
             // held back until it settles rather than writing the file on every pixel.
@@ -894,7 +900,8 @@ public partial class EditorWindow : Window
         // Everything here is already saved as it changes; this only catches a slider
         // move still sitting in the debounce when the window was closed.
         _settingsWrite.Stop();
-        SettingsService.Current.LastStrokeWidth = _strokeWidth;
+        if (float.IsFinite(_strokeWidth))
+            SettingsService.Current.LastStrokeWidth = _strokeWidth;
         SettingsService.Save();
 
         _shadowPaint?.Dispose();

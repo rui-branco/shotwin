@@ -139,6 +139,27 @@ public static class SettingsService
 
     private static AppSettings? _current;
 
+    /// <summary>
+    /// Set when the file was there but could not be read. What <see cref="Current"/> holds
+    /// from then on is a set of defaults standing in for settings that are still on disk,
+    /// and writing those back would turn one locked read into permanent loss.
+    /// </summary>
+    private static bool _loadFailed;
+
+    /// <summary>
+    /// True when this session is running on stand-in defaults and refusing to write. The
+    /// pages that save are expected to ask, because a page that reports "Saved." over a
+    /// write that was declined is worse than the failure it is hiding.
+    /// </summary>
+    public static bool LoadFailed
+    {
+        get
+        {
+            _ = Current;
+            return _loadFailed;
+        }
+    }
+
     public static AppSettings Current => _current ??= Load();
 
     private static AppSettings Load()
@@ -163,6 +184,7 @@ public static class SettingsService
                     if (!document.RootElement.TryGetProperty(nameof(AppSettings.HotkeyLayoutVersion), out _))
                         loaded.HotkeyLayoutVersion = 0;
 
+                    Sanitise(loaded);
                     MigrateHotkeyLayout(loaded);
                     return loaded;
                 }
@@ -178,9 +200,12 @@ public static class SettingsService
         }
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
         {
-            // Locked or unreadable this once. Defaults for this run, and the file is left
-            // alone so the next run can read it properly rather than overwriting it.
+            // Locked or unreadable this once. Defaults for this run, and the flag below
+            // keeps every save in this session from writing them back — the file is still
+            // the only copy of everything the user chose, and the next run will almost
+            // certainly read it properly.
             CrashLog.Write("Settings", ex);
+            _loadFailed = true;
         }
         return new AppSettings();
     }
@@ -205,6 +230,21 @@ public static class SettingsService
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
         {
         }
+    }
+
+    /// <summary>
+    /// NaN and the infinities survive a round trip through the file now that the serializer
+    /// writes them as named literals, and that is the point: a bad value costs one setting
+    /// rather than the whole file. It should not outlive the read, though. Left in place it
+    /// goes straight back to the control it came from, and a stroke width of NaN stays NaN
+    /// for every session after. Anything not finite goes back to its default.
+    /// </summary>
+    private static void Sanitise(AppSettings settings)
+    {
+        var defaults = new AppSettings();
+
+        if (!float.IsFinite(settings.LastStrokeWidth))
+            settings.LastStrokeWidth = defaults.LastStrokeWidth;
     }
 
     /// <summary>
@@ -237,6 +277,13 @@ public static class SettingsService
     /// </summary>
     private static void Save(AppSettings settings)
     {
+        // A load that failed left defaults in memory standing in for a file that is still
+        // on disk and still readable next time. Writing them over it is how a moment's lock
+        // at sign-in turned into "my settings were all gone after the reboot" — the last
+        // write of the session, from OnExit, landing defaults on top of the real thing.
+        // This session reads and runs; it does not write.
+        if (_loadFailed) return;
+
         try
         {
             Directory.CreateDirectory(Dir);
