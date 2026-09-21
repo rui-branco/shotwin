@@ -15,7 +15,7 @@
     <AssemblyName>Shotwin</AssemblyName>
     <RootNamespace>Shotwin</RootNamespace>
     <!-- The one place the version is set. The update check compares against this. -->
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <!-- Keep the exe small and cold-start fast; capture latency is the whole point. -->
     <TieredPGO>true</TieredPGO>
