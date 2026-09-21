@@ -490,6 +490,11 @@ public partial class App : Application
         {
             _recorder = null;
 
+            // The count-in already put a number on the icon, and nothing else takes it
+            // off on this path — a recording that never started would otherwise sit in
+            // the tray wearing a red "1".
+            ClearRecordingFromTray();
+
             // Disposed first: the file is created before the encoder is asked whether it
             // can transcode at all, and it is still open when the answer is no.
             recorder.Dispose();
@@ -530,16 +535,16 @@ public partial class App : Application
             if (_recorder is null)
             {
                 StopWatchingForRecordingKeys();
-        ClearRecordingFromTray();
+                ClearRecordingFromTray();
 
-        // Belt as well as braces: the strip already closes itself the moment _recorder
-        // stops being the one it was given, so this only makes it go a quarter of a
-        // second sooner.
-        _indicator?.Close();
-        _indicator = null;
+                // Belt as well as braces: the strip already closes itself the moment
+                // _recorder stops being the one it was given, so this only makes it go a
+                // quarter of a second sooner.
+                _indicator?.Close();
+                _indicator = null;
 
-        _frame?.Close();
-        _frame = null;
+                _frame?.Close();
+                _frame = null;
                 return;
             }
 
@@ -604,13 +609,11 @@ public partial class App : Application
 
         _tray.ToolTipText = "Shotwin";
 
-        // Back to the icon that shipped with the app, and the drawn one released.
-        _tray.Icon = null;
-        if (_trayIconHandle != IntPtr.Zero)
-        {
-            DestroyIcon(_trayIconHandle);
-            _trayIconHandle = IntPtr.Zero;
-        }
+        // Back to the icon that shipped with the app — drawn through the same Win32 path
+        // the badge uses, not by clearing Icon. Nulling it only unhooks the handle: the
+        // IconSource set at startup is not re-read, so the tray was left with a blank
+        // space where the app icon should be. Drawing the plain icon puts a real one back.
+        DrawTrayIcon(null, badge: false);
     }
 
     /// <summary>
@@ -634,48 +637,65 @@ public partial class App : Application
     /// threw outright or dereferenced null, which is what put a crash notification on
     /// screen every second of the count-in.
     /// </summary>
-    private void SetTrayBadge(string? number)
+    private void SetTrayBadge(string? number) => DrawTrayIcon(number, badge: true);
+
+    /// <summary>
+    /// The one place the tray icon is drawn, badged or plain, so the icon it goes back to
+    /// when a recording ends is the same kind of object as the one it wore during it.
+    /// </summary>
+    private void DrawTrayIcon(string? number, bool badge)
     {
         if (_tray is null) return;
+
+        // Nothing to draw the badge onto, so the badge would be all there was and the
+        // plain icon would be nothing at all. The startup IconSource is still the right
+        // answer in that case.
+        if (_idleIcon is null)
+        {
+            if (!badge) _tray.Icon = null;
+            return;
+        }
 
         const int Size = 32;
 
         var visual = new System.Windows.Media.DrawingVisual();
         using (var drawing = visual.RenderOpen())
         {
-            if (_idleIcon is not null)
-                drawing.DrawImage(_idleIcon, new System.Windows.Rect(0, 0, Size, Size));
+            drawing.DrawImage(_idleIcon, new System.Windows.Rect(0, 0, Size, Size));
 
-            // A number has to stay legible at 16px in the tray, so it fills the icon
-            // rather than sitting in a corner the way the plain dot does.
-            var centre = number is null
-                ? new System.Windows.Point(Size - 9, Size - 9)
-                : new System.Windows.Point(Size / 2.0, Size / 2.0);
-
-            double radius = number is null ? 9 : 15;
-
-            drawing.DrawEllipse(new System.Windows.Media.SolidColorBrush(
-                System.Windows.Media.Color.FromRgb(0x14, 0x14, 0x17)), null, centre, radius, radius);
-            drawing.DrawEllipse(new System.Windows.Media.SolidColorBrush(
-                System.Windows.Media.Color.FromRgb(0xFF, 0x3B, 0x30)), null, centre, radius - 2.5, radius - 2.5);
-
-            if (number is not null)
+            if (badge)
             {
-                var text = new System.Windows.Media.FormattedText(
-                    number,
-                    System.Globalization.CultureInfo.InvariantCulture,
-                    System.Windows.FlowDirection.LeftToRight,
-                    new System.Windows.Media.Typeface(
-                        new System.Windows.Media.FontFamily("Segoe UI"),
-                        System.Windows.FontStyles.Normal,
-                        System.Windows.FontWeights.Bold,
-                        System.Windows.FontStretches.Normal),
-                    21,
-                    System.Windows.Media.Brushes.White,
-                    96);
+                // A number has to stay legible at 16px in the tray, so it fills the icon
+                // rather than sitting in a corner the way the plain dot does.
+                var centre = number is null
+                    ? new System.Windows.Point(Size - 9, Size - 9)
+                    : new System.Windows.Point(Size / 2.0, Size / 2.0);
 
-                drawing.DrawText(text,
-                    new System.Windows.Point(centre.X - text.Width / 2, centre.Y - text.Height / 2));
+                double radius = number is null ? 9 : 15;
+
+                drawing.DrawEllipse(new System.Windows.Media.SolidColorBrush(
+                    System.Windows.Media.Color.FromRgb(0x14, 0x14, 0x17)), null, centre, radius, radius);
+                drawing.DrawEllipse(new System.Windows.Media.SolidColorBrush(
+                    System.Windows.Media.Color.FromRgb(0xFF, 0x3B, 0x30)), null, centre, radius - 2.5, radius - 2.5);
+
+                if (number is not null)
+                {
+                    var text = new System.Windows.Media.FormattedText(
+                        number,
+                        System.Globalization.CultureInfo.InvariantCulture,
+                        System.Windows.FlowDirection.LeftToRight,
+                        new System.Windows.Media.Typeface(
+                            new System.Windows.Media.FontFamily("Segoe UI"),
+                            System.Windows.FontStyles.Normal,
+                            System.Windows.FontWeights.Bold,
+                            System.Windows.FontStretches.Normal),
+                        21,
+                        System.Windows.Media.Brushes.White,
+                        96);
+
+                    drawing.DrawText(text,
+                        new System.Windows.Point(centre.X - text.Width / 2, centre.Y - text.Height / 2));
+                }
             }
         }
 
@@ -719,6 +739,13 @@ public partial class App : Application
         _recorder = null;
 
         StopWatchingForRecordingKeys();
+
+        // Cleared here rather than left to the watcher, which is the timer the line above
+        // just stopped: the tick that noticed _recorder had gone null never runs again, so
+        // every ordinary stop and cancel used to leave the red dot on the tray for the
+        // rest of the session. Cleared before the await, too — StopAsync has to flush the
+        // encoder, and the icon should stop claiming to be recording the moment it isn't.
+        ClearRecordingFromTray();
 
         string? finished = await recorder.StopAsync();
         recorder.Dispose();
@@ -1066,6 +1093,14 @@ public partial class App : Application
         _commands?.Dispose();
         _hotkeys?.Dispose();
         _tray?.Dispose();
+
+        // The drawn icon outlives the tray it was handed to, so it goes back after it.
+        if (_trayIconHandle != IntPtr.Zero)
+        {
+            DestroyIcon(_trayIconHandle);
+            _trayIconHandle = IntPtr.Zero;
+        }
+
         _instanceMutex?.Dispose();
         base.OnExit(e);
     }
