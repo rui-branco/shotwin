@@ -1,16 +1,20 @@
+<p align="center">
+  <img src="docs/logo.png" alt="" width="104" height="104">
+</p>
+
 <h1 align="center">Shotwin</h1>
 
 <p align="center">
   <strong>A screenshot tool for Windows, built for pixel work.</strong><br>
-  Capture, mark up, read the text out of an image, record a region to video,
-  and keep a shot on top while you use it.
+  Capture, mark up, read the text out of an image, record a region to video, and keep a
+  shot on top while you use it.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4" alt="Windows 10 or 11">
-  <img src="https://img.shields.io/badge/.NET-10-512BD4" alt=".NET 10">
-  <img src="https://img.shields.io/badge/languages-30-success" alt="30 languages">
-  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT licence">
+  <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4">
+  <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4">
+  <img alt="30 languages" src="https://img.shields.io/badge/languages-30-success">
+  <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue">
 </p>
 
 ---
@@ -348,6 +352,22 @@ of the whole virtual desktop, which is fast and dependency-free but cannot see
 hardware-overlay or DRM-protected surfaces. A DXGI Desktop Duplication implementation
 can replace it without touching callers.
 
+## Build
+
+```powershell
+.\install.ps1                      # builds and installs in one step
+dotnet build src/Shotwin            # or just build it
+```
+
+Needs the .NET 10 SDK; everything else comes from NuGet on first build. `install.ps1`
+publishes self-contained and single-file, which is why the result is around 75&nbsp;MB and
+why nothing has to be installed to run it.
+
+| Script | Purpose |
+| --- | --- |
+| `install.ps1` | Build, publish and install to `%LOCALAPPDATA%\Programs\Shotwin` |
+| `tools/make-logo.ps1` | Render `docs/logo.png` from the app's own icon |
+
 ## Roadmap
 
 Not yet built, roughly in the order they are worth doing:
@@ -358,3 +378,7 @@ Not yet built, roughly in the order they are worth doing:
 - **Ruler / measure mode**, crop, before-after GIF, canvas combining.
 - **S3 upload.**
 - **DXGI capture** for protected surfaces and lower latency.
+
+## License
+
+MIT
