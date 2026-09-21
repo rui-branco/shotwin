@@ -11,6 +11,10 @@
 </p>
 
 <p align="center">
+  <img src="docs/window.png" alt="The Shotwin window, on the Capture page" width="722">
+</p>
+
+<p align="center">
   <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4">
   <img alt="30 languages" src="https://img.shields.io/badge/languages-30-success">
@@ -372,6 +376,7 @@ why nothing has to be installed to run it.
 | --- | --- |
 | `install.ps1` | Build, publish and install to `%LOCALAPPDATA%\Programs\Shotwin` |
 | `tools/make-logo.ps1` | Render `docs/logo.png` from the app's own icon |
+| `tools/make-screenshots.ps1` | Photograph the running app into `docs/` |
 
 ## Roadmap
 
