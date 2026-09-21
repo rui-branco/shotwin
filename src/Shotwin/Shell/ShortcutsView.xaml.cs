@@ -156,7 +156,12 @@ public partial class ShortcutsView : UserControl
         SettingsService.Save();
 
         Warning.Visibility = Visibility.Collapsed;
-        Flash(Localisation.Get("ShortcutsSaved"));
+
+        // The combinations above are live either way — they are registered from what is in
+        // memory. Only the record of them is missing, so this says the write was refused
+        // rather than pretending it happened.
+        Flash(Localisation.Get(
+            SettingsService.LoadFailed ? "SettingsNotWritten" : "ShortcutsSaved"));
         Applied?.Invoke();
     }
 

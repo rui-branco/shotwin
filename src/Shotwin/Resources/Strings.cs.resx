@@ -945,6 +945,10 @@
     <value>Další soubor: {0}.png</value>
     <comment>Settings page, a worked example under the file name box. {0} is the name the template produces right now.</comment>
   </data>
+  <data name="SettingsNotWritten" xml:space="preserve">
+    <value>Když se Shotwin spustil, vaše nastavení se nepodařilo načíst, takže tato změna nebyla uložena. Restartujte Shotwin a zkuste to znovu.</value>
+    <comment>Settings and Shortcuts pages, shown in place of the "Saved." confirmation when the settings file could not be read at startup and the app is refusing to overwrite it with defaults.</comment>
+  </data>
   <data name="SettingsOpen" xml:space="preserve">
     <value>Otevřít</value>
     <comment>Settings page, button that opens the save folder in Explorer.</comment>

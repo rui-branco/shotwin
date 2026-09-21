@@ -265,6 +265,14 @@ public partial class SettingsView : UserControl
             _loading = false;
             Flash(Localisation.Get("SettingsStartupRefused"));
         }
+        else if (SettingsService.LoadFailed)
+        {
+            // The start-at-login box is kept in the registry and was still set, but nothing
+            // else on this page reached the disk: the settings file could not be read when
+            // the app started, so what is in memory is defaults, and writing those over the
+            // real file would lose the lot. Saying "Saved." here would simply be untrue.
+            Flash(Localisation.Get("SettingsNotWritten"));
+        }
         else
         {
             Flash(Localisation.Get("SettingsSaved"));

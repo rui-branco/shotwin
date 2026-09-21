@@ -919,6 +919,10 @@
     <value>File berikutnya: {0}.png</value>
     <comment>Settings page, a worked example under the file name box. {0} is the name the template produces right now.</comment>
   </data>
+  <data name="SettingsNotWritten" xml:space="preserve">
+    <value>Pengaturan Anda tidak bisa dibaca saat Shotwin dijalankan, jadi perubahan ini tidak tersimpan. Mulai ulang Shotwin untuk mencoba lagi.</value>
+    <comment>Settings and Shortcuts pages, shown in place of the "Saved." confirmation when the settings file could not be read at startup and the app is refusing to overwrite it with defaults.</comment>
+  </data>
   <data name="SettingsOpen" xml:space="preserve">
     <value>Buka</value>
     <comment>Settings page, button that opens the save folder in Explorer.</comment>
