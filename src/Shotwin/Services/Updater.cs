@@ -165,7 +165,11 @@ public static class Updater
         ReleaseInfo release, IProgress<double>? progress, CancellationToken token)
     {
         string exe = ExecutablePath;
-        if (exe.Length == 0) return false;
+        if (exe.Length == 0)
+        {
+            CrashLog.Note("Update", "No path for the running exe, so there is nothing to replace.");
+            return false;
+        }
 
         string staged = exe + ".new";
         try
@@ -194,11 +198,21 @@ public static class Updater
             }
 
             if (IsProgram(staged)) return true;
+
+            CrashLog.Note("Update",
+                $"Downloaded {new FileInfo(staged).Length} bytes from {release.DownloadUrl}, "
+                + "and it is not a program.");
         }
         catch (Exception ex) when (ex is HttpRequestException or OperationCanceledException
                                       or IOException or UnauthorizedAccessException
                                       or InvalidOperationException)
         {
+            // Logged rather than swallowed. Every one of these paths ends with the button
+            // quietly going back to offering the update, which from the outside is
+            // indistinguishable from the click not registering at all — and with nothing
+            // written down, the only way to find out which of them ran was to rebuild the
+            // download by hand outside the app.
+            CrashLog.Write("Update", ex);
         }
 
         // Half a file, or a redirect that landed on an HTML page, must never be left
@@ -244,7 +258,20 @@ public static class Updater
             throw;
         }
 
-        Process.Start(exe);
+        // The swap is done by this point, so a launch that fails is not worth undoing: the
+        // new build is the one on disk and the next start is already it. Caught because
+        // Process.Start reports a refused launch as a Win32Exception, which is not one of
+        // the file exceptions the caller expects — it went to the dispatcher instead, and
+        // closed the app on the one path where the update had actually worked.
+        try
+        {
+            Process.Start(exe);
+        }
+        catch (System.ComponentModel.Win32Exception ex)
+        {
+            CrashLog.Write("Update", ex);
+        }
+
         Application.Current.Shutdown();
     }
 

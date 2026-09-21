@@ -18,6 +18,12 @@ public static class CrashLog
 
     public static string FilePath => Path.Combine(Folder, "errors.log");
 
+    /// <summary>
+    /// A failure with no exception behind it: something that returned false, or refused
+    /// to go on, where the only other record would be nothing at all.
+    /// </summary>
+    public static void Note(string context, string message) => Append(context, message);
+
     public static void Write(string context, Exception exception)
     {
         try
@@ -44,6 +50,23 @@ public static class CrashLog
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
         {
             // Nothing sensible left to do if even the log cannot be written.
+        }
+    }
+
+    private static void Append(string context, string body)
+    {
+        try
+        {
+            System.IO.Directory.CreateDirectory(Folder);
+
+            File.AppendAllText(FilePath, new StringBuilder()
+                .AppendLine()
+                .AppendLine($"=== {DateTime.Now:yyyy-MM-dd HH:mm:ss}  {context} ===")
+                .AppendLine(body)
+                .ToString());
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+        {
         }
     }
 }
