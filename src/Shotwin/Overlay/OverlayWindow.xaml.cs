@@ -2,10 +2,10 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using Shotwin.Capture;
 using Shotwin.Services;
 using SkiaSharp;
-using SkiaSharp.Views.Desktop;
 using static Shotwin.Interop.NativeMethods;
 
 namespace Shotwin.Overlay;
@@ -37,8 +37,22 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
     private readonly List<CapturableWindow> _windows;
     private readonly OverlayMode _mode;
 
-    /// <summary>Only built for colour picking; the loupe needs src/dest rect draws.</summary>
-    private SKImage? _frozenImage;
+    /// <summary>The frozen desktop as an image. It shares the bitmap's pixels, not a copy.</summary>
+    private readonly SKImage _frozenImage;
+
+    /// <summary>
+    /// What is on screen, at the frozen desktop's size. Only the parts that changed are
+    /// redrawn and marked dirty, so WPF uploads those rectangles and nothing else.
+    /// </summary>
+    private readonly WriteableBitmap _buffer;
+
+    /// <summary>Everything the last paint drew on top of the desktop, to be cleared by the next.</summary>
+    private readonly SKRegion _chrome = new();
+
+    /// <summary>The undimmed rect the buffer currently shows, if any.</summary>
+    private SKRectI? _paintedHole;
+
+    private bool _paintQueued;
 
     private double _scale = 1.0;
     private OverlayState _state = OverlayState.Idle;
@@ -86,8 +100,16 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
         _originX = originX;
         _originY = originY;
         _mode = mode;
-        if (mode == OverlayMode.ColourPick) _frozenImage = SKImage.FromBitmap(frozen);
+
+        // Nothing writes to the frozen desktop again. Saying so lets Skia draw it as it
+        // is; a mutable bitmap gets copied, whole, every time it is drawn.
+        _frozen.SetImmutable();
+        _frozenImage = SKImage.FromBitmap(frozen);
         _windows = WindowEnumerator.Enumerate(IntPtr.Zero);
+
+        _buffer = new WriteableBitmap(frozen.Width, frozen.Height, 96, 96, PixelFormats.Pbgra32, null);
+        Surface.Source = _buffer;
+        Paint(everything: true);
 
         Loaded += OnLoaded;
         MouseMove += OnMouseMove;
@@ -143,7 +165,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
             _cursorInside = true;
             UpdateHover();
         }
-        Surface.InvalidateVisual();
+        RequestPaint();
     }
 
     // ---- Input ------------------------------------------------------------------
@@ -176,7 +198,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
         }
 
         if (_state == OverlayState.Dragging) _cursor = p;
-        Surface.InvalidateVisual();
+        RequestPaint();
     }
 
     /// <summary>Shift constrains to a square; Alt grows the selection from its centre.</summary>
@@ -246,7 +268,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
         _dragStart = p;
         _dragCurrent = p;
         _cursor = p;
-        Surface.InvalidateVisual();
+        RequestPaint();
     }
 
     private void OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -265,7 +287,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
                 Complete(bounds);
                 return;
             }
-            Surface.InvalidateVisual();
+            RequestPaint();
             return;
         }
 
@@ -387,7 +409,10 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
     protected override void OnClosed(EventArgs e)
     {
         base.OnClosed(e);
-        _frozenImage?.Dispose();
+        CompositionTarget.Rendering -= OnRendering;
+        _paintQueued = true;   // nothing paints into a closed window
+        _chrome.Dispose();
+        _frozenImage.Dispose();
         _frozen.Dispose();
     }
 
@@ -395,31 +420,123 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
 
     private static readonly SKColor Accent = new(0x3D, 0x8B, 0xFD);
 
-    private void OnPaintSurface(object? sender, SKPaintSurfaceEventArgs e)
+    /// <summary>
+    /// Paints at most once per frame, however many mouse moves arrive in between. A
+    /// gaming mouse reports far more often than any screen refreshes.
+    /// </summary>
+    private void RequestPaint()
     {
-        var canvas = e.Surface.Canvas;
-        canvas.Clear(SKColors.Black);
-        canvas.DrawBitmap(_frozen, 0, 0);
+        if (_paintQueued) return;
+        _paintQueued = true;
+        CompositionTarget.Rendering += OnRendering;
+    }
 
+    private void OnRendering(object? sender, EventArgs e)
+    {
+        CompositionTarget.Rendering -= OnRendering;
+        _paintQueued = false;
+        Paint();
+    }
+
+    /// <summary>
+    /// Brings the buffer up to date by redrawing only what changed: the desktop comes
+    /// back wherever the last paint drew chrome or the dimming moved, then the chrome
+    /// is drawn again where it now belongs. Moving the cursor touches a few thousand
+    /// pixels instead of the whole desktop, and dragging touches the strips the
+    /// selection's edges passed over.
+    /// </summary>
+    private void Paint(bool everything = false)
+    {
+        var bounds = new SKRectI(0, 0, _frozen.Width, _frozen.Height);
+        var hole = Hole();
+
+        using var stale = new SKRegion();
+        if (everything)
+        {
+            stale.SetRect(bounds);
+        }
+        else
+        {
+            stale.SetRegion(_chrome);
+
+            // The dimming changes only inside one hole or the other, not inside both.
+            using var moved = new SKRegion();
+            if (_paintedHole is { } was) moved.Op(was, SKRegionOperation.XOR);
+            if (hole is { } now) moved.Op(now, SKRegionOperation.XOR);
+            stale.Op(moved, SKRegionOperation.Union);
+        }
+
+        var info = new SKImageInfo(_buffer.PixelWidth, _buffer.PixelHeight,
+            SKColorType.Bgra8888, SKAlphaType.Premul);
+
+        _buffer.Lock();
+        try
+        {
+            using (var surface = SKSurface.Create(info, _buffer.BackBuffer, _buffer.BackBufferStride))
+            {
+                var canvas = surface.Canvas;
+
+                canvas.Save();
+                canvas.ClipRegion(stale);
+                canvas.DrawImage(_frozenImage, 0, 0);
+
+                // No dimming when picking a colour: the point is to read the real colours.
+                if (_mode != OverlayMode.ColourPick) DrawDimming(canvas, info, hole);
+                canvas.Restore();
+
+                _chrome.SetRect(SKRectI.Empty);
+                DrawChrome(canvas, info);
+                _chrome.Op(bounds, SKRegionOperation.Intersect);
+            }
+
+            stale.Op(_chrome, SKRegionOperation.Union);
+            stale.Op(bounds, SKRegionOperation.Intersect);
+
+            using var rects = stale.CreateRectIterator();
+            while (rects.Next(out var r))
+                _buffer.AddDirtyRect(new Int32Rect(r.Left, r.Top, r.Width, r.Height));
+        }
+        finally
+        {
+            _buffer.Unlock();
+        }
+
+        _paintedHole = hole;
+    }
+
+    /// <summary>
+    /// The part left undimmed: the selection being dragged, or else the window under
+    /// the cursor. Null when there is none, or it has no area yet.
+    /// </summary>
+    private SKRectI? Hole()
+    {
+        if (_mode == OverlayMode.ColourPick) return null;
+
+        SKRectI? r = _state == OverlayState.Dragging ? CurrentSelection() : _hoveredBounds;
+        return r is { Width: > 0, Height: > 0 } ? r : null;
+    }
+
+    /// <summary>
+    /// Everything drawn over the desktop. Each piece reports where it lands through
+    /// <see cref="Mark"/>, so the next paint knows what to clear.
+    /// </summary>
+    private void DrawChrome(SKCanvas canvas, SKImageInfo info)
+    {
         if (_mode == OverlayMode.ColourPick)
         {
-            // No dimming: the point is to read the real colours underneath.
             // The lens is the pointer in this mode, so nothing else is drawn at the
             // cursor: no crosshair, no chip beside it.
-            if (_cursorInside) DrawLoupe(canvas, e.Info);
+            if (_cursorInside) DrawLoupe(canvas, info);
             return;
         }
 
         SKRectI? selection = _state == OverlayState.Dragging ? CurrentSelection() : null;
-        SKRectI? highlight = selection ?? (_state == OverlayState.Idle ? _hoveredBounds : null);
-
-        DrawDimming(canvas, e.Info, highlight);
 
         if (selection is { } sel)
         {
             DrawSelectionChrome(canvas, sel);
         }
-        else if (highlight is { } hover)
+        else if (_hoveredBounds is { } hover)
         {
             DrawSelectionChrome(canvas, hover);
             DrawWindowLabel(canvas, hover);
@@ -429,7 +546,19 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
             DrawHint(canvas, hint);
 
         if (_cursorInside)
-            DrawCursor(canvas, e.Info, selection);
+            DrawCursor(canvas, info, selection);
+    }
+
+    /// <summary>
+    /// Records that something was drawn inside this rect. The margin covers the
+    /// antialiased fringe, which lands outside the geometry it was asked for.
+    /// </summary>
+    private void Mark(SKRect r, float margin = 2)
+    {
+        _chrome.Op(new SKRectI(
+            (int)MathF.Floor(r.Left - margin), (int)MathF.Floor(r.Top - margin),
+            (int)MathF.Ceiling(r.Right + margin), (int)MathF.Ceiling(r.Bottom + margin)),
+            SKRegionOperation.Union);
     }
 
     /// <summary>
@@ -481,7 +610,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
     /// come back and adjust; here the drag ends and the shot is taken, so eight dots
     /// are just decoration sitting on top of the pixels you are trying to frame.
     /// </summary>
-    private static void DrawSelectionChrome(SKCanvas canvas, SKRectI r)
+    private void DrawSelectionChrome(SKCanvas canvas, SKRectI r)
     {
         using var border = new SKPaint
         {
@@ -490,7 +619,15 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
             StrokeWidth = 2,
             IsAntialias = false,
         };
-        canvas.DrawRect(new SKRect(r.Left - 1, r.Top - 1, r.Right + 1, r.Bottom + 1), border);
+        var edge = new SKRect(r.Left - 1, r.Top - 1, r.Right + 1, r.Bottom + 1);
+        canvas.DrawRect(edge, border);
+
+        // The four sides, not the rect: marking the whole selection would redraw all
+        // of it on every move of a drag, which is the cost this is here to avoid.
+        Mark(new SKRect(edge.Left, edge.Top, edge.Right, edge.Top));
+        Mark(new SKRect(edge.Left, edge.Bottom, edge.Right, edge.Bottom));
+        Mark(new SKRect(edge.Left, edge.Top, edge.Left, edge.Bottom));
+        Mark(new SKRect(edge.Right, edge.Top, edge.Right, edge.Bottom));
     }
 
     /// <summary>
@@ -524,6 +661,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
 
         DrawArms(halo);
         DrawArms(line);
+        Mark(new SKRect(x - Gap - Arm, y - Gap - Arm, x + Gap + Arm, y + Gap + Arm), margin: 3);
 
         void DrawArms(SKPaint paint)
         {
@@ -564,8 +702,6 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
     /// </summary>
     private void DrawLoupe(SKCanvas canvas, SKImageInfo info)
     {
-        if (_frozenImage is null) return;
-
         const int Zoom = 10;
         const int Box = 150;
         const int Samples = Box / Zoom;
@@ -634,6 +770,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
         };
         canvas.DrawCircle(centreX, centreY, radius + 5.5f, edge);
         canvas.DrawCircle(centreX, centreY, radius, edge);
+        Mark(box, margin: 8);   // the outer ring reaches 6px past the lens
 
         // Centred under the lens and pill-shaped, so the chip belongs to the circle
         // rather than sitting beside it like a tooltip that lost its anchor.
@@ -667,7 +804,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
     /// the circle above it. Every radius here is derived from the height, so the shape
     /// stays a true pill at any font size.
     /// </summary>
-    private static void DrawSwatchPill(
+    private void DrawSwatchPill(
         SKCanvas canvas, SKImageInfo info, string text, string coordinates,
         float centreX, float top, SKColor swatch)
     {
@@ -700,6 +837,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
             ImageFilter = SKImageFilter.CreateDropShadowOnly(0, 2, 4, 4, new SKColor(0, 0, 0, 0x90)),
         };
         canvas.DrawRoundRect(box, Height / 2f, Height / 2f, shadow);
+        Mark(box, margin: 16);   // the blur spreads about three sigmas, plus the 2px drop
 
         using var bg = new SKPaint { Color = new SKColor(0x18, 0x18, 0x1B, 0xF0), IsAntialias = true };
         canvas.DrawRoundRect(box, Height / 2f, Height / 2f, bg);
@@ -759,7 +897,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
         return ShapedText.Measure(text, font) + LabelPadding * 2;
     }
 
-    private static void DrawLabel(SKCanvas canvas, string text, SKPoint at)
+    private void DrawLabel(SKCanvas canvas, string text, SKPoint at)
     {
         using var font = LabelFont(text);
         var box = new SKRect(at.X, at.Y,
@@ -767,6 +905,9 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
 
         using var bg = new SKPaint { Color = new SKColor(0x18, 0x18, 0x1B, 0xE0), IsAntialias = true };
         canvas.DrawRoundRect(box, 4, 4, bg);
+
+        // Wide enough for glyphs that overhang the chip, which a fallback font's can.
+        Mark(box, margin: 6);
 
         using var paint = new SKPaint { Color = SKColors.White, IsAntialias = true };
         ShapedText.Draw(canvas, text, at.X + LabelPadding, at.Y + 14.5f, font, paint);

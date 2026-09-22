@@ -1,7 +1,6 @@
 <Window x:Class="Shotwin.Overlay.OverlayWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:skia="clr-namespace:SkiaSharp.Views.WPF;assembly=SkiaSharp.Views.WPF"
         Title="Shotwin Overlay"
         WindowStyle="None"
         ResizeMode="NoResize"
@@ -19,7 +18,12 @@
         of the desktop drawn at virtual-desktop coordinates, and a mirrored screen is
         one where the cursor lands on the wrong pixels.
     -->
+    <!--
+        A plain Image over a WriteableBitmap the window paints into itself, not an
+        SKElement: that one redraws and re-uploads every pixel on every paint, and at
+        desktop size, once per mouse move, that is enough to slow the whole machine.
+    -->
     <Grid>
-        <skia:SKElement x:Name="Surface" PaintSurface="OnPaintSurface" />
+        <Image x:Name="Surface" Stretch="Fill" RenderOptions.BitmapScalingMode="NearestNeighbor" />
     </Grid>
 </Window>
