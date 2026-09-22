@@ -118,22 +118,6 @@ it for the running one and restarts.
 Windows protects Pictures, Documents, Desktop and Videos from apps it does not know, so
 Shotwin checks a folder is writable before using it and says so if it is not.
 
-## Build
-
-```powershell
-.\install.ps1                      # or -StartWithWindows to run at login
-```
-
-Builds, publishes self-contained and single-file, and installs to
-`%LOCALAPPDATA%\Programs\Shotwin` with a Start menu entry. `-Uninstall` removes all of
-it. Needs the .NET 10 SDK.
-
-| Script | Purpose |
-| --- | --- |
-| `install.ps1` | Build, publish and install |
-| `tools/make-logo.ps1` | Render `docs/logo.png` from the app's own icon |
-| `tools/make-screenshots.ps1` | Photograph the running app into `docs/` |
-
 ## How it works
 
 - **Capture** is GDI `BitBlt` per monitor, with the DPI awareness to get physical pixels
