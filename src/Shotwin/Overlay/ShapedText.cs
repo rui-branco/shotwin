@@ -20,12 +20,20 @@ namespace Shotwin.Overlay;
 internal static class ShapedText
 {
     /// <summary>
-    /// The overlay repaints on every mouse move, and building a shaper means parsing the
-    /// font's tables, so the last one is kept. One entry is enough: the strings on screen
-    /// at any moment are the hint and a window title, in the same language.
+    /// The overlay redraws its labels on every paint, and building a shaper means reading
+    /// and parsing the font, so one is kept per typeface. Keeping only the last one was
+    /// not enough: a window title with a character Consolas lacks (the en dash in an
+    /// IDE's title bar will do) sits next to a coordinate chip in Consolas, and the two
+    /// evicted each other twice per paint.
     /// </summary>
-    private static SKTypeface? _cachedTypeface;
-    private static SKShaper? _cachedShaper;
+    private static readonly Dictionary<SKTypeface, SKShaper> Shapers =
+        new(ReferenceEqualityComparer.Instance);
+
+    /// <summary>More than the overlay ever shows at once; past it the cache just starts over.</summary>
+    private const int MaxShapers = 8;
+
+    private static readonly SKTypeface Consolas =
+        SKTypeface.FromFamilyName("Consolas") ?? SKTypeface.Default;
 
     /// <summary>
     /// Latin, its accented range and the general punctuation Consolas covers. Anything
@@ -49,7 +57,7 @@ internal static class ShapedText
             if (match is not null) return match;
         }
 
-        return SKTypeface.FromFamilyName("Consolas") ?? SKTypeface.Default;
+        return Consolas;
     }
 
     /// <summary>
@@ -98,13 +106,17 @@ internal static class ShapedText
 
     private static SKShaper ShaperFor(SKTypeface typeface)
     {
-        if (ReferenceEquals(typeface, _cachedTypeface) && _cachedShaper is not null)
-            return _cachedShaper;
+        if (Shapers.TryGetValue(typeface, out var shaper))
+            return shaper;
 
-        _cachedShaper?.Dispose();
-        _cachedShaper = new SKShaper(typeface);
-        _cachedTypeface = typeface;
+        if (Shapers.Count >= MaxShapers)
+        {
+            foreach (var old in Shapers.Values) old.Dispose();
+            Shapers.Clear();
+        }
 
-        return _cachedShaper;
+        shaper = new SKShaper(typeface);
+        Shapers[typeface] = shaper;
+        return shaper;
     }
 }
