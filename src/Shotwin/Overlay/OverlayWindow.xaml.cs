@@ -473,7 +473,12 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
 
     // ---- Painting ---------------------------------------------------------------
 
-    private static readonly SKColor Accent = new(0x3D, 0x8B, 0xFD);
+    /// <summary>
+    /// Near-white rather than an accent colour. The border sits just outside the
+    /// selection, on the dimmed desktop, where white reads over anything; a tint only
+    /// competes with the colours of whatever is being framed.
+    /// </summary>
+    private static readonly SKColor SelectionColour = new(0xF4, 0xF4, 0xF5);
 
     /// <summary>
     /// Paints at most once per frame, however many mouse moves arrive in between. A
@@ -669,7 +674,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
     {
         using var border = new SKPaint
         {
-            Color = Accent,
+            Color = SelectionColour,
             Style = SKPaintStyle.Stroke,
             StrokeWidth = 2,
             IsAntialias = false,
