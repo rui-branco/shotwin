@@ -107,7 +107,7 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
         _frozenImage = SKImage.FromBitmap(frozen);
         _windows = WindowEnumerator.Enumerate(IntPtr.Zero);
 
-        _buffer = new WriteableBitmap(frozen.Width, frozen.Height, 96, 96, PixelFormats.Pbgra32, null);
+        _buffer = BufferFor(frozen.Width, frozen.Height);
         Surface.Source = _buffer;
         Paint(everything: true);
 
@@ -414,6 +414,61 @@ public partial class OverlayWindow : Window, Services.IFixedFlowDirection
         _chrome.Dispose();
         _frozenImage.Dispose();
         _frozen.Dispose();
+    }
+
+    // ---- Warm-up ----------------------------------------------------------------
+
+    /// <summary>
+    /// The buffer every overlay paints into, kept between captures. A new one each time
+    /// is a desktop-sized allocation on the path between the shortcut and the overlay,
+    /// and only one overlay is ever open, so there is never a second one to want.
+    /// </summary>
+    private static WriteableBitmap? _sharedBuffer;
+
+    private static WriteableBitmap BufferFor(int width, int height)
+    {
+        if (_sharedBuffer is { } buffer && buffer.PixelWidth == width && buffer.PixelHeight == height)
+            return buffer;
+
+        _sharedBuffer = new WriteableBitmap(width, height, 96, 96, PixelFormats.Pbgra32, null);
+        return _sharedBuffer;
+    }
+
+    /// <summary>
+    /// Does once, at startup, what the first capture would otherwise do while the user
+    /// waits on it: load Skia and HarfBuzz, read the label fonts and build their shapers,
+    /// and set aside the buffer. Without it the first shortcut after launch took three
+    /// times as long to put the overlay up as every one after it.
+    /// </summary>
+    public static void Warm()
+    {
+        var info = new SKImageInfo(256, 64, SKColorType.Bgra8888, SKAlphaType.Premul);
+        using var surface = SKSurface.Create(info);
+        var canvas = surface.Canvas;
+
+        using (var desktop = new SKBitmap(info.WithAlphaType(SKAlphaType.Opaque)))
+        {
+            desktop.SetImmutable();
+            using var image = SKImage.FromBitmap(desktop);
+            canvas.DrawImage(image, 0, 0);
+        }
+
+        DrawDimming(canvas, info, new SKRectI(16, 16, 48, 48));
+
+        // The coordinate chip is plain Latin; a window title rarely is. The en dash in an
+        // app's title bar is enough to send it to a fallback font with its own shaper.
+        using var paint = new SKPaint { Color = SKColors.White, IsAntialias = true };
+        foreach (string text in new[] { "1920, 1080", "Shotwin – Overlay" })
+        {
+            using var font = LabelFont(text);
+            canvas.DrawRoundRect(new SKRect(0, 0, ShapedText.Measure(text, font), LabelHeight), 4, 4, paint);
+            ShapedText.Draw(canvas, text, 0, 14.5f, font, paint);
+        }
+
+        _ = WindowEnumerator.Enumerate(IntPtr.Zero);
+
+        var (_, _, width, height) = Monitors.VirtualDesktop;
+        if (width > 0 && height > 0) BufferFor(width, height);
     }
 
     // ---- Painting ---------------------------------------------------------------

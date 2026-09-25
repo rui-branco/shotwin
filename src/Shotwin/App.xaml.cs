@@ -115,6 +115,10 @@ public partial class App : Application
         BuildTrayIcon();
         WarnAboutHotkeyConflicts();
 
+        // Once the tray is up and nothing else is waiting, so the first shortcut pressed
+        // after launch opens the overlay as quickly as every later one.
+        Dispatcher.InvokeAsync(OverlayWindow.Warm, System.Windows.Threading.DispatcherPriority.ApplicationIdle);
+
         // A first launch that already asked for something should not wait for a hotkey.
         Dispatcher.BeginInvoke(() => RunCommand(requested));
 
