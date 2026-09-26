@@ -194,7 +194,10 @@ public partial class App : Application
 
         _tray.TrayLeftMouseUp += (_, _) => StartCapture();
         _tray.TrayBalloonTipClicked += (_, _) => RevealNotifiedFile();
-        _tray.ForceCreate();
+
+        // The default also switches the whole process to Efficiency mode (idle priority
+        // plus EcoQoS), which makes the app respond late whenever the machine is busy.
+        _tray.ForceCreate(enablesEfficiencyMode: false);
     }
 
     /// <summary>
